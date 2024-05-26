@@ -3,7 +3,7 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-    <div>
+    <div class="bg-red-200 h-full w-full">
         ciao
     </div>
 </template>
