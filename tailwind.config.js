@@ -7,6 +7,10 @@ export default {
     extend: {
         fontFamily: {
             area: ['AreaNormalTrial', 'sans-serif']
+        },
+        colors: {
+            'primary': '#F3F0EB',
+            'secondary': '#141414'
         }
     },
   },
