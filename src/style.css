@@ -5,3 +5,7 @@
 body, html, #app {
     @apply h-screen w-screen
 }
+
+.flex-center{
+    @apply flex justify-center items-center
+}
