@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Header from './components/Header.vue'
+import FeaturedWorks from './components/landingPage/FeaturedWorks.vue'
 
 </script>
 
@@ -26,8 +27,12 @@ import Header from './components/Header.vue'
 
             </div>
         </div>
-        <div class="bg-red-500 h-32 w-full shrink-0">
-            ciao
+        <div class="w-full shrink-0 px-20">
+            <div class="w-full bg-slate-400 h-[2px] shrink-0 mb-5"/>
+            <FeaturedWorks/>
+        </div>
+        <div class="h-96 shrink-0">
+            altro
         </div>
     </div>
 </template>
