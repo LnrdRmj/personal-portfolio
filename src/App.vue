@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Header from './components/Header.vue'
-import FeaturedWorks from './components/landingPage/FeaturedWorks.vue'
+import FeaturedWorks from './components/landingPage/feturedWorks/FeaturedWorks.vue'
 
 </script>
 
