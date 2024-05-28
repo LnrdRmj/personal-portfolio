@@ -7,7 +7,7 @@ import FeaturedWorks from './components/landingPage/FeaturedWorks.vue'
 <template>
     <div class="flex flex-col w-full h-full overflow-y-scroll bg-primary">
         <div class="flex flex-col h-screen w-full shrink-0">
-            <Header class="fixed w-full"></Header>
+            <Header class="fixed w-full z-10"></Header>
             <div class="flex flex-col pl-36">
                 <div class="text-7xl w-full font-semibold max-w-[1100px] mt-36">
                     <div>Ciao, mi chiamo <br> Iacopo Pazzaglia e sono un Creative Director e <br> Web Designer</div>
