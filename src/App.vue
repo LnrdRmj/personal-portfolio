@@ -1,8 +1,12 @@
 <script setup lang="ts">
 import Header from './components/Header.vue';
 import FeaturedWorks from './components/landingPage/feturedWorks/FeaturedWorks.vue';
+import Reviews from './components/landingPage/reviews/Reviews.vue';
 import Services from './components/landingPage/services/Services.vue';
-import Works from './components/landingPage/works/Works.vue'
+import Works from './components/landingPage/works/Works.vue';
+
+import WhatsappIcon from './assets/whatsappicon.png'
+import EmailIcon from './assets/emailicon.png'
 
 const works = [
     {
@@ -58,7 +62,7 @@ const works = [
 <template>
     <div class="flex flex-col w-full h-full overflow-y-scroll bg-primary">
         <div class="flex flex-col h-screen w-full shrink-0">
-            <Header class="fixed w-full z-10"></Header>
+            <Header class="fixed w-full z-20"></Header>
             <div class="flex flex-col pl-36">
                 <div class="text-7xl w-full font-semibold max-w-[1100px] mt-36">
                     <div>Ciao, mi chiamo <br> Iacopo Pazzaglia e sono un Creative Director e <br> Web Designer</div>
@@ -72,7 +76,8 @@ const works = [
                     </div>
                 </div>
 
-                <button class="px-8 w-fit rounded-lg mt-24 bg-secondary py-3 text-white text-xl font-semibold">
+                <button class="px-8 w-fit rounded-lg mt-24 bg-secondary py-3 text-white text-xl font-semibold
+                    hover:bg-blue-600 transition-colors">
                     Conosciamoci!
                 </button>
 
@@ -87,5 +92,41 @@ const works = [
         </div>
         <div class="max-w-full bg-gray-400 h-[2px] shrink-0 mb-5 mx-20"/>
         <Works :works="works" class="pb-24 max-w-full mx-20"/>
+        <div class="px-3 shrink-0">
+            <Reviews/>
+        </div>
+        <div class="flex flex-col px-72 my-52">
+            <div class="max-w-full bg-gray-400 h-[2px] shrink-0 mb-5"/>
+            <div class="uppercase text-2xl mb-16">Vuoi collaborare?</div>
+            <div class="flex flex-col">
+                <div class="text-6xl font-semibold">
+                    Contattami
+                </div>
+                <div class="text-lg leading-5 mt-5">
+                    Sei pronto a trasformare la tua visione digitale in realtà?<br>
+                    Contattami oggi per prenotare una consulenza gratuita e discutere del tuo progetto.
+                </div>
+            </div>
+            <div class="mt-10">
+                <div class="flex">
+                    <img class="h-4 mt-[5px] mr-2" :src="WhatsappIcon" alt="">
+                    <div class="flex flex-col font-semibold">
+                        <div class="text-lg">Whatsapp</div>
+                        <div>345 9768944</div>
+                    </div>
+                </div>
+                <div class="flex mt-6">
+                    <img class="h-4 mt-[5px] mr-2" :src="EmailIcon" alt="">
+                    <div class="flex flex-col font-semibold">
+                        <div class="text-lg">Email</div>
+                        <div>info@iacopopazzaglia.it</div>
+                    </div>
+                </div>
+            </div>
+            <button class="px-8 w-fit rounded-lg mt-20 bg-secondary py-3 text-white text-xl font-semibold
+                hover:bg-blue-600 transition-colors">
+                Prenota una Consulenza gratuita
+            </button>
+        </div>
     </div>
 </template>
