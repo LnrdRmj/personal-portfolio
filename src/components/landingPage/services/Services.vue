@@ -8,7 +8,7 @@ import ContactMe from '../../common/ContactMe.vue'
 </script>
 
 <template>
-    <div class="flex flex-col rounded-[20px] px-16 py-[120px] bg-secondary w-full text-white">
+    <div class="flex flex-col rounded-[20px] px-16 pt-[120px] pb-24 bg-secondary w-full text-white">
         <div class="w-full bg-zinc-800 h-[2px] shrink-0 mb-5"/>
         <div class="uppercase font-normal text-2xl mb-[80px]">Servizi principali</div>
         <div class="flex space-x-10 w-full [&>*]:h-[700px]">
@@ -27,7 +27,7 @@ import ContactMe from '../../common/ContactMe.vue'
         </div>
         <div class="w-full bg-zinc-800 h-[2px] shrink-0 my-16"/>
         <div class="flex flex-col items-center">
-            <div>Hai una richiesta specifica?</div>
+            <div class="text-2xl mb-6">Hai una richiesta specifica?</div>
             <ContactMe/>
         </div>
     </div>
