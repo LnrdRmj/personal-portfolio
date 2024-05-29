@@ -8,7 +8,7 @@ import WorkCard from './WorkCard.vue'
             LAVORI IN EVIDENZA
         </div>
         <!-- grid-rows-[repeat(auto-fill,minmax(500px,auto))] -->
-        <div class="grid grid-cols-3 gap-7 grid-rows-[repeat(auto-fill,minmax(200px,auto))]">
+        <div class="grid grid-cols-3 gap-7 grid-rows-[repeat(5,minmax(200px,auto))]">
             <WorkCard class="col-span-2 row-span-2"
                 variant="big"
                 imageSrc="https://cdn.motor1.com/images/mgl/4001vK/s1/porsche-911-gt3-rs-2022.jpg"/>

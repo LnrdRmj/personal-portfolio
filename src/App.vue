@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Header from './components/Header.vue'
 import FeaturedWorks from './components/landingPage/feturedWorks/FeaturedWorks.vue'
-
+import Services from './components/landingPage/services/Services.vue'
 </script>
 
 <template>
@@ -31,8 +31,8 @@ import FeaturedWorks from './components/landingPage/feturedWorks/FeaturedWorks.v
             <div class="w-full bg-slate-400 h-[2px] shrink-0 mb-5"/>
             <FeaturedWorks/>
         </div>
-        <div class="h-96 shrink-0">
-            altro
+        <div class="h-96 shrink-0 px-3 mt-64">
+            <Services/>
         </div>
     </div>
 </template>
