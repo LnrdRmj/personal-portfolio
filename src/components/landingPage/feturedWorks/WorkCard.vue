@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 
 
 type Variant = "big" | "small"
@@ -12,11 +12,12 @@ const props = withDefaults(defineProps<{
 })
 
 const isBigVariant = computed(() => props.variant == 'big')
+const hovered = ref(false)
 
 </script>
 
 <template>
-    <div class="flex flex-col">
+    <div class="flex flex-col" @mouseover="hovered = true" @mouseleave="hovered = false">
         <div class="size-full overflow-hidden transition-[border-radius] duration-700 rounded-[20px] hover:rounded-[40px]">
             <img :src="imageSrc" 
                 class="object-cover size-full
@@ -28,7 +29,14 @@ const isBigVariant = computed(() => props.variant == 'big')
                 'justify-between': isBigVariant,
                 'flex-col': !isBigVariant,
             }">
-            <div class="font-bold">YOOMY</div>
+            <div class="relative bg-red-600">
+                <div class="font-bold h-fit absolute transition-all duration-300" :class="hovered == true ? 'opacity-0 -translate-y-full' : 'opacity-100 translate-y-0'">
+                    YOOMY
+                </div>
+                <div class="font-bold h-fit absolute transition-all duration-300 w-32" :class="hovered == false ? 'opacity-0 translate-y-full' : 'opacity-100 translate-y-0'">
+                    non yoomy
+                </div>
+            </div>
             <div class="font-semibold" 
                 :class="{
                     'w-1/2': isBigVariant
