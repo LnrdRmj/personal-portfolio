@@ -17,7 +17,7 @@ const isBigVariant = computed(() => props.variant == 'big')
 
 <template>
     <div class="flex flex-col">
-        <div class="size-full overflow-hidden rounded-[20px]">
+        <div class="size-full overflow-hidden transition-[border-radius] duration-700 rounded-[20px] hover:rounded-[40px]">
             <img :src="imageSrc" 
                 class="object-cover size-full
                     transition-transform duration-700 hover:scale-110">
