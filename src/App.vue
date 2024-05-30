@@ -4,9 +4,10 @@ import FeaturedWorks from './components/landingPage/feturedWorks/FeaturedWorks.v
 import Reviews from './components/landingPage/reviews/Reviews.vue';
 import Services from './components/landingPage/services/Services.vue';
 import Works from './components/landingPage/works/Works.vue';
+import Footer from './components/landingPage/footer/Footer.vue'
 
-import WhatsappIcon from './assets/whatsappicon.png'
-import EmailIcon from './assets/emailicon.png'
+import EmailIcon from './assets/emailicon.png';
+import WhatsappIcon from './assets/whatsappicon.png';
 
 const works = [
     {
@@ -128,5 +129,6 @@ const works = [
                 Prenota una Consulenza gratuita
             </button>
         </div>
+        <Footer/>
     </div>
 </template>

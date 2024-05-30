@@ -2,11 +2,6 @@
 import Client from './Client.vue';
 import Review from './Review.vue'
 
-import YoomyLogo from '../../../assets/clients/icons/yoomy.svg'
-import IreLogo from '../../../assets/clients/icons/ire.svg'
-import NaturaeLogo from '../../../assets/clients/icons/naturaeFirenze.svg'
-import SoftKeysLogo from '../../../assets/clients/icons/softKeys.svg'
-import VoricelLogo from '../../../assets/clients/icons/voricel.svg'
 import { ref } from 'vue';
 
 const reviews: {
@@ -18,35 +13,35 @@ const reviews: {
 }[] = [
     {
         companyName: 'Yoomy',
-        logo: YoomyLogo,
+        logo: '/images/clients/icons/yoomy.svg',
         description: 'Ho recentemente affidato la creazione del mio sito web a Iacopo Pazzaglia e non potrei essere più soddisfatto del risultato! Sin dall\'inizio, il team è stato estremamente professionale, attento e ricettivo alle mie esigenze.',
         reviewer: 'Yoomy Group',
         role: 'Team di Yoomy',
     },
     {
         companyName: 'Voricel',
-        logo: IreLogo,
+        logo: '/images/clients/icons/voricel.svg',
         description: 'Descrizione 2',
         reviewer: 'Farid Sanhaji',
         role: 'Founder di Voricel',
     },
     {
         companyName: 'Naturae Firenze',
-        logo: NaturaeLogo,
+        logo: '/images/clients/icons/naturaeFirenze.svg',
         description: 'Descrizione 3',
         reviewer: 'Fabio Canestrini',
         role: 'Founder di Naturae Firenze',
     },
     {
         companyName: 'Softkeys',
-        logo: SoftKeysLogo,
+        logo: '/images/clients/icons/softKeys.svg',
         description: 'Descrizione 4',
         reviewer: 'Giulio Rossini',
         role: 'Owner di softkeys',
     },
     {
         companyName: 'i\'Re',
-        logo: VoricelLogo,
+        logo: '/images/clients/icons/ire.svg',
         description: 'Descrizione 5',
         reviewer: 'Ettore Canestrini',
         role: 'Founde di I\'Rè',
