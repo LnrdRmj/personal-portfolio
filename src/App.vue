@@ -71,17 +71,15 @@ const works = [
                 <div class="text-2xl mt-12">
                     <div>
                         {{ $t('underTitle.phrase1')}}
-                        <!-- Pronto a trasformare la tua visione digitale in realtà? -->
                     </div>
                     <div>
                         {{ $t('underTitle.phrase2')}}
-                        <!-- Contattami oggi per prenotare una consulenza gratuita e discutere del tuo progetto. -->
                     </div>
                 </div>
 
                 <button class="px-8 w-fit rounded-lg mt-24 bg-secondary py-3 text-white text-xl font-semibold
                     hover:bg-blue-600 transition-colors">
-                    Conosciamoci!
+                    {{ $t('knoweachotherbutton') }}
                 </button>
 
             </div>
