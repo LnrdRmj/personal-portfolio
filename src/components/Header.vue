@@ -5,7 +5,7 @@ import WhiteArrow from '../assets/white_arrow.svg'
 </script>
 
 <template>
-    <div class="bg-black flex justify-between text-white text-xl py-5 px-10">
+    <div class="bg-black flex justify-between items-center text-white text-xl py-5 px-10">
         <div>
             Iacopo Pazzaglia
         </div>
