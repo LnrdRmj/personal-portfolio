@@ -1,8 +1,15 @@
 <script setup lang="ts">
 
+import { ref, watch } from 'vue';
 import WhiteArrow from '../assets/white_arrow.svg'
 import { useTranslation } from "i18next-vue";
 const { i18next } = useTranslation();
+
+const language = ref<string>(i18next.language)
+
+watch(language, () => {
+    i18next.changeLanguage(language.value).then(console.log).catch(console.log)
+})
 
 </script>
 
@@ -12,9 +19,9 @@ const { i18next } = useTranslation();
             Iacopo Pazzaglia
         </div>
         <div class="flex justify-between items-center space-x-20">
-            <select name="" id="" class="bg-secondary text-white">
-                <option value="en" @click="i18next.changeLanguage('en')">ENG</option>
-                <option value="it" @click="i18next.changeLanguage('it')">IT</option>
+            <select name="" id="" class="bg-secondary text-white" v-model="language">
+                <option value="it">IT</option>
+                <option value="en">ENG</option>
             </select>
             <button> {{ $t('headerSection.work') }} </button>
             <button> {{ $t('headerSection.whoAmI') }} </button>
