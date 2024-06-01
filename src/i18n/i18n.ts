@@ -1,20 +1,18 @@
+import i18next from 'i18next';
+import I18NextVue from 'i18next-vue';
 import en from '../i18n/en.json';
 import it from '../i18n/it.json';
-import { createI18n } from 'vue-i18n';
 
-const messages = {
-    en,
-    it
-}
-
-export const i18n = createI18n({
-    locale: 'en', // set locale
-    fallbackLocale: 'en', // set fallback locale
-    messages, // set locale messages
-});
-
-export function changeLocale(locale: keyof typeof messages) {
-    i18n.global.locale = locale
-    console.log('changed');
-    
+export function setup() {
+    i18next.init({
+        lng: 'it',
+        interpolation: {
+            escapeValue: false
+        },
+        fallbackLng: false,
+        resources: {
+            en: { translation: en },
+            it: { translation: it }
+        }
+    });
 }
