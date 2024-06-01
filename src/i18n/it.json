@@ -6,6 +6,31 @@
     },
     "knoweachotherbutton": "Conosciamoci!",
     "featuredWorks": {
-        "title": "Lavori in evidenza"
+        "title": "Lavori in evidenza",
+        "work1": {
+            "client": "Yoomy",
+            "role": "CO-OWNER / CREATIVE DIRECTOR",
+            "description": "Progetto Start-up di un'Applicazione, Studio di una Brand Identity adeguata al Target e Realizzazione di Materiale Pubblicitario e Social."
+        },
+        "work2": {
+            "client": "Yoomy",
+            "role": "CO-OWNER / CREATIVE DIRECTOR",
+            "description": "Progettazione e Prototipazione completa del Sito Web su Figma, Studio di una nuova Brand Identity e Realizzazione di un Foto-Prodotto e Google Ads."
+        },
+        "work3": {
+            "client": "Yoomy",
+            "role": "CO-OWNER / CREATIVE DIRECTOR",
+            "description": "Progettazione e Prototipazione completa del Sito Web su Figma, Studio di una nuova Brand Identity e Realizzazione di un Foto-Prodotto e Google Ads."
+        },
+        "work4": {
+            "client": "Yoomy",
+            "role": "CO-OWNER / CREATIVE DIRECTOR",
+            "description": "Rebranding aziendale che comprende la creazione di Palette colori, strategia Social Network e linea di Merchandising."
+        },
+        "work5": {
+            "client": "Yoomy",
+            "role": "CO-OWNER / CREATIVE DIRECTOR",
+            "description": "Rebranding aziendale che comprende la creazione di Palette colori, strategia Social Network e linea di Merchandising."
+        }
     }
 }

@@ -6,7 +6,10 @@ type Variant = "big" | "small"
 
 const props = withDefaults(defineProps<{
     variant: Variant,
-    imageSrc: string
+    imageSrc: string,
+    client: string,
+    role: string,
+    description: string,
 }>(), {
     variant: 'small'
 })
@@ -29,19 +32,22 @@ const hovered = ref(false)
                 'justify-between': isBigVariant,
                 'flex-col': !isBigVariant,
             }">
-            <div class="relative h-8">
+            <div class="relative h-8 [&>*]:uppercase"
+                :class="{
+                    'w-1/2': isBigVariant
+                }">
                 <div class="font-bold h-fit absolute transition-all duration-300" :class="hovered == true ? 'opacity-0 -translate-y-full' : 'opacity-100 translate-y-0'">
-                    YOOMY
+                    {{ client }}
                 </div>
-                <div class="font-bold h-fit absolute transition-all duration-300 w-32" :class="hovered == false ? 'opacity-0 translate-y-full' : 'opacity-100 translate-y-0'">
-                    non yoomy
+                <div class="font-bold h-fit absolute transition-all duration-300 w-full" :class="hovered == false ? 'opacity-0 translate-y-full' : 'opacity-100 translate-y-0'">
+                    {{ role }}
                 </div>
             </div>
             <div class="font-semibold" 
                 :class="{
                     'w-1/2': isBigVariant
                 }">
-                Progetto Start-up di un'Applicazione, Studio di una Brand Identity adeguata al Target e Realizzazione di Materiale Pubblicitario e Social.
+                {{ description }}
             </div>
         </div>
     </div>
