@@ -1,65 +1,75 @@
 <script setup lang="ts">
 import Header from './components/Header.vue';
 import FeaturedWorks from './components/landingPage/feturedWorks/FeaturedWorks.vue';
+import Footer from './components/landingPage/footer/Footer.vue';
 import Reviews from './components/landingPage/reviews/Reviews.vue';
 import Services from './components/landingPage/services/Services.vue';
 import Works from './components/landingPage/works/Works.vue';
-import Footer from './components/landingPage/footer/Footer.vue'
 
 import EmailIcon from './assets/emailicon.png';
 import WhatsappIcon from './assets/whatsappicon.png';
 
 import { useTranslation } from "i18next-vue";
+import { ref } from 'vue';
 const { t, i18next } = useTranslation();
 
-const works = [
-    {
-        period: `2021 - ${t('worksSection.table.toNow')}`,
-        clientName: 'Yoomy',
-        role: 'Co-Owner / Creative Director',
-        skills: [
-            { name: 'APP', color: '#A7FF7D' },
-            { name: 'BRAND', color: '#79F7FF' },
-            { name: '3D', color: '#FFA665' }
-        ]
-    },
-    {
-        period: `2022 - ${t('worksSection.table.toNow')}`,
-        clientName: 'Voricel',
-        role: 'Web Designer',
-        skills: [
-            { name: 'WEB', color: '#EAFF6A' },
-            { name: 'BRAND', color: '#79F7FF' },
-            { name: 'ADS', color: '#FF72E0' }
-        ]
-    },
-    {
-        period: `2022 - ${t('worksSection.table.toNow')}`,
-        clientName: 'Naturae Firenze',
-        role: 'Graphic Designer',
-        skills: [
-            { name: 'VISUAL', color: '#FF6A6A' },
-            { name: 'SOCIAL', color: '#CE90FF' }
-        ]
-    },
-    {
-        period: `2023 - ${t('worksSection.table.toNow')}`,
-        clientName: 'Softkeys',
-        role: 'Graphic Designer',
-        skills: [
-            { name: 'ADS', color: '#FF72E0' }
-        ]
-    },
-    {
-        period: '2023 - 2024',
-        clientName: 'i\'Re',
-        role: 'Visual Designer',
-        skills: [
-            { name: 'VISUAL', color: '#FF6A6A' },
-            { name: 'BRAND', color: '#79F7FF' }
-        ]
-    }
-];
+const works = ref(getWorks());
+
+// Unfortunatelly when we change the languages we also have to "recalculate" the works
+i18next.on("languageChanged", () => {
+    works.value = getWorks()
+});
+
+function getWorks() {
+    return [
+        {
+            period: `2021 - ${i18next.t('worksSection.table.toNow')}`,
+            clientName: 'Yoomy',
+            role: 'Co-Owner / Creative Director',
+            skills: [
+                { name: 'APP', color: '#A7FF7D' },
+                { name: 'BRAND', color: '#79F7FF' },
+                { name: '3D', color: '#FFA665' }
+            ]
+        },
+        {
+            period: `2022 - ${t('worksSection.table.toNow')}`,
+            clientName: 'Voricel',
+            role: 'Web Designer',
+            skills: [
+                { name: 'WEB', color: '#EAFF6A' },
+                { name: 'BRAND', color: '#79F7FF' },
+                { name: 'ADS', color: '#FF72E0' }
+            ]
+        },
+        {
+            period: `2022 - ${t('worksSection.table.toNow')}`,
+            clientName: 'Naturae Firenze',
+            role: 'Graphic Designer',
+            skills: [
+                { name: 'VISUAL', color: '#FF6A6A' },
+                { name: 'SOCIAL', color: '#CE90FF' }
+            ]
+        },
+        {
+            period: `2023 - ${t('worksSection.table.toNow')}`,
+            clientName: 'Softkeys',
+            role: 'Graphic Designer',
+            skills: [
+                { name: 'ADS', color: '#FF72E0' }
+            ]
+        },
+        {
+            period: '2023 - 2024',
+            clientName: 'i\'Re',
+            role: 'Visual Designer',
+            skills: [
+                { name: 'VISUAL', color: '#FF6A6A' },
+                { name: 'BRAND', color: '#79F7FF' }
+            ]
+        }
+    ]
+}
 
 </script>
 
