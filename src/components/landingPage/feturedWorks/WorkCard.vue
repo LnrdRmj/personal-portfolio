@@ -29,7 +29,7 @@ const hovered = ref(false)
                 'justify-between': isBigVariant,
                 'flex-col': !isBigVariant,
             }">
-            <div class="relative bg-red-600">
+            <div class="relative h-8">
                 <div class="font-bold h-fit absolute transition-all duration-300" :class="hovered == true ? 'opacity-0 -translate-y-full' : 'opacity-100 translate-y-0'">
                     YOOMY
                 </div>
