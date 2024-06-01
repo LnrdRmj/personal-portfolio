@@ -17,7 +17,7 @@ import ContactMe from '../../common/ContactMe.vue';
                 <div> Instagram </div>
             </div>
             <div class="flex flex-col">
-                <div class="text-zinc-300 mb-2"> Scrivimi </div>
+                <div class="text-zinc-300 mb-2"> {{ $t('footerSection.writeMe') }} </div>
                 <div> info@nocodejack.it </div>
                 <div> +39 3459768944 </div>
             </div>

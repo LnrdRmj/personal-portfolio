@@ -5,6 +5,11 @@
         "phrase2": "Contattami oggi per prenotare una consulenza gratuita e discutere del tuo progetto."
     },
     "contactMe": "Contattami",
+    "headerSection": {
+        "work": "Lavori",
+        "whoAmI": "Chi sono",
+        "services": "Servizi"
+    },
     "knoweachotherbutton": "Conosciamoci!",
     "featuredWorks": {
         "title": "Lavori in evidenza",
@@ -86,5 +91,8 @@
     "contactsSection": {
         "title": "Vuoi collaborare?",
         "bookConsultation": "Prenota una Consulenza gratuita"
+    },
+    "footerSection": {
+        "writeMe": "Scrivimi"
     }
 }

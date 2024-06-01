@@ -16,12 +16,12 @@ const { i18next } = useTranslation();
                 <option value="en" @click="i18next.changeLanguage('en')">ENG</option>
                 <option value="it" @click="i18next.changeLanguage('it')">IT</option>
             </select>
-            <button> Work </button>
-            <button> Servizi </button>
-            <button> Chi sono </button>
+            <button> {{ $t('headerSection.work') }} </button>
+            <button> {{ $t('headerSection.whoAmI') }} </button>
+            <button> {{ $t('headerSection.services') }} </button>
             <button class="rounded-full border flex items-center border-primary py-1 px-4">
                 <div class="mr-2">
-                    Contattami
+                    {{ $t('contactMe') }}
                 </div>
                 <div>
                     <img :src="WhiteArrow" alt="" srcset="">

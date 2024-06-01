@@ -5,6 +5,11 @@
         "phrase2": "Contact me today to schedule a free consultation and discuss your project."
     },
     "contactMe": "Contact Me",
+    "headerSection": {
+        "work": "Works",
+        "whoAmI": "Who am I",
+        "services": "Services"
+    },
     "knoweachotherbutton": "Let's get in touch!",
     "featuredWorks": {
         "title": "Featured Works",
@@ -89,5 +94,8 @@
     "contactsSection": {
         "title": "Want to Collaborate?",
         "bookConsultation": "Book a Free Consultation"
+    },
+    "footerSection": {
+        "writeMe": "Write me"
     }
 }
