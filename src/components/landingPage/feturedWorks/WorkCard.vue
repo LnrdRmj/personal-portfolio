@@ -5,7 +5,7 @@ import { computed, ref } from 'vue';
 type Variant = "big" | "small"
 
 const props = withDefaults(defineProps<{
-    variant: Variant,
+    variant?: Variant,
     imageSrc: string,
     client: string,
     role: string,
