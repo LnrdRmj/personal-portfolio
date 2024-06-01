@@ -7,7 +7,7 @@
         transition-colors
         border-primary bg-secondary hover:bg-primary">
         <div class="mr-2 group-hover:text-black">
-            Contattami
+            {{ $t('contactMe') }}
         </div>
         <div>
             <!-- White arrow -->

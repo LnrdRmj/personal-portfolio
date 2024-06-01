@@ -19,15 +19,15 @@ const hovered = ref<boolean[]>([])
 
 <template>
     <div class="flex flex-col">
-        <div class="text-3xl font-semibold mb-10">
-            WORKS
+        <div class="text-3xl font-semibold mb-10 uppercase">
+            {{ $t('worksSection.title') }}
         </div>
         <div class="w-full [&>*]:items-center [&>*:last-child]:border-b [&>*:last-child]:border-b-black">
-            <div class="flex w-full text-sm font-medium text-zinc-400 h-10">
+            <div class="flex w-full text-sm font-medium text-zinc-400 h-10 uppercase">
                 <div class="w-2/12"></div>
-                <div class="w-2/12">CLIENTE</div>
-                <div class="w-3/12">POSIZIONE</div>
-                <div class="w-3/12">SKILLS</div>
+                <div class="w-2/12">{{ $t('worksSection.table.clientCol') }}</div>
+                <div class="w-3/12">{{ $t('worksSection.table.roleCol') }}</div>
+                <div class="w-3/12">{{ $t('worksSection.table.skillsCol') }}</div>
                 <div class="w-2/12"></div>
             </div>
             <div v-for="(work, index) of works" @mouseenter="hovered[index] = true" @mouseleave="hovered[index] = false" class="flex items-center border-t border-t-black w-full font-medium h-16
@@ -45,7 +45,7 @@ const hovered = ref<boolean[]>([])
                 </div>
                 <div class="w-2/12">
                     <button class="transition-all group-hover:border group-hover:border-white group-hover:text-white px-3 py-[1px] rounded-full">
-                        Vedi progetto
+                        {{ $t('worksSection.table.previewProject') }}
                     </button>
                 </div>
             </div>

@@ -1,52 +1,67 @@
 <script setup lang="ts">
+import { useTranslation } from 'i18next-vue';
 import Client from './Client.vue';
-import Review from './Review.vue'
+import Review from './Review.vue';
 
 import { ref } from 'vue';
+const { i18next } = useTranslation();
 
-const reviews: {
+type Review = {
     companyName: string,
     logo: string,
-    description: string,
+    review: string,
     reviewer: string,
     role: string
-}[] = [
-    {
-        companyName: 'Yoomy',
-        logo: '/images/clients/icons/yoomy.svg',
-        description: 'Ho recentemente affidato la creazione del mio sito web a Iacopo Pazzaglia e non potrei essere più soddisfatto del risultato! Sin dall\'inizio, il team è stato estremamente professionale, attento e ricettivo alle mie esigenze.',
-        reviewer: 'Yoomy Group',
-        role: 'Team di Yoomy',
-    },
-    {
-        companyName: 'Voricel',
-        logo: '/images/clients/icons/voricel.svg',
-        description: 'Descrizione 2',
-        reviewer: 'Farid Sanhaji',
-        role: 'Founder di Voricel',
-    },
-    {
-        companyName: 'Naturae Firenze',
-        logo: '/images/clients/icons/naturaeFirenze.svg',
-        description: 'Descrizione 3',
-        reviewer: 'Fabio Canestrini',
-        role: 'Founder di Naturae Firenze',
-    },
-    {
-        companyName: 'Softkeys',
-        logo: '/images/clients/icons/softKeys.svg',
-        description: 'Descrizione 4',
-        reviewer: 'Giulio Rossini',
-        role: 'Owner di softkeys',
-    },
-    {
-        companyName: 'i\'Re',
-        logo: '/images/clients/icons/ire.svg',
-        description: 'Descrizione 5',
-        reviewer: 'Ettore Canestrini',
-        role: 'Founde di I\'Rè',
-    }
-]
+}
+
+const reviews = ref(getReviews())
+
+// Unfortunatelly when we change the languages we also have to "recalculate" the works
+i18next.on("languageChanged", () => {
+    reviews.value = getReviews()
+    console.log('reviews updated');
+    
+});
+
+function getReviews(): Review[] {
+    return [
+        {
+            companyName: 'Yoomy',
+            logo: '/images/clients/icons/yoomy.svg',
+            review: 'reviewsSection.review1.description',
+            reviewer: 'Yoomy Group',
+            role: 'reviewsSection.review1.role',
+        },
+        {
+            companyName: 'Voricel',
+            logo: '/images/clients/icons/voricel.svg',
+            review: 'reviewsSection.review2.description',
+            reviewer: 'Farid Sanhaji',
+            role: 'reviewsSection.review2.role',
+        },
+        {
+            companyName: 'Naturae Firenze',
+            logo: '/images/clients/icons/naturaeFirenze.svg',
+            review: 'reviewsSection.review3.description',
+            reviewer: 'Fabio Canestrini',
+            role: 'reviewsSection.review3.role',
+        },
+        {
+            companyName: 'Softkeys',
+            logo: '/images/clients/icons/softKeys.svg',
+            review: 'reviewsSection.review4.description',
+            reviewer: 'Giulio Rossini',
+            role: 'reviewsSection.review4.role',
+        },
+        {
+            companyName: 'i\'Re',
+            logo: '/images/clients/icons/ire.svg',
+            review: 'reviewsSection.review5.description',
+            reviewer: 'Ettore Canestrini',
+            role: 'reviewsSection.review5.role',
+        }
+    ]
+}
 
 const selectedReviewIndex = ref(0);
 const animationDuration = '.5s'
@@ -81,7 +96,7 @@ const animationDuration = '.5s'
                         <Review class="w-full"
                             v-if="index === selectedReviewIndex"
                             v-bind="{
-                                review: review.description,
+                                review: review.review,
                                 name: review.reviewer,
                                 role: review.role
                             }"/>

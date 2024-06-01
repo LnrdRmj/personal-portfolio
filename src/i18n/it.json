@@ -1,0 +1,98 @@
+{
+    "title": "Ciao, sono Leonardo Ramaj e sono un Full Stack Developer freelancer",
+    "underTitle": {
+        "phrase1": "Pronto a trasformare la tua visione digitale in realtà?",
+        "phrase2": "Contattami oggi per prenotare una consulenza gratuita e discutere del tuo progetto."
+    },
+    "contactMe": "Contattami",
+    "headerSection": {
+        "work": "Lavori",
+        "whoAmI": "Chi sono",
+        "services": "Servizi"
+    },
+    "knoweachotherbutton": "Conosciamoci!",
+    "featuredWorks": {
+        "title": "Lavori in evidenza",
+        "work1": {
+            "client": "Yoomy",
+            "role": "CO-OWNER / CREATIVE DIRECTOR",
+            "description": "Progetto Start-up di un'Applicazione, Studio di una Brand Identity adeguata al Target e Realizzazione di Materiale Pubblicitario e Social."
+        },
+        "work2": {
+            "client": "Yoomy",
+            "role": "CO-OWNER / CREATIVE DIRECTOR",
+            "description": "Progettazione e Prototipazione completa del Sito Web su Figma, Studio di una nuova Brand Identity e Realizzazione di un Foto-Prodotto e Google Ads."
+        },
+        "work3": {
+            "client": "Yoomy",
+            "role": "CO-OWNER / CREATIVE DIRECTOR",
+            "description": "Progettazione e Prototipazione completa del Sito Web su Figma, Studio di una nuova Brand Identity e Realizzazione di un Foto-Prodotto e Google Ads."
+        },
+        "work4": {
+            "client": "Yoomy",
+            "role": "CO-OWNER / CREATIVE DIRECTOR",
+            "description": "Rebranding aziendale che comprende la creazione di Palette colori, strategia Social Network e linea di Merchandising."
+        },
+        "work5": {
+            "client": "Yoomy",
+            "role": "CO-OWNER / CREATIVE DIRECTOR",
+            "description": "Rebranding aziendale che comprende la creazione di Palette colori, strategia Social Network e linea di Merchandising."
+        }
+    },
+    "services": {
+        "title": "Servici principali",
+        "service1": {
+            "description": "Rebranding aziendale che comprende la creazione di Palette colori, strategia Social Network e linea di Merchandising.",
+            "skills": ["Flussi Utente (UX)", "Website Design (UI)", "Figma", "Responsive / Mobile", "Gestione"]
+        },
+        "service2": {
+            "description": "Sviluppo di un’identità visiva conforme ai valori distintivi dell’azienda.",
+            "skills": ["Logo", "Palette colori", "Figma", "Responsive / Mobile", "Gestione"]
+        },
+        "service3": {
+            "description": "Realizzazione di contenuti multimediali per elevare la presenza sul mercato dell’azienda.",
+            "skills": ["Animazione 3D", "Pubblicità", "Immagini", "Social Network", "Merchandising"]
+        },
+        "havearequest": "Hai una richiesta specifica?"
+    },
+    "worksSection": {
+        "title": "Works",
+        "table": {
+            "clientCol": "Cliente",
+            "roleCol": "Posizione",
+            "skillsCol": "Skills",
+            "previewProject": "Vedi progetto",
+            "toNow": "ad'oggi"
+        }
+    },
+    "reviewsSection": {
+        "title": "COSA DICONO I MIEI CLIENTI",
+        "review1": {
+            "description": "Ho recentemente affidato la creazione del mio sito web a Iacopo Pazzaglia e non potrei essere più soddisfatto del risultato! Sin dall'inizio, il team è stato estremamente professionale, attento e ricettivo alle mie esigenze.",
+            "role": "Team di Yoomy"
+        },
+        "review2": {
+            "description": "Descrizione 2.",
+            "role": "Founder di Voricel"
+        },
+        "review3": {
+            "description": "Descrizione 3.",
+            "role": "Founder di Naturae Firenze"
+        },
+        "review4": {
+            "description": "Descrizione 4.",
+            "role": "Owner di softkeys"
+        },
+        "review5": {
+            "description": "Descrizione 5.",
+            "role": "Founde di I'Rè"
+        }
+    },
+    "contactsSection": {
+        "title": "Vuoi collaborare?",
+        "bookConsultation": "Prenota una Consulenza gratuita"
+    },
+    "footerSection": {
+        "writeMe": "Scrivimi"
+    }
+}
