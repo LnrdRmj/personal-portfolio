@@ -82,5 +82,9 @@
             "description": "Descrizione 5.",
             "role": "Founde di I'Rè"
         }
+    },
+    "contactsSection": {
+        "title": "Vuoi collaborare?",
+        "bookConsultation": "Prenota una Consulenza gratuita"
     }
 }

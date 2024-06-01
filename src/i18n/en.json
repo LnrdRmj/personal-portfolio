@@ -87,6 +87,7 @@
         }
     },
     "contactsSection": {
-        
+        "title": "Want to Collaborate?",
+        "bookConsultation": "Book a Free Consultation"
     }
 }
