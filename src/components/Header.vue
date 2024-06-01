@@ -1,6 +1,7 @@
 <script setup lang="ts">
 
 import WhiteArrow from '../assets/white_arrow.svg'
+import { changeLocale } from '../i18n/i18n';
 
 </script>
 
@@ -10,6 +11,10 @@ import WhiteArrow from '../assets/white_arrow.svg'
             Iacopo Pazzaglia
         </div>
         <div class="flex justify-between items-center space-x-20">
+            <select name="" id="" class="bg-secondary text-white">
+                <option value="en" @click="changeLocale('en')">ENG</option>
+                <option value="it" @click="changeLocale('it')">IT</option>
+            </select>
             <button> Work </button>
             <button> Servizi </button>
             <button> Chi sono </button>
