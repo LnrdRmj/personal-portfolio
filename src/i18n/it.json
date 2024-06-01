@@ -49,5 +49,15 @@
             "skills": ["Animazione 3D", "Pubblicità", "Immagini", "Social Network", "Merchandising"]
         },
         "havearequest": "Hai una richiesta specifica?"
+    },
+    "worksSection": {
+        "title": "Works",
+        "table": {
+            "clientCol": "Cliente",
+            "roleCol": "Posizione",
+            "skillsCol": "Skills",
+            "previewProject": "Vedi progetto",
+            "toNow": "ad'oggi"
+        }
     }
 }

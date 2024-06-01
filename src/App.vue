@@ -9,9 +9,12 @@ import Footer from './components/landingPage/footer/Footer.vue'
 import EmailIcon from './assets/emailicon.png';
 import WhatsappIcon from './assets/whatsappicon.png';
 
+import { useTranslation } from "i18next-vue";
+const { t, i18next } = useTranslation();
+
 const works = [
     {
-        period: '2021 - present',
+        period: `2021 - ${t('worksSection.table.toNow')}`,
         clientName: 'Yoomy',
         role: 'Co-Owner / Creative Director',
         skills: [
@@ -21,7 +24,7 @@ const works = [
         ]
     },
     {
-        period: '2022 - present',
+        period: `2022 - ${t('worksSection.table.toNow')}`,
         clientName: 'Voricel',
         role: 'Web Designer',
         skills: [
@@ -31,7 +34,7 @@ const works = [
         ]
     },
     {
-        period: '2022 - present',
+        period: `2022 - ${t('worksSection.table.toNow')}`,
         clientName: 'Naturae Firenze',
         role: 'Graphic Designer',
         skills: [
@@ -40,7 +43,7 @@ const works = [
         ]
     },
     {
-        period: '2023 - present',
+        period: `2023 - ${t('worksSection.table.toNow')}`,
         clientName: 'Softkeys',
         role: 'Graphic Designer',
         skills: [

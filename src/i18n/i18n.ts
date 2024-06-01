@@ -1,5 +1,4 @@
 import i18next from 'i18next';
-import I18NextVue from 'i18next-vue';
 import en from '../i18n/en.json';
 import it from '../i18n/it.json';
 
