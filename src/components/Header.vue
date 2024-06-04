@@ -16,7 +16,7 @@ watch(language, () => {
 <template>
     <div class="bg-black flex justify-between items-center text-white text-xl py-5 px-10">
         <div>
-            Iacopo Pazzaglia
+            Leonardo Ramaj
         </div>
         <div class="flex justify-between items-center space-x-20">
             <select name="" id="" class="bg-secondary text-white" v-model="language">
