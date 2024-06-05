@@ -80,14 +80,18 @@ function updateScrollLeft() {
 }
 
 onMounted(() => {
-    requestAnimationFrame(() => {
+    // requestAnimationFrame(() => {
         
-        let repeatFunction = () => {
-            updateScrollLeft()
-            requestAnimationFrame(repeatFunction)
-        }
-        requestAnimationFrame(repeatFunction)
-    })
+    //     let repeatFunction = () => {
+    //         updateScrollLeft()
+    //         requestAnimationFrame(repeatFunction)
+    //     }
+    //     requestAnimationFrame(repeatFunction)
+    // })
+
+    setInterval(() => {
+        updateScrollLeft()
+    }, 20)
 
     createFullyHiddenObserver(loopFirstChildCallback)
 })
