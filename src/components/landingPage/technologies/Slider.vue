@@ -15,7 +15,7 @@ onMounted(() => {
         if (slider.value == null) return
 
         slider.value.scrollLeft += 0.5
-    }, 10)
+    }, 20)
 
     createFullyHiddenObserver(loopFirstChildCallback)
 })
@@ -25,12 +25,11 @@ function createFullyHiddenObserver(callback: IntersectionObserverCallback): void
         root: slider.value,
         rootMargin: rootMargin,
     })
-    console.log("Element to observe is: ", slider.value!.children[0]);
     fullyHiddenObserver.observe(slider.value!.children[0])
 }
 
 function loopFirstChildCallback(thresholds: IntersectionObserverEntry[], observer: IntersectionObserver){
-    // The first child is visible
+    // If the first child is visible
     if (thresholds[0].isIntersecting) return
     fullyHiddenObserver.unobserve(slider.value!.children[0])
 
@@ -39,29 +38,29 @@ function loopFirstChildCallback(thresholds: IntersectionObserverEntry[], observe
     tmpCopy.shift()
     tmpCopy.push(firstElement)
     strings.value = tmpCopy
-
-    console.log(slider.value!.children[0].clientWidth);
     
-    slider.value!.scrollLeft -= slider.value!.children[0].clientWidth + 16
-    // createIntersectionObserver(loopFirstChildCallback)
+    var style = window.getComputedStyle(slider.value!.children[0]);
+    // Shift the scroll back of the component width (without forgetting the left margin)
+    slider.value!.scrollLeft -= slider.value!.children[0].clientWidth + parseInt(style.marginLeft)
     nextTick(() => {
-        console.log("strings values: ", strings.value);
-        createFullyHiddenObserver(loopFirstChildCallback)
+        fullyHiddenObserver.observe(slider.value!.children[0])
     })
 }
 
 onUnmounted(() => {
-    if (autoScrollInterval != null)
+    if (autoScrollInterval != null){
         clearInterval(autoScrollInterval)
+        fullyHiddenObserver.disconnect()
+    }
 })
 
 </script>
 
 <template>
     <div class="bg-secondary px-10 py-20">
-        <div class="flex overflow-x-scroll space-x-4" ref="slider">
+        <div class="flex overflow-x-scroll" ref="slider">
             <!-- <div class="h-64 w-64 shrink-0 bg-green-200"/> -->
-            <div class="flex-center  h-64 w-64 shrink-0 bg-green-200" v-for="(string, i) of strings" :key="string" :style="{ opacity: +string / 10}">
+            <div class="flex-center ml-4 h-64 w-64 shrink-0 bg-green-200" v-for="(string, i) of strings" :key="string" :style="{ opacity: +string / 10}">
                 {{ string }}
             </div>
         </div>
