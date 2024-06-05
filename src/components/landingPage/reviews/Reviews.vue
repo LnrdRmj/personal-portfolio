@@ -19,8 +19,6 @@ const reviews = ref(getReviews())
 // Unfortunatelly when we change the languages we also have to "recalculate" the works
 i18next.on("languageChanged", () => {
     reviews.value = getReviews()
-    console.log('reviews updated');
-    
 });
 
 function getReviews(): Review[] {

@@ -9,3 +9,12 @@ body, html, #app {
 .flex-center{
     @apply flex justify-center items-center
 }
+
+.hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}

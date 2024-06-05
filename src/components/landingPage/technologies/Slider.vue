@@ -1,21 +1,70 @@
 <script setup lang="ts">
+import IconVue from './icons/ICON_VUE.svg';
+import IconFlutter from './icons/ICON_FLUTTER.svg';
+import IconGit from './icons/ICON_GIT.svg';
+import IconJava from './icons/ICON_JAVA.svg';
+import IconJS from './icons/ICON_JS.svg';
+import IconNode from './icons/ICON_NODE.svg';
+import IconTailwind from './icons/ICON_TAILWIND.svg';
+import IconTypescript from './icons/ICON_TYPESCRIPT.svg';
+
 import { nextTick, onMounted, onUnmounted, ref } from 'vue';
+
+type Technology = {
+    imageSrc: string,
+    label: string
+}
+
+const technologies = ref<Technology[]>([
+    {
+        imageSrc: IconJS,
+        label: 'JavaScript',
+    },
+    {
+        imageSrc: IconTypescript,
+        label: 'TypeScript',
+    },
+    {
+        imageSrc: IconVue,
+        label: 'Vue',
+    },
+    {
+        imageSrc: IconTailwind,
+        label: 'Tailwind CSS',
+    },
+    {
+        imageSrc: IconNode,
+        label: 'Node.js',
+    },
+    {
+        imageSrc: IconFlutter,
+        label: 'Flutter',
+    },
+    {
+        imageSrc: IconGit,
+        label: 'Git',
+    },
+    {
+        imageSrc: IconJava,
+        label: 'Java',
+    },
+])
 
 const slider = ref<HTMLElement | null>(null)
 let autoScrollInterval: number | null
-
-let strings = ref(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'])
 
 let fullyHiddenObserver: IntersectionObserver
 // Add 100px to the left margin of the slider
 const rootMargin = '0px 0px 0px 100px'
 
+const scrollingSpeed = ref(0.5)
+
 onMounted(() => {
     autoScrollInterval = setInterval(() => {
         if (slider.value == null) return
 
-        slider.value.scrollLeft += 0.5
-    }, 20)
+        slider.value.scrollLeft += scrollingSpeed.value
+    }, 15)
 
     createFullyHiddenObserver(loopFirstChildCallback)
 })
@@ -33,11 +82,11 @@ function loopFirstChildCallback(thresholds: IntersectionObserverEntry[], observe
     if (thresholds[0].isIntersecting) return
     fullyHiddenObserver.unobserve(slider.value!.children[0])
 
-    let tmpCopy: string[] = JSON.parse(JSON.stringify(strings.value))
-    let firstElement = strings.value[0]
+    let tmpCopy: Technology[] = JSON.parse(JSON.stringify(technologies.value))
+    let firstElement = technologies.value[0]
     tmpCopy.shift()
     tmpCopy.push(firstElement)
-    strings.value = tmpCopy
+    technologies.value = tmpCopy
     
     var style = window.getComputedStyle(slider.value!.children[0]);
     // Shift the scroll back of the component width (without forgetting the left margin)
@@ -58,10 +107,14 @@ onUnmounted(() => {
 
 <template>
     <div class="bg-secondary px-10 py-20">
-        <div class="flex overflow-x-scroll" ref="slider">
+        <div class="flex overflow-x-scroll hide-scrollbar" ref="slider"
+            @mouseenter="scrollingSpeed = 0"
+            @mouseleave="scrollingSpeed = .5"
+            style="transform: translate3d(0, 0, 0)">
             <!-- <div class="h-64 w-64 shrink-0 bg-green-200"/> -->
-            <div class="flex-center ml-4 h-64 w-64 shrink-0 bg-green-200" v-for="(string, i) of strings" :key="string" :style="{ opacity: +string / 10}">
-                {{ string }}
+            <div class="flex-center flex-col ml-4 h-64 w-64 shrink-0" v-for="(technology, i) of technologies" :key="i">
+                <img :src="technology.imageSrc" class="size-24 mb-5"/>
+                <div class="text-white text-2xl font-semibold"> {{ technology.label }} </div>
             </div>
         </div>
     </div>
