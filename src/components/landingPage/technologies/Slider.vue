@@ -8,6 +8,7 @@ import IconNode from './icons/ICON_NODE.svg';
 import IconTailwind from './icons/ICON_TAILWIND.svg';
 import IconTypescript from './icons/ICON_TYPESCRIPT.svg';
 import IconLaravel from './icons/ICON_LARAVEL.svg';
+import IconDocker from './icons/ICON_DOCKER.svg';
 
 import { nextTick, onMounted, onUnmounted, ref } from 'vue';
 
@@ -40,6 +41,10 @@ const technologies = ref<Technology[]>([
     {
         imageSrc: IconNode,
         label: 'Node.js',
+    },
+    {
+        imageSrc: IconDocker,
+        label: 'Docker',
     },
     {
         imageSrc: IconFlutter,
@@ -95,6 +100,7 @@ function loopFirstChildCallback(thresholds: IntersectionObserverEntry[], observe
     if (thresholds[0].isIntersecting) return
     fullyHiddenObserver.unobserve(slider.value!.children[0])
 
+    // Move first element to the back
     let tmpCopy: Technology[] = JSON.parse(JSON.stringify(technologies.value))
     let firstElement = technologies.value[0]
     tmpCopy.shift()
