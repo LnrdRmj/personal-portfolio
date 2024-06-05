@@ -77,7 +77,7 @@ onUnmounted(() => {
 <template>
     <div class="flex flex-col bg-secondary rounded-[20px] px-16">
         <div class="w-full bg-zinc-800 h-[2px] shrink-0 mt-[50px] mb-4"/>
-        <div class="text-3xl text-white font-semibold mb-10">
+        <div class="uppercase font-normal text-2xl mb-[80px] text-white">
             COSA DICONO I MIEI CLIENTI
         </div>
         <div class="flex h-[650px] space-x-5">

@@ -4,7 +4,7 @@ import WorkCard from './WorkCard.vue'
 
 <template>
     <div class="flex flex-col">
-        <div class="text-3xl font-medium mb-14 uppercase">
+        <div class="text-2xl font-medium mb-14 uppercase">
             {{  $t('featuredWorks.title') }}
         </div>
         <!-- grid-rows-[repeat(auto-fill,minmax(500px,auto))] -->

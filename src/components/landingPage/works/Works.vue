@@ -19,7 +19,7 @@ const hovered = ref<boolean[]>([])
 
 <template>
     <div class="flex flex-col">
-        <div class="text-3xl font-semibold mb-10 uppercase">
+        <div class="text-2xl font-semibold mb-10 uppercase">
             {{ $t('worksSection.title') }}
         </div>
         <div class="w-full [&>*]:items-center [&>*:last-child]:border-b [&>*:last-child]:border-b-black">
