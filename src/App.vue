@@ -5,7 +5,7 @@ import Footer from './components/landingPage/footer/Footer.vue';
 import Reviews from './components/landingPage/reviews/Reviews.vue';
 import Services from './components/landingPage/services/Services.vue';
 import Works from './components/landingPage/works/Works.vue';
-
+import Slider from './components/landingPage/technologies/Slider.vue'
 import EmailIcon from './assets/emailicon.png';
 import WhatsappIcon from './assets/whatsappicon.png';
 
@@ -46,6 +46,9 @@ i18next.on("languageChanged", () => {
                 </button>
 
             </div>
+        </div>
+        <div>
+            <Slider/>
         </div>
         <div class="w-full shrink-0 px-20">
             <div class="w-full bg-slate-400 h-[2px] shrink-0 mb-5"/>
