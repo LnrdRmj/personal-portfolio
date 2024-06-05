@@ -1,8 +1,7 @@
 <script setup lang="ts">
 
-import { ref, watch } from 'vue';
-import WhiteArrow from '../assets/white_arrow.svg'
 import { useTranslation } from "i18next-vue";
+import { ref, watch } from 'vue';
 import ContactMe from './common/ContactMe.vue';
 const { i18next } = useTranslation();
 
