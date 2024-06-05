@@ -47,7 +47,7 @@ i18next.on("languageChanged", () => {
 
             </div>
         </div>
-        <div>
+        <div class="mb-32">
             <Slider/>
         </div>
         <div class="w-full shrink-0 px-20">
