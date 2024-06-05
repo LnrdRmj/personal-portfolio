@@ -9,6 +9,7 @@ import IconTailwind from './icons/ICON_TAILWIND.svg';
 import IconTypescript from './icons/ICON_TYPESCRIPT.svg';
 import IconLaravel from './icons/ICON_LARAVEL.svg';
 import IconDocker from './icons/ICON_DOCKER.svg';
+import IconFirebase from './icons/ICON_FIREBASE.svg';
 
 import { nextTick, onMounted, onUnmounted, ref } from 'vue';
 
@@ -35,12 +36,16 @@ const technologies = ref<Technology[]>([
         label: 'Tailwind CSS',
     },
     {
+        imageSrc: IconNode,
+        label: 'Node.js',
+    },
+    {
         imageSrc: IconLaravel,
         label: 'Laravel',
     },
     {
-        imageSrc: IconNode,
-        label: 'Node.js',
+        imageSrc: IconFirebase,
+        label: 'Firebase',
     },
     {
         imageSrc: IconDocker,
