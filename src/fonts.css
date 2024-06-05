@@ -132,18 +132,3 @@
     font-weight: 900;
     font-style: italic;
 }
-
-/* Extrablack */
-@font-face {
-    font-family: 'AreaNormalTrial';
-    src: url('fonts/AreaNormalTrial-Extralblack-BF65ea75c662008.otf') format('opentype');
-    font-weight: 950;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'AreaNormalTrial';
-    src: url('fonts/AreaNormalTrial-ExtralblackItalic-BF65ea75c68c2d6.otf') format('opentype');
-    font-weight: 950;
-    font-style: italic;
-}
