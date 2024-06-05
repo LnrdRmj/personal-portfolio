@@ -7,6 +7,7 @@ import IconJS from './icons/ICON_JS.svg';
 import IconNode from './icons/ICON_NODE.svg';
 import IconTailwind from './icons/ICON_TAILWIND.svg';
 import IconTypescript from './icons/ICON_TYPESCRIPT.svg';
+import IconLaravel from './icons/ICON_LARAVEL.svg';
 
 import { nextTick, onMounted, onUnmounted, ref } from 'vue';
 
@@ -31,6 +32,10 @@ const technologies = ref<Technology[]>([
     {
         imageSrc: IconTailwind,
         label: 'Tailwind CSS',
+    },
+    {
+        imageSrc: IconLaravel,
+        label: 'Laravel',
     },
     {
         imageSrc: IconNode,
@@ -59,12 +64,20 @@ const rootMargin = '0px 0px 0px 100px'
 
 const scrollingSpeed = ref(0.5)
 
-onMounted(() => {
-    autoScrollInterval = setInterval(() => {
-        if (slider.value == null) return
+function updateScrollLeft() {
+    if (slider.value == null) return
+    slider.value.scrollLeft += scrollingSpeed.value
+}
 
-        slider.value.scrollLeft += scrollingSpeed.value
-    }, 15)
+onMounted(() => {
+    requestAnimationFrame(() => {
+        
+        let repeatFunction = () => {
+            updateScrollLeft()
+            requestAnimationFrame(repeatFunction)
+        }
+        requestAnimationFrame(repeatFunction)
+    })
 
     createFullyHiddenObserver(loopFirstChildCallback)
 })
