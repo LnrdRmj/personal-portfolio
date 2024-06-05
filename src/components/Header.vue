@@ -3,6 +3,7 @@
 import { ref, watch } from 'vue';
 import WhiteArrow from '../assets/white_arrow.svg'
 import { useTranslation } from "i18next-vue";
+import ContactMe from './common/ContactMe.vue';
 const { i18next } = useTranslation();
 
 const language = ref<string>(i18next.language)
@@ -26,14 +27,15 @@ watch(language, () => {
             <button> {{ $t('headerSection.work') }} </button>
             <button> {{ $t('headerSection.whoAmI') }} </button>
             <button> {{ $t('headerSection.services') }} </button>
-            <button class="rounded-full border flex items-center border-primary py-1 px-4">
+            <!-- <button class="rounded-full border flex items-center border-primary py-1 px-4">
                 <div class="mr-2">
                     {{ $t('contactMe') }}
                 </div>
                 <div>
                     <img :src="WhiteArrow" alt="" srcset="">
                 </div>
-            </button>
+            </button> -->
+            <ContactMe/>
         </div>
     </div>
 </template>
