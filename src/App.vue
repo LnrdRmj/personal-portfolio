@@ -10,7 +10,7 @@ import EmailIcon from './assets/emailicon.png';
 import WhatsappIcon from './assets/whatsappicon.png';
 
 import { useTranslation } from "i18next-vue";
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import { getWorks } from './data/works';
 const { t, i18next } = useTranslation();
 
@@ -79,14 +79,14 @@ i18next.on("languageChanged", () => {
                     <img class="h-4 mt-[5px] mr-2" :src="WhatsappIcon" alt="">
                     <div class="flex flex-col font-semibold">
                         <div class="text-lg">Whatsapp</div>
-                        <div>+39 345 9768944</div>
+                        <div>+39 327 955 1219</div>
                     </div>
                 </div>
                 <div class="flex mt-6">
                     <img class="h-4 mt-[5px] mr-2" :src="EmailIcon" alt="">
                     <div class="flex flex-col font-semibold">
                         <div class="text-lg">Email</div>
-                        <div>info@iacopopazzaglia.it</div>
+                        <div>leonardo.ra14@icloud.com</div>
                     </div>
                 </div>
             </div>
