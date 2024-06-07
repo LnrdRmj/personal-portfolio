@@ -72,7 +72,7 @@ let fullyHiddenObserver: IntersectionObserver
 // Add 100px to the left margin of the slider
 const rootMargin = '0px 0px 0px 100px'
 
-const scrollingSpeed = ref(0.5)
+const scrollingSpeed = ref(1)
 
 function updateScrollLeft() {
     if (slider.value == null) return
@@ -91,7 +91,7 @@ onMounted(() => {
 
     setInterval(() => {
         updateScrollLeft()
-    }, 20)
+    }, 15)
 
     createFullyHiddenObserver(loopFirstChildCallback)
 })
@@ -139,7 +139,7 @@ onUnmounted(() => {
         <div class="uppercase font-normal text-white text-2xl mb-[80px]">{{ $t('technolgiesSection.title') }}</div>
         <div class="flex overflow-x-scroll hide-scrollbar" ref="slider"
             @mouseenter="scrollingSpeed = 0"
-            @mouseleave="scrollingSpeed = .5"
+            @mouseleave="scrollingSpeed = 1"
             style="transform: translate3d(0, 0, 0)">
             <!-- <div class="h-64 w-64 shrink-0 bg-green-200"/> -->
             <div class="flex-center flex-col ml-4 h-64 w-64 shrink-0" v-for="(technology, i) of technologies" :key="i">
