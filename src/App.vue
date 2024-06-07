@@ -1,16 +1,16 @@
 <script setup lang="ts">
+import EmailIcon from './assets/emailicon.png';
+import WhatsappIcon from './assets/whatsappicon.png';
 import Header from './components/Header.vue';
 import FeaturedWorks from './components/landingPage/feturedWorks/FeaturedWorks.vue';
 import Footer from './components/landingPage/footer/Footer.vue';
 import Reviews from './components/landingPage/reviews/Reviews.vue';
 import Services from './components/landingPage/services/Services.vue';
+import Slider from './components/landingPage/technologies/Slider.vue';
 import Works from './components/landingPage/works/Works.vue';
-import Slider from './components/landingPage/technologies/Slider.vue'
-import EmailIcon from './assets/emailicon.png';
-import WhatsappIcon from './assets/whatsappicon.png';
 
 import { useTranslation } from "i18next-vue";
-import { ref, computed } from 'vue';
+import { ref } from 'vue';
 import { getWorks } from './data/works';
 const { t, i18next } = useTranslation();
 
