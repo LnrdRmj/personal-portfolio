@@ -18,15 +18,16 @@ import ContactMe from '../../common/ContactMe.vue';
             </div>
             <div class="flex flex-col">
                 <div class="text-zinc-300 mb-2"> {{ $t('footerSection.writeMe') }} </div>
-                <div> info@nocodejack.it </div>
-                <div> +39 3459768944 </div>
+                <div> leonardo.ra14@icloud.com </div>
+                <div> +39 327 955 1219 </div>
             </div>
-            <div class="flex flex-col">
+            <!-- For when I'll actually have a P.Iva -->
+            <!-- <div class="flex flex-col">
                 <div class="text-zinc-300 mb-2"> Dati Fiscali </div>
                 <div> P.IVA - 07345890482 </div>
                 <div> Sesto Fiorentino (FI), 50019 </div>
                 <div> Via Beccaria 19 </div>
-            </div>
+            </div> -->
         </div>
     </footer>
 </template>

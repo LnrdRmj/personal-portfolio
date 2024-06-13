@@ -6,6 +6,7 @@ import FeaturedWorks from './components/landingPage/feturedWorks/FeaturedWorks.v
 import Footer from './components/landingPage/footer/Footer.vue';
 import Reviews from './components/landingPage/reviews/Reviews.vue';
 import Services from './components/landingPage/services/Services.vue';
+import Slider from './components/landingPage/technologies/Slider.vue';
 import Works from './components/landingPage/works/Works.vue';
 
 import { useTranslation } from "i18next-vue";
@@ -26,11 +27,13 @@ i18next.on("languageChanged", () => {
     <div class="flex flex-col w-full h-full overflow-y-scroll bg-primary">
         <div class="flex flex-col h-screen w-full shrink-0">
             <Header class="fixed w-full z-20"></Header>
-            <div class="flex flex-col pl-36">
-                <div class="text-7xl w-full font-semibold max-w-[1100px] mt-36">
-                    <div>{{ $t('title') }}</div>
+            <div class="flex flex-col px-10 sm:px-36">
+                <div class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl w-full
+                            font-medium sm:font-semibold
+                            max-w-[1100px] mt-36">
+                    <div v-html="$t('title')"></div>
                 </div>
-                <div class="text-2xl mt-12">
+                <div class="text-xl mt-12">
                     <div>
                         {{ $t('underTitle.phrase1') }}
                     </div>
@@ -53,8 +56,8 @@ i18next.on("languageChanged", () => {
         <div class="shrink-0 px-3 mt-64 mb-72">
             <Services/>
         </div>
-        <div class="max-w-full bg-gray-400 h-[2px] shrink-0 mb-5 mx-20"/>
-        <Works :works="works" class="pb-24 max-w-full mx-20"/>
+        <div class="max-w-full bg-gray-400 h-[2px] shrink-0 mb-5 mx-10 sm:mx-36"/>
+        <Works :works="works" class="px-10 sm:px-36 max-w-full mb-32"/>
         <div class="px-3 shrink-0">
             <Reviews/>
         </div>
@@ -75,14 +78,14 @@ i18next.on("languageChanged", () => {
                     <img class="h-4 mt-[5px] mr-2" :src="WhatsappIcon" alt="">
                     <div class="flex flex-col font-semibold">
                         <div class="text-lg">Whatsapp</div>
-                        <div>+39 345 9768944</div>
+                        <div>+39 327 955 1219</div>
                     </div>
                 </div>
                 <div class="flex mt-6">
                     <img class="h-4 mt-[5px] mr-2" :src="EmailIcon" alt="">
                     <div class="flex flex-col font-semibold">
                         <div class="text-lg">Email</div>
-                        <div>info@iacopopazzaglia.it</div>
+                        <div>leonardo.ra14@icloud.com</div>
                     </div>
                 </div>
             </div>

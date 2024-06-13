@@ -18,3 +18,8 @@ body, html, #app {
 .hide-scrollbar::-webkit-scrollbar {
     display: none;  /* Safari and Chrome */
 }
+
+.gradient-text{
+    background-size: 200% 200%;
+    @apply animate-background-scroll text-transparent bg-gradient-to-tl from-amber-500 to-pink-500 bg-clip-text
+}

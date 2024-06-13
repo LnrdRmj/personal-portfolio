@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
     <div class="flex flex-col">
-        <div class="rounded-[20px] overflow-hidden aspect-[.8]">
+        <div class="rounded-xl sm:rounded-[20px] overflow-hidden aspect-[1.2] sm:aspect-[.8]">
             <img :src="imageSrc" class="object-cover size-full" alt="">
         </div>
         <div class="mt-5 text-sm font-semibold">

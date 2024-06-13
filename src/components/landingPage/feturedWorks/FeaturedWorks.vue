@@ -8,7 +8,7 @@ import WorkCard from './WorkCard.vue'
             {{  $t('featuredWorks.title') }}
         </div>
         <!-- grid-rows-[repeat(auto-fill,minmax(500px,auto))] -->
-        <div class="grid grid-cols-3 gap-7 grid-rows-[repeat(5,minmax(200px,auto))]">
+        <div class="flex flex-col space-y-8 sm:space-y-0 sm:grid sm:grid-cols-3 sm:gap-7 sm:grid-rows-[repeat(5,minmax(200px,auto))]">
             <WorkCard class="col-span-2 row-span-2"
                 :client="$t('featuredWorks.work1.client')"
                 :role="$t('featuredWorks.work1.role')"
