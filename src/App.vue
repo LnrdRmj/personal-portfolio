@@ -59,8 +59,8 @@ i18next.on("languageChanged", () => {
         <div class="shrink-0 px-3 mt-64 mb-72">
             <Services/>
         </div>
-        <div class="max-w-full bg-gray-400 h-[2px] shrink-0 mb-5 mx-20"/>
-        <Works :works="works" class="pb-24 max-w-full mx-20"/>
+        <div class="max-w-full bg-gray-400 h-[2px] shrink-0 mb-5 mx-10 sm:mx-36"/>
+        <Works :works="works" class="px-10 sm:px-36 max-w-full mb-32"/>
         <div class="px-3 shrink-0">
             <Reviews/>
         </div>
