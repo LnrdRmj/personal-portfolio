@@ -27,14 +27,13 @@ i18next.on("languageChanged", () => {
     <div class="flex flex-col w-full h-full overflow-y-scroll bg-primary">
         <div class="flex flex-col h-screen w-full shrink-0">
             <Header class="fixed w-full z-20"></Header>
-            <div class="flex flex-col px-16 sm:px-36">
-                <div class="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl w-full
+            <div class="flex flex-col px-10 sm:px-36">
+                <div class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl w-full
                             font-medium sm:font-semibold
                             max-w-[1100px] mt-36">
                     <div v-html="$t('title')"></div>
-                    <div class="hidden test-transparent animate-background-scroll  bg-gradient-to-tl from-amber-500 to-pink-500 bg-clip-text"></div>
                 </div>
-                <div class="text-2xl mt-12">
+                <div class="text-xl mt-12">
                     <div>
                         {{ $t('underTitle.phrase1') }}
                     </div>
