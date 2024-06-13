@@ -1,5 +1,5 @@
 {
-    "title": "Ciao, sono Leonardo Ramaj e sono un Full Stack Developer freelancer!",
+    "title": "Ciao, sono Leonardo Ramaj e sono un <span style=\"background-size: 200% 200%\" class=\"animate-background-scroll text-transparent bg-gradient-to-tl from-amber-500 to-pink-500 bg-clip-text\">Full Stack Developer</span> freelancer",
     "underTitle": {
         "phrase1": "Pronto a trasformare la tua visione digitale in realtà?",
         "phrase2": "Contattami oggi per prenotare una consulenza gratuita e discutere del tuo progetto."
