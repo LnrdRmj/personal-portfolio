@@ -27,14 +27,14 @@ const hovered = ref(false)
                     transition-transform duration-700 hover:scale-110">
         </div>
         <div class="w-full bg-slate-300 h-[2px] shrink-0 mt-3 mb-1"/>
-        <div class="flex justify-between"
+        <div class="flex flex-col sm:flex-row justify-between"
             :class="{
                 'justify-between': isBigVariant,
                 'flex-col': !isBigVariant,
             }">
-            <div class="relative h-8 [&>*]:uppercase"
+            <div class="relative h-8 w-full [&>*]:uppercase"
                 :class="{
-                    'w-1/2': isBigVariant
+                    'sm:w-1/2': isBigVariant
                 }">
                 <div class="font-bold h-fit absolute transition-all duration-300" :class="hovered == true ? 'opacity-0 -translate-y-full' : 'opacity-100 translate-y-0'">
                     {{ client }}
@@ -45,7 +45,7 @@ const hovered = ref(false)
             </div>
             <div class="font-semibold" 
                 :class="{
-                    'w-1/2': isBigVariant
+                    'sm:w-1/2': isBigVariant
                 }">
                 {{ description }}
             </div>
