@@ -6,7 +6,6 @@ import FeaturedWorks from './components/landingPage/feturedWorks/FeaturedWorks.v
 import Footer from './components/landingPage/footer/Footer.vue';
 import Reviews from './components/landingPage/reviews/Reviews.vue';
 import Services from './components/landingPage/services/Services.vue';
-import Slider from './components/landingPage/technologies/Slider.vue';
 import Works from './components/landingPage/works/Works.vue';
 
 import { useTranslation } from "i18next-vue";
