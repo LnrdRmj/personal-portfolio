@@ -1,13 +1,13 @@
 <script setup lang="ts">
+import EmailIcon from './assets/emailicon.png';
+import WhatsappIcon from './assets/whatsappicon.png';
 import Header from './components/Header.vue';
 import FeaturedWorks from './components/landingPage/feturedWorks/FeaturedWorks.vue';
 import Footer from './components/landingPage/footer/Footer.vue';
 import Reviews from './components/landingPage/reviews/Reviews.vue';
 import Services from './components/landingPage/services/Services.vue';
+import Slider from './components/landingPage/technologies/Slider.vue';
 import Works from './components/landingPage/works/Works.vue';
-import Slider from './components/landingPage/technologies/Slider.vue'
-import EmailIcon from './assets/emailicon.png';
-import WhatsappIcon from './assets/whatsappicon.png';
 
 import { useTranslation } from "i18next-vue";
 import { ref } from 'vue';
@@ -27,9 +27,12 @@ i18next.on("languageChanged", () => {
     <div class="flex flex-col w-full h-full overflow-y-scroll bg-primary">
         <div class="flex flex-col h-screen w-full shrink-0">
             <Header class="fixed w-full z-20"></Header>
-            <div class="flex flex-col pl-36">
-                <div class="text-7xl w-full font-semibold max-w-[1100px] mt-36">
-                    <div>{{ $t('title') }}</div>
+            <div class="flex flex-col px-16 sm:px-36">
+                <div class="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl w-full
+                            font-medium sm:font-semibold
+                            max-w-[1100px] mt-36">
+                    <div v-html="$t('title')"></div>
+                    <div class="hidden test-transparent animate-background-scroll  bg-gradient-to-tl from-amber-500 to-pink-500 bg-clip-text"></div>
                 </div>
                 <div class="text-2xl mt-12">
                     <div>
@@ -79,14 +82,14 @@ i18next.on("languageChanged", () => {
                     <img class="h-4 mt-[5px] mr-2" :src="WhatsappIcon" alt="">
                     <div class="flex flex-col font-semibold">
                         <div class="text-lg">Whatsapp</div>
-                        <div>+39 345 9768944</div>
+                        <div>+39 327 955 1219</div>
                     </div>
                 </div>
                 <div class="flex mt-6">
                     <img class="h-4 mt-[5px] mr-2" :src="EmailIcon" alt="">
                     <div class="flex flex-col font-semibold">
                         <div class="text-lg">Email</div>
-                        <div>info@iacopopazzaglia.it</div>
+                        <div>leonardo.ra14@icloud.com</div>
                     </div>
                 </div>
             </div>
