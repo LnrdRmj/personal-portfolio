@@ -49,7 +49,7 @@ i18next.on("languageChanged", () => {
 
             </div>
         </div>
-        <div class="w-full shrink-0 px-20">
+        <div class="w-full shrink-0 px-10 sm:px-36">
             <div class="w-full bg-slate-400 h-[2px] shrink-0 mb-5"/>
             <FeaturedWorks/>
         </div>
