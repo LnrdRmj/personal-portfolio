@@ -10,7 +10,9 @@ import ContactMe from '../../common/ContactMe.vue';
             <div> LOGO </div>
             <ContactMe/>
         </div>
-        <div class="flex text-sm mt-16 space-x-32">
+        <div class="flex flex-col space-x-0 space-y-10 
+                    md:flex-row md:space-x-32 md:space-y-0
+                    text-sm mt-16 ">
             <div class="flex flex-col">
                 <div class="text-zinc-300 mb-2"> Social </div>
                 <div> Linkedin </div>
