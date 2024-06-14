@@ -64,11 +64,11 @@ i18next.on("languageChanged", () => {
         <div class="px-3 shrink-0">
             <Reviews/>
         </div>
-        <div class="flex flex-col px-72 my-52">
+        <div class="flex flex-col px-10 sm:px-20 lg:px-36 my-52">
             <div class="max-w-full bg-gray-400 h-[2px] shrink-0 mb-5"/>
             <div class="uppercase text-2xl mb-16">{{  $t('contactsSection.title') }}</div>
             <div class="flex flex-col">
-                <div class="text-6xl font-semibold">
+                <div class="text-4xl sm:text-5xl lg:text-6xl font-semibold">
                     {{ $t('contactMe') }}
                 </div>
                 <div class="text-lg leading-5 mt-5">
@@ -92,7 +92,7 @@ i18next.on("languageChanged", () => {
                     </div>
                 </div>
             </div>
-            <button class="px-8 w-fit rounded-lg mt-20 bg-secondary py-3 text-white text-xl font-semibold
+            <button class="px-8 w-fit rounded-lg mt-20 bg-secondary py-3 text-white text-base lg:text-xl font-semibold
                 hover:bg-blue-600 transition-colors">
                 {{ $t('contactsSection.bookConsultation') }}
             </button>
