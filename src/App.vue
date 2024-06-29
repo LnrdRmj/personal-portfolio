@@ -25,7 +25,9 @@ i18next.on("languageChanged", () => {
 
 <template>
     <div>
-        <Header class="fixed w-full z-20"></Header>
+        <div class="fixed w-full z-20">
+            <Header class="w-full"></Header>
+        </div>
         <div class="flex flex-col w-full h-full overflow-y-scroll bg-primary">
             <div class="flex flex-col h-screen w-full shrink-0">
                 <div class="flex flex-col px-10 sm:px-36">
