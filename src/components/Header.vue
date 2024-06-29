@@ -38,14 +38,15 @@ const visibility = ref(false)
         <div class="lg:hidden
             text-white bg-black 
             absolute top-full left-0
-            w-full h-screen
+            flex flex-col md:flex-row
+            w-full h-screen md:h-fit
             z-10 py-12 px-8
             transition-[opacity,transform] duration-[250ms]"
             :class="visibility ? 'translate-y-0 opacity-100' : 'opacity-0 -translate-y-full'">
-            <div class="flex flex-col 
-                w-full 
-                border-t border-t-gray-500 
-                pt-20 px-6
+            <div class="flex flex-col
+                w-full md:w-1/3
+                border-t border-t-gray-500 md:border-none 
+                pt-20 px-6 md:pt-0
                 text-2xl">
                 <div class="flex flex-col items-start space-y-4">
                     <button> {{ $t('headerSection.work') }} </button>
@@ -54,8 +55,10 @@ const visibility = ref(false)
                     <button> {{ $t('headerSection.contacts') }} </button>
                 </div>
             </div>
-            <div class="w-full bg-gray-500 h-[1px] shrink-0 mt-16 mb-10" />
-            <div class="flex flex-col px-6">
+            <div class="bg-gray-500 
+                h-[1px] w-full md:h-auto md:w-[1px]
+                mt-16 mb-10 md:mt-0 md:mb-0"></div>
+            <div class="flex flex-col px-6 md:w-2/3">
                 <div class="text-2xl">
                     {{ $t('contactMe') }}!
                 </div>
