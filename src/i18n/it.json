@@ -9,7 +9,10 @@
         "work": "Lavori",
         "whoAmI": "Chi sono",
         "services": "Servizi",
-        "contacts": "Contatti"
+        "contacts": "Contatti",
+        "menu": {
+            "catchPhrase": "Prenota una consulenza gratuita per discutere con me del tuo progetto."
+        }
     },
     "knoweachotherbutton": "Conosciamoci!",
     "technolgiesSection": {

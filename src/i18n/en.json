@@ -9,7 +9,10 @@
         "work": "Works",
         "whoAmI": "Who am I",
         "services": "Services",
-        "contacts": "Contacts"
+        "contacts": "Contacts",
+        "menu": {
+            "catchPhrase": "Book a Free Consultation with me to discuss about your project."
+        }
     },
     "knoweachotherbutton": "Let's get in touch!",
     "technolgiesSection": {
