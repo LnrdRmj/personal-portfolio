@@ -30,7 +30,7 @@ i18next.on("languageChanged", () => {
         </div>
         <div class="flex flex-col w-full h-full overflow-y-scroll bg-primary">
             <div class="flex flex-col h-screen w-full shrink-0">
-                <div class="flex flex-col px-10 sm:px-36">
+                <div class="flex flex-col standard-responsive-padding">
                     <div class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl w-full
                                 font-medium sm:font-semibold
                                 max-w-[1100px] mt-36">
@@ -55,19 +55,21 @@ i18next.on("languageChanged", () => {
             <div class="mb-32">
                 <Slider />
             </div>
-            <div class="w-full shrink-0 px-10 sm:px-36">
+            <div class="w-full shrink-0 standard-responsive-padding">
                 <div class="w-full bg-gray-400 h-[2px] shrink-0 mb-5" />
                 <FeaturedWorks />
             </div>
             <div class="shrink-0 px-3 mt-64 mb-72">
                 <Services />
             </div>
-            <div class="max-w-full bg-gray-400 h-[2px] shrink-0 mb-5 mx-10 sm:mx-36" />
-            <Works :works="works" class="px-10 sm:px-36 max-w-full mb-32" />
+            <div class="standard-responsive-padding">
+                <div class="max-w-full bg-gray-400 h-[2px] shrink-0 mb-5" />
+            </div>
+            <Works :works="works" class="max-w-full mb-32 standard-responsive-padding" />
             <div class="px-3 shrink-0">
                 <Reviews />
             </div>
-            <div class="flex flex-col px-10 sm:px-20 lg:px-36 my-52">
+            <div class="flex flex-col standard-responsive-padding lg:px-36 my-52">
                 <div class="max-w-full bg-gray-400 h-[2px] shrink-0 mb-5" />
                 <div class="uppercase text-2xl mb-16">{{ $t('contactsSection.title') }}</div>
                 <div class="flex flex-col">
@@ -104,3 +106,9 @@ i18next.on("languageChanged", () => {
         </div>
     </div>
 </template>
+
+<style scoped>
+.standard-responsive-padding {
+    @apply px-10 sm:px-20 md:px-32
+}
+</style>
