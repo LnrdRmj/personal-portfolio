@@ -2,24 +2,231 @@
 @tailwind components;
 @tailwind utilities;
 
-body, html, #app {
-    @apply h-screen w-screen
+body,
+html,
+#app {
+  @apply h-screen w-screen;
 }
 
-.flex-center{
-    @apply flex justify-center items-center
+.flex-center {
+  @apply flex justify-center items-center;
 }
 
 .hide-scrollbar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-    display: none;  /* Safari and Chrome */
+  display: none; /* Safari and Chrome */
 }
 
-.gradient-text{
-    background-size: 200% 200%;
-    @apply animate-background-scroll text-transparent bg-gradient-to-tl from-amber-500 to-pink-500 bg-clip-text
+.gradient-text {
+  background-size: 200% 200%;
+  @apply animate-background-scroll text-transparent bg-gradient-to-tl from-amber-500 to-pink-500 bg-clip-text;
+}
+
+@layer global-animations {
+  /* 1. declare transition */
+  .group-fade-move {
+    transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  }
+
+  /* 2. declare enter from and leave to state */
+  .group-fade-enter-from,
+  .group-fade-leave-to {
+    opacity: 0;
+    transform: scaleY(0.01) translate(30px, 0);
+  }
+
+  /* 3. ensure leaving items are taken out of layout flow so that moving
+        animations can be calculated correctly. */
+  .group-fade-leave-active {
+    position: absolute;
+  }
+
+  /* smaller */
+  .smaller-leave-active {
+    transition: all 0.4s cubic-bezier(0.78, 0.32, 0.91, 0.81);
+  }
+
+  .smaller-enter-active {
+    transition: all 0.4s cubic-bezier(0, 0.94, 0.68, 0.98);
+  }
+
+  .smaller-leave-from,
+  .smaller-enter-to {
+    transform: translateY(0) scaleY(1);
+    opacity: 1;
+  }
+
+  .smaller-leave-to,
+  .smaller-enter-from {
+    transform: translateY(0) scaleY(0.6);
+    opacity: 0;
+  }
+
+  /* slide-right */
+  .slide-right-enter-active {
+    transition: transform 1s cubic-bezier(0.17, 0.67, 0.63, 0.9);
+  }
+  .slide-right-leave-active {
+    transition: transform 1s cubic-bezier(0.73, 0.34, 0.8, 0.8);
+  }
+
+  .slide-right-enter-from {
+    transform: translateX(-100%);
+  }
+  .slide-right-leave-to {
+    transform: translateX(100%);
+  }
+
+  /* slide-left */
+  .slide-left-enter-active {
+    transition: transform 1s cubic-bezier(0.17, 0.67, 0.63, 0.9);
+  }
+  .slide-left-leave-active {
+    transition: transform 1s cubic-bezier(0.73, 0.34, 0.8, 0.8);
+  }
+
+  .slide-left-enter-from {
+    transform: translateX(100%);
+  }
+  .slide-left-leave-to {
+    transform: translateX(-100%);
+  }
+
+  /* to-from-down */
+  .to-from-down-enter-active,
+  .to-from-down-leave-active {
+    transition: all 1s ease;
+  }
+
+  .to-from-down-leave-from,
+  .to-from-down-enter-to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .to-from-down-enter-from,
+  .to-from-down-leave-to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  /* to-from-up */
+  .to-from-up-enter-active,
+  .to-from-up-leave-active {
+    transition: all 1s ease;
+  }
+
+  .to-from-up-leave-from,
+  .to-from-up-enter-to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .to-from-up-enter-from,
+  .to-from-up-leave-to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  /* to-from-left */
+  .to-from-left-enter-active,
+  .to-from-left-leave-active {
+    transition: all 1s ease;
+  }
+
+  .to-from-left-leave-from,
+  .to-from-left-enter-to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .to-from-left-enter-from,
+  .to-from-left-leave-to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  /* to-from-right */
+  .to-from-right-enter-active,
+  .to-from-right-leave-active {
+    transition: all 1s ease;
+  }
+
+  .to-from-right-leave-from,
+  .to-from-right-enter-to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .to-from-right-enter-from,
+  .to-from-right-leave-to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  /* Slide */
+  .slide-enter-to {
+    position: absolute;
+    width: 100%;
+    right: 0;
+  }
+
+  .slide-enter-from {
+    position: absolute;
+    width: 100%;
+    right: -100%;
+  }
+
+  .slide-leave-to {
+    position: absolute;
+    width: 100%;
+    left: -100%;
+  }
+
+  .slide-leave-from {
+    position: absolute;
+    width: 100%;
+    left: 0;
+  }
+
+  /* fade animation */
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.5s ease;
+  }
+
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+  }
+
+  /* slide animation */
+  .slide-enter-active {
+    transition: all 0.4s cubic-bezier(0.17, 0.67, 0.33, 1.03);
+  }
+
+  .slide-leave-active {
+    transition: all 0.4s cubic-bezier(0.42, 0.13, 0.76, 0.36);
+  }
+
+  .slide-enter-from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  .slide-enter-to {
+    transform: translateX(0%);
+  }
+
+  .slide-leave-from {
+    transform: translateX(0%);
+  }
+
+  .slide-leave-to {
+    transform: translateX(100%);
+  }
 }
