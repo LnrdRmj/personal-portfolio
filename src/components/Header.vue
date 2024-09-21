@@ -19,7 +19,7 @@ const visibility = ref(false)
     <div class="flex flex-col relative">
         <div class="bg-black flex justify-between items-center text-white text-xl py-5 px-10 relative z-20">
             <div>
-                Leonardo Ramaj
+                Iacopo Pazzaglia
             </div>
             <div class="hidden lg:flex lg:justify-between lg:items-center lg:space-x-20">
                 <select name="" id="" class="bg-secondary text-white" v-model="language">
