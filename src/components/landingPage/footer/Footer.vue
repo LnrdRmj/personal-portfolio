@@ -5,10 +5,10 @@ import ContactMe from '../../common/ContactMe.vue';
 
 <template>
     <footer class="px-16 py-16 pb-32 text-white bg-secondary flex flex-col">
-        <div class="max-w-full bg-zinc-800 h-[2px] shrink-0 mb-5"/>
+        <div class="max-w-full bg-zinc-800 h-[2px] shrink-0 mb-5" />
         <div class="flex justify-between">
             <div> LOGO </div>
-            <ContactMe/>
+            <ContactMe />
         </div>
         <div class="flex flex-col space-x-0 space-y-10 
                     md:flex-row md:space-x-32 md:space-y-0
@@ -20,8 +20,8 @@ import ContactMe from '../../common/ContactMe.vue';
             </div>
             <div class="flex flex-col">
                 <div class="text-zinc-300 mb-2"> {{ $t('footerSection.writeMe') }} </div>
-                <div> leonardo.ra14@icloud.com </div>
-                <div> +39 327 955 1219 </div>
+                <div> iacopo2001p@gmail.com </div>
+                <div> +39345 976 8944 </div>
             </div>
             <!-- For when I'll actually have a P.Iva -->
             <!-- <div class="flex flex-col">
