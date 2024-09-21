@@ -85,7 +85,7 @@ i18next.on("languageChanged", () => {
                         <img class="h-4 mt-[5px] mr-2" :src="WhatsappIcon" alt="">
                         <div class="flex flex-col font-semibold">
                             <div class="text-lg">Whatsapp</div>
-                            <div>+39345 976 8944</div>
+                            <div>+39 345 976 8944</div>
                         </div>
                     </div>
                     <div class="flex mt-6">

@@ -21,7 +21,7 @@ import ContactMe from '../../common/ContactMe.vue';
             <div class="flex flex-col">
                 <div class="text-zinc-300 mb-2"> {{ $t('footerSection.writeMe') }} </div>
                 <div> iacopo2001p@gmail.com </div>
-                <div> +39345 976 8944 </div>
+                <div> +39 345 976 8944 </div>
             </div>
             <!-- For when I'll actually have a P.Iva -->
             <!-- <div class="flex flex-col">
