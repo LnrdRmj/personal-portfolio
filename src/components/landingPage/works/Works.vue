@@ -30,18 +30,23 @@ const hovered = ref<boolean[]>([])
                 <div class="hidden sm:block w-3/12">{{ $t('worksSection.table.skillsCol') }}</div>
                 <div class="hidden sm:block w-2/12"></div>
             </div>
-            <div v-for="(work, index) of works" @mouseenter="hovered[index] = true" @mouseleave="hovered[index] = false" class="flex items-center border-t border-t-black w-full font-medium h-16
+            <div v-for="(work, index) of works" @mouseenter="hovered[index] = true" @mouseleave="hovered[index] = false"
+                class="flex items-center border-t border-t-black w-full font-medium h-16
                 group hover:bg-black hover:rounded-md [&:hover+div]:border-t-transparent transition-colors
                 text-lg sm:text-base">
-                <div class="hidden sm:block w-2/12 text-zinc-400 group-hover:pl-5 transition-[padding]">{{ work.period }}</div>
-                <div class="w-[45%] sm:w-2/12 group-hover:pl-5 group-hover:text-white transition-[padding]">{{ work.clientName }}</div>
-                <div class="w-[45%] sm:w-3/12 group-hover:pl-5 group-hover:text-white transition-[padding]">{{ work.role }}</div>
+                <div class="hidden sm:block w-2/12 text-zinc-400 group-hover:pl-5 transition-[padding]">{{ work.period
+                    }}</div>
+                <div class="w-[45%] sm:w-2/12 group-hover:pl-5 group-hover:text-white transition-[padding]">{{
+                    work.clientName }}</div>
+                <div class="w-[45%] sm:w-3/12 group-hover:pl-5 group-hover:text-white transition-[padding]">{{ work.role
+                    }}</div>
                 <div class="hidden w-3/12 sm:flex space-x-3 text-sm">
-                    <div v-for="skill of work.skills" class="border flex-center uppercase rounded-md h-fit py-[2px] px-[7px] transition-colors"
-                    :style="hovered[index] == true 
-                        ? `color: ${skill.color}; border-color: ${skill.color}`
-                         : 'color: black; border-color: black'">
-                        {{skill.name}}
+                    <div v-for="skill of work.skills"
+                        class="border flex-center uppercase rounded-md h-fit pt-[2px] pb-[4px] px-[7px] transition-colors"
+                        :style="hovered[index] == true
+                            ? `color: ${skill.color}; border-color: ${skill.color}`
+                            : 'color: black; border-color: black'">
+                        {{ skill.name }}
                     </div>
                 </div>
                 <div class="w-2/12">
