@@ -1,23 +1,25 @@
 <script setup lang="ts">
-import { getWorks } from "../../data/works/works";
-import Header from "../Header.vue";
 import EmailIcon from "../../assets/emailicon.png";
 import WhatsappIcon from "../../assets/whatsappicon.png";
+import { getWorks } from "../../data/works/works";
+import Header from "../Header.vue";
 
 import { useTranslation } from "i18next-vue";
 import { ref } from "vue";
-import Slider from "./technologies/Slider.vue";
 import FeaturedWorks from "./feturedWorks/FeaturedWorks.vue";
-import Services from "./services/Services.vue";
-import Reviews from "./reviews/Reviews.vue";
 import Footer from "./footer/Footer.vue";
+import Reviews from "./reviews/Reviews.vue";
+import Services from "./services/Services.vue";
+import Slider from "./technologies/Slider.vue";
+import Works from "./works/Works.vue";
 const { t, i18next } = useTranslation();
 
-const works = ref(getWorks({ t, i18next }));
+const works = ref(getWorks());
+console.log(works.value);
 
 // Unfortunatelly when we change the languages we also have to "recalculate" the works
 i18next.on("languageChanged", () => {
-    works.value = getWorks({ t, i18next });
+    works.value = getWorks();
 });
 </script>
 

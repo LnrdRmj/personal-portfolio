@@ -1,6 +1,8 @@
 import { useTranslation } from "i18next-vue";
 import { I18nValue, createI18ValueWithFromOne } from "../../i18n/i18n";
 
+import YoomyBannerProject from "./assets/yoomyBannerProject.png";
+
 const skills = {
     web: { name: "WEB", color: "#79F7FF" },
     devops: { name: "DEVOPS", color: "#A7FF7D" },
@@ -10,8 +12,8 @@ const skills = {
     react: { name: "REACT", color: "#CE90FF" },
 };
 
-export function getWorks(translationObject: ReturnType<typeof useTranslation>) {
-    const t = translationObject.i18next.t;
+export function getWorks() {
+    const { t } = useTranslation();
     return [
         {
             id: 1,
@@ -22,6 +24,7 @@ export function getWorks(translationObject: ReturnType<typeof useTranslation>) {
                 it: "Programmatore",
             } satisfies I18nValue,
             skills: [skills.web, skills.devops, skills.team],
+            bannerPath: YoomyBannerProject,
         },
         {
             id: 2,
@@ -29,6 +32,7 @@ export function getWorks(translationObject: ReturnType<typeof useTranslation>) {
             clientName: "Yoomy",
             role: createI18ValueWithFromOne("Fullstack developer") satisfies I18nValue,
             skills: [skills.web, skills.vue, skills.app],
+            bannerPath: YoomyBannerProject,
         },
         {
             id: 3,
@@ -36,6 +40,7 @@ export function getWorks(translationObject: ReturnType<typeof useTranslation>) {
             clientName: "NGSensors",
             role: createI18ValueWithFromOne("Web developer") satisfies I18nValue,
             skills: [skills.web, skills.react],
+            bannerPath: YoomyBannerProject,
         },
         {
             id: 4,
@@ -43,6 +48,7 @@ export function getWorks(translationObject: ReturnType<typeof useTranslation>) {
             clientName: "Paust Auction",
             role: createI18ValueWithFromOne("Web developer") satisfies I18nValue,
             skills: [skills.vue, skills.web],
+            bannerPath: YoomyBannerProject,
         },
     ];
 }
