@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { I18nValue } from '../../../i18n/i18n';
+import { useTranslation } from 'i18next-vue';
 
 defineProps<{
     works: {
         period: string,
         clientName: string,
-        role: string,
+        role: I18nValue,
         skills: {
             name: string,
             color: string
@@ -14,6 +16,7 @@ defineProps<{
 }>()
 
 const hovered = ref<boolean[]>([])
+const { i18next } = useTranslation();
 
 </script>
 
@@ -34,12 +37,12 @@ const hovered = ref<boolean[]>([])
                 class="flex items-center border-t border-t-black w-full font-medium h-16
                 group hover:bg-black hover:rounded-md [&:hover+div]:border-t-transparent transition-colors
                 text-lg sm:text-base">
-                <div class="hidden sm:block w-2/12 text-zinc-400 group-hover:pl-5 transition-[padding]">{{ work.period
-                    }}</div>
-                <div class="w-[45%] sm:w-2/12 group-hover:pl-5 group-hover:text-white transition-[padding]">{{
-                    work.clientName }}</div>
-                <div class="w-[45%] sm:w-3/12 group-hover:pl-5 group-hover:text-white transition-[padding]">{{ work.role
-                    }}</div>
+                <div class="hidden sm:block w-2/12 text-zinc-400 group-hover:pl-5 transition-[padding]">
+                    {{ work.period }}</div>
+                <div class="w-[45%] sm:w-2/12 group-hover:pl-5 group-hover:text-white transition-[padding]">
+                    {{ work.clientName }}</div>
+                <div class="w-[45%] sm:w-3/12 group-hover:pl-5 group-hover:text-white transition-[padding]">
+                    {{ work.role[i18next.language] }}</div>
                 <div class="hidden w-3/12 sm:flex space-x-3 text-sm">
                     <div v-for="skill of work.skills"
                         class="border flex-center uppercase rounded-md h-fit pt-[2px] pb-[4px] px-[7px] transition-colors"

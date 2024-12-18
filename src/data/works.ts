@@ -1,4 +1,5 @@
 import { useTranslation } from "i18next-vue"
+import { I18nValue, createI18ValueWithFromOne } from "../i18n/i18n"
 
 const skills = {
     web: { name: 'WEB', color: '#79F7FF' },
@@ -15,7 +16,10 @@ export function getWorks(translationObject: ReturnType<typeof useTranslation>) {
         {
             period: `2020 - ${t('worksSection.table.toNow')}`,
             clientName: 'Stratos',
-            role: 'Programmer',
+            role: {
+                en: 'Programmer',
+                it: 'Programmatore'
+            } satisfies I18nValue,
             skills: [
                 skills.web,
                 skills.devops,
@@ -25,7 +29,7 @@ export function getWorks(translationObject: ReturnType<typeof useTranslation>) {
         {
             period: `2022 - ${t('worksSection.table.toNow')}`,
             clientName: 'Yoomy',
-            role: 'Fullstack developer',
+            role: createI18ValueWithFromOne('Fullstack developer') satisfies I18nValue,
             skills: [
                 skills.web,
                 skills.vue,
@@ -35,7 +39,7 @@ export function getWorks(translationObject: ReturnType<typeof useTranslation>) {
         {
             period: `2024 - ${t('worksSection.table.toNow')}`,
             clientName: 'NGSensors',
-            role: 'Web developer',
+            role: createI18ValueWithFromOne('Web developer') satisfies I18nValue,
             skills: [
                 skills.web,
                 skills.react,
@@ -44,7 +48,7 @@ export function getWorks(translationObject: ReturnType<typeof useTranslation>) {
         {
             period: `2024 - ${t('worksSection.table.toNow')}`,
             clientName: 'Paust Auction',
-            role: 'Web developer',
+            role: createI18ValueWithFromOne('Web developer') satisfies I18nValue,
             skills: [
                 skills.vue,
                 skills.web,
