@@ -1,8 +1,7 @@
-import { useTranslation } from "i18next-vue";
 import { I18nValue, createI18ValueWithFromOne } from "../../i18n/i18n";
 
-import YoomyBannerProject from "./assets/yoomyBannerProject.png";
 import i18next from "i18next";
+import YoomyBannerProject from "./assets/yoomyBannerProject.png";
 
 export type Skill = { name: string; color: string };
 const skills: Record<string, Skill> = {
