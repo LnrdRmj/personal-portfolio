@@ -1,5 +1,5 @@
 import { useTranslation } from "i18next-vue";
-import { I18nValue, createI18ValueWithFromOne } from "../i18n/i18n";
+import { I18nValue, createI18ValueWithFromOne } from "../../i18n/i18n";
 
 const skills = {
     web: { name: "WEB", color: "#79F7FF" },

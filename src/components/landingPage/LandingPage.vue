@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getWorks } from "../../data/works";
+import { getWorks } from "../../data/works/works";
 import Header from "../Header.vue";
 import EmailIcon from "../../assets/emailicon.png";
 import WhatsappIcon from "../../assets/whatsappicon.png";
