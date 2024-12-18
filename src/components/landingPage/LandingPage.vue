@@ -1,24 +1,24 @@
 <script setup lang="ts">
-    import { getWorks } from "../../data/works";
-    import Header from "../Header.vue";
-    import EmailIcon from "../../assets/emailicon.png";
-    import WhatsappIcon from "../../assets/whatsappicon.png";
+import { getWorks } from "../../data/works";
+import Header from "../Header.vue";
+import EmailIcon from "../../assets/emailicon.png";
+import WhatsappIcon from "../../assets/whatsappicon.png";
 
-    import { useTranslation } from "i18next-vue";
-    import { ref } from "vue";
-    import Slider from "./technologies/Slider.vue";
-    import FeaturedWorks from "./feturedWorks/FeaturedWorks.vue";
-    import Services from "./services/Services.vue";
-    import Reviews from "./reviews/Reviews.vue";
-    import Footer from "./footer/Footer.vue";
-    const { t, i18next } = useTranslation();
+import { useTranslation } from "i18next-vue";
+import { ref } from "vue";
+import Slider from "./technologies/Slider.vue";
+import FeaturedWorks from "./feturedWorks/FeaturedWorks.vue";
+import Services from "./services/Services.vue";
+import Reviews from "./reviews/Reviews.vue";
+import Footer from "./footer/Footer.vue";
+const { t, i18next } = useTranslation();
 
-    const works = ref(getWorks({ t, i18next }));
+const works = ref(getWorks({ t, i18next }));
 
-    // Unfortunatelly when we change the languages we also have to "recalculate" the works
-    i18next.on("languageChanged", () => {
-        works.value = getWorks({ t, i18next });
-    });
+// Unfortunatelly when we change the languages we also have to "recalculate" the works
+i18next.on("languageChanged", () => {
+    works.value = getWorks({ t, i18next });
+});
 </script>
 
 <template>
@@ -30,8 +30,7 @@
             <div class="flex flex-col h-screen w-full shrink-0">
                 <div class="flex flex-col standard-responsive-padding">
                     <div
-                        class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl w-full font-medium sm:font-semibold max-w-[1100px] mt-36"
-                    >
+                        class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl w-full font-medium sm:font-semibold max-w-[1100px] mt-36">
                         <div v-html="$t('title')"></div>
                     </div>
                     <div class="text-xl mt-12">
@@ -44,8 +43,7 @@
                     </div>
 
                     <button
-                        class="px-8 w-fit rounded-lg mt-24 bg-secondary py-3 text-white text-xl font-semibold hover:bg-blue-600 transition-colors"
-                    >
+                        class="px-8 w-fit rounded-lg mt-24 bg-secondary py-3 text-white text-xl font-semibold hover:bg-blue-600 transition-colors">
                         {{ $t("knoweachotherbutton") }}
                     </button>
                 </div>
@@ -96,8 +94,7 @@
                     </div>
                 </div>
                 <button
-                    class="px-8 w-fit rounded-lg mt-20 bg-secondary py-3 text-white text-base lg:text-xl font-semibold hover:bg-blue-600 transition-colors"
-                >
+                    class="px-8 w-fit rounded-lg mt-20 bg-secondary py-3 text-white text-base lg:text-xl font-semibold hover:bg-blue-600 transition-colors">
                     {{ $t("contactsSection.bookConsultation") }}
                 </button>
             </div>
