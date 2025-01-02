@@ -18,8 +18,9 @@ export interface Work {
     period: string;
     clientName: string;
     role: I18nValue;
-    skills: Skill[]; // Skills array uses the Skill type
+    skills: Skill[];
     bannerPath: string;
+    description: string;
 }
 export function getWorks(): Work[] {
     const { t } = i18next;
@@ -34,6 +35,8 @@ export function getWorks(): Work[] {
             },
             skills: [skills.web, skills.devops, skills.team],
             bannerPath: YoomyBannerProject,
+            description:
+                "Progetto Start-up di un'Applicazione, Studio di una Brand Identity adeguata al Target e Realizzazione di Materiale Pubblicitario e Social.",
         },
         {
             id: 2,
@@ -42,6 +45,8 @@ export function getWorks(): Work[] {
             role: createI18ValueWithFromOne("Fullstack developer"),
             skills: [skills.web, skills.vue, skills.app],
             bannerPath: YoomyBannerProject,
+            description:
+                "Progetto Start-up di un'Applicazione, Studio di una Brand Identity adeguata al Target e Realizzazione di Materiale Pubblicitario e Social.",
         },
         {
             id: 3,
@@ -50,6 +55,8 @@ export function getWorks(): Work[] {
             role: createI18ValueWithFromOne("Web developer"),
             skills: [skills.web, skills.react],
             bannerPath: YoomyBannerProject,
+            description:
+                "Progetto Start-up di un'Applicazione, Studio di una Brand Identity adeguata al Target e Realizzazione di Materiale Pubblicitario e Social.",
         },
         {
             id: 4,
@@ -58,6 +65,8 @@ export function getWorks(): Work[] {
             role: createI18ValueWithFromOne("Web developer"),
             skills: [skills.vue, skills.web],
             bannerPath: YoomyBannerProject,
+            description:
+                "Progetto Start-up di un'Applicazione, Studio di una Brand Identity adeguata al Target e Realizzazione di Materiale Pubblicitario e Social.",
         },
     ];
 }
