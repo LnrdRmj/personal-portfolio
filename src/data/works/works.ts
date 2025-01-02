@@ -20,7 +20,7 @@ export interface Work {
     role: I18nValue;
     skills: Skill[];
     bannerPath: string;
-    description: string;
+    description: I18nValue;
 }
 export function getWorks(): Work[] {
     const { t } = i18next;
@@ -35,8 +35,10 @@ export function getWorks(): Work[] {
             },
             skills: [skills.web, skills.devops, skills.team],
             bannerPath: YoomyBannerProject,
-            description:
-                "Progetto Start-up di un'Applicazione, Studio di una Brand Identity adeguata al Target e Realizzazione di Materiale Pubblicitario e Social.",
+            description: {
+                en: "Start-up Project for an Application, Development of a Brand Identity suitable for the Target Audience, and Creation of Advertising and Social Media Materials.",
+                it: "Progetto Start-up di un'Applicazione, Studio di una Brand Identity adeguata al Target e Realizzazione di Materiale Pubblicitario e Social.",
+            },
         },
         {
             id: 2,
@@ -45,8 +47,10 @@ export function getWorks(): Work[] {
             role: createI18ValueWithFromOne("Fullstack developer"),
             skills: [skills.web, skills.vue, skills.app],
             bannerPath: YoomyBannerProject,
-            description:
-                "Progetto Start-up di un'Applicazione, Studio di una Brand Identity adeguata al Target e Realizzazione di Materiale Pubblicitario e Social.",
+            description: {
+                en: "Start-up Project for an Application, Development of a Brand Identity suitable for the Target Audience, and Creation of Advertising and Social Media Materials.",
+                it: "Progetto Start-up di un'Applicazione, Studio di una Brand Identity adeguata al Target e Realizzazione di Materiale Pubblicitario e Social.",
+            },
         },
         {
             id: 3,
@@ -55,8 +59,10 @@ export function getWorks(): Work[] {
             role: createI18ValueWithFromOne("Web developer"),
             skills: [skills.web, skills.react],
             bannerPath: YoomyBannerProject,
-            description:
-                "Progetto Start-up di un'Applicazione, Studio di una Brand Identity adeguata al Target e Realizzazione di Materiale Pubblicitario e Social.",
+            description: {
+                en: "Start-up Project for an Application, Development of a Brand Identity suitable for the Target Audience, and Creation of Advertising and Social Media Materials.",
+                it: "Progetto Start-up di un'Applicazione, Studio di una Brand Identity adeguata al Target e Realizzazione di Materiale Pubblicitario e Social.",
+            },
         },
         {
             id: 4,
@@ -65,8 +71,10 @@ export function getWorks(): Work[] {
             role: createI18ValueWithFromOne("Web developer"),
             skills: [skills.vue, skills.web],
             bannerPath: YoomyBannerProject,
-            description:
-                "Progetto Start-up di un'Applicazione, Studio di una Brand Identity adeguata al Target e Realizzazione di Materiale Pubblicitario e Social.",
+            description: {
+                en: "Start-up Project for an Application, Development of a Brand Identity suitable for the Target Audience, and Creation of Advertising and Social Media Materials.",
+                it: "Progetto Start-up di un'Applicazione, Studio di una Brand Identity adeguata al Target e Realizzazione di Materiale Pubblicitario e Social.",
+            },
         },
     ];
 }
