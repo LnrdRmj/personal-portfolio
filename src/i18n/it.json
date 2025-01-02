@@ -60,11 +60,23 @@
         },
         "service2": {
             "description": "Sviluppo di un’identità visiva conforme ai valori distintivi dell’azienda.",
-            "skills": ["Logo", "Palette colori", "Figma", "Responsive / Mobile", "Gestione"]
+            "skills": [
+                "Logo",
+                "Palette colori",
+                "Figma",
+                "Responsive / Mobile",
+                "Gestione"
+            ]
         },
         "service3": {
             "description": "Realizzazione di contenuti multimediali per elevare la presenza sul mercato dell’azienda.",
-            "skills": ["Animazione 3D", "Pubblicità", "Immagini", "Social Network", "Merchandising"]
+            "skills": [
+                "Animazione 3D",
+                "Pubblicità",
+                "Immagini",
+                "Social Network",
+                "Merchandising"
+            ]
         },
         "havearequest": "Hai una richiesta specifica?"
     },
@@ -107,5 +119,6 @@
     },
     "footerSection": {
         "writeMe": "Scrivimi"
-    }
+    },
+    "position": "posizione"
 }
