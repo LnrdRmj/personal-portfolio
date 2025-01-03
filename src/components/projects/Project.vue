@@ -11,7 +11,7 @@ import DoubleImagesWithText from './sections/doubleImagesWithText/DoubleImagesWi
 import TripleImages from './sections/tripleImages/TripleImages.vue';
 import ContactMeSection from '../common/contactMeSection/ContactMeSection.vue';
 
-const props = defineProps<{
+defineProps<{
     project: Work
 }>()
 

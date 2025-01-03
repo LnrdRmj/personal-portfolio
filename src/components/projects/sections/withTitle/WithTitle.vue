@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import HeaderCard from '../../header/HeaderCard.vue';
 
-
-const props = defineProps<{
+defineProps<{
     title: string,
     description: string
 }>()

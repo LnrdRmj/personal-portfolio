@@ -2,7 +2,7 @@
 import MediaContainer from '../common/MediaContainer.vue';
 import { MediaUrl } from '../common/media';
 
-const props = defineProps<{
+defineProps<{
     medias: [MediaUrl, MediaUrl]
 }>()
 

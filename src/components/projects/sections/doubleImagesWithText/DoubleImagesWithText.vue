@@ -3,7 +3,7 @@ import HeaderCard from '../../header/HeaderCard.vue';
 import { MediaUrl } from '../common/media';
 import DoubleImages from '../doubleImages/DoubleImages.vue';
 
-const props = withDefaults(defineProps<{
+withDefaults(defineProps<{
     medias: [MediaUrl, MediaUrl],
     title: string,
     description: string,

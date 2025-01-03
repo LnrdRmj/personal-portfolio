@@ -3,7 +3,7 @@ import { Work } from '../../../data/works/works';
 import { getSelectedLanguageFromI18nValue } from '../../../i18n/i18n';
 import HeaderCard from './HeaderCard.vue';
 
-const props = defineProps<{
+defineProps<{
     project: Work
 }>()
 </script>

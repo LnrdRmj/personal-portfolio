@@ -4,13 +4,12 @@ import { getWorks } from "../../data/works/works";
 import { useTranslation } from "i18next-vue";
 import { ref } from "vue";
 import FeaturedWorks from "./feturedWorks/FeaturedWorks.vue";
-import Footer from "./footer/Footer.vue";
 import Reviews from "./reviews/Reviews.vue";
 import Services from "./services/Services.vue";
 import Slider from "./technologies/Slider.vue";
 import Works from "./works/Works.vue";
 import ContactMeSection from "../common/contactMeSection/ContactMeSection.vue";
-const { t, i18next } = useTranslation();
+const { i18next } = useTranslation();
 
 const works = ref(getWorks());
 
