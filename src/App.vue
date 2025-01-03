@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Header from './components/Header.vue';
+import Footer from './components/landingPage/footer/Footer.vue';
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import Header from './components/Header.vue';
                 <component :is="Component" class="w-full flex-1 min-h-0 mt-20" />
             </transition>
         </RouterView>
+        <Footer />
     </div>
 </template>
 
