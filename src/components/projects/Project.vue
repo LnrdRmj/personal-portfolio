@@ -8,6 +8,7 @@ import SingleImage from './sections/singleImage/SingleImage.vue';
 import { MediaUrl } from './sections/common/media';
 import WithTitle from './sections/withTitle/WithTitle.vue';
 import DoubleImagesWithText from './sections/doubleImagesWithText/DoubleImagesWithText.vue';
+import TripleImages from './sections/tripleImages/TripleImages.vue';
 
 const props = defineProps<{
     project: Work
@@ -25,7 +26,7 @@ const placeholderImageMedia: MediaUrl = {
 </script>
 
 <template>
-    <div class="flex flex-col justify-center w-full gap-2 text-lg">
+    <div class="flex flex-col justify-center w-full gap-2">
         <ProjectHeader :project="project" />
         <SingleImage class="h-[600px] object-cover" :media="placeholderImageMedia" />
         <DoubleImages class="h-[600px]" :medias="[placeholderImageMedia, placeholderVideoMedia]" />
@@ -38,5 +39,7 @@ In un contesto reale, questa descrizione includerebbe dettagli chiari e informat
             title="TITOLO SEZIONE"
             description="Sono una descrizione di esempio creata per mostrare come potrebbe apparire un testo descrittivo.
         In un contesto reale, questa descrizione includerebbe dettagli chiari e informativi su un argomento specifico, come una panoramica del prodotto." />
+        <TripleImages class="h-[600px]"
+            :medias="[placeholderImageMedia, placeholderVideoMedia, placeholderImageMedia]" />
     </div>
 </template>
