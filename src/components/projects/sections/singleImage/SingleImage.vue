@@ -1,5 +1,13 @@
+<script setup lang="ts">
+import MediaContainer from '../common/MediaContainer.vue';
+import { MediaUrl } from '../common/media';
+
+const props = defineProps<{
+    media: MediaUrl
+}>()
+
+</script>
+
 <template>
-    <div>
-        singleimage
-    </div>
+    <MediaContainer :media="media" />
 </template>
