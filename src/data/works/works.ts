@@ -28,7 +28,7 @@ export function getWorks(): Work[] {
         {
             id: 1,
             period: `2020 - ${t("worksSection.table.toNow")}`,
-            clientName: "Stratos",
+            clientName: "Yoomy",
             role: {
                 en: "Programmer",
                 it: "Programmatore",
@@ -36,8 +36,8 @@ export function getWorks(): Work[] {
             skills: [skills.web, skills.devops, skills.team],
             bannerPath: YoomyBannerProject,
             description: {
-                en: "Start-up Project for an Application, Development of a Brand Identity suitable for the Target Audience, and Creation of Advertising and Social Media Materials.",
-                it: "Progetto Start-up di un'Applicazione, Studio di una Brand Identity adeguata al Target e Realizzazione di Materiale Pubblicitario e Social.",
+                en: "Start-up Project for an Application, Development of a Brand Identity<br> suitable for the Target Audience, and Creation of Advertising and Social Media Materials.",
+                it: "Progetto Start-up di un'Applicazione, Studio di una Brand Identity<br> adeguata al Target e Realizzazione di Materiale Pubblicitario e Social.",
             },
         },
         {
