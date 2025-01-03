@@ -120,5 +120,6 @@
     "footerSection": {
         "writeMe": "Scrivimi"
     },
-    "position": "posizione"
+    "position": "posizione",
+    "periodOfTime": "periodo"
 }

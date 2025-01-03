@@ -123,5 +123,6 @@
     "footerSection": {
         "writeMe": "Write me"
     },
-    "position": "position"
+    "position": "position",
+    "periodOfTime": "period"
 }
