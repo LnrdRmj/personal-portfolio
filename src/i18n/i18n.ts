@@ -26,3 +26,7 @@ export function createI18ValueWithFromOne<T>(value: T): I18nValue<T> {
         it: value,
     };
 }
+
+export function getSelectedLanguageFromI18nValue<T>(value: I18nValue<T>): T {
+    return value[i18next.language];
+}
