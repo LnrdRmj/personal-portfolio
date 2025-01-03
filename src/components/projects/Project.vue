@@ -9,6 +9,7 @@ import { MediaUrl } from './sections/common/media';
 import WithTitle from './sections/withTitle/WithTitle.vue';
 import DoubleImagesWithText from './sections/doubleImagesWithText/DoubleImagesWithText.vue';
 import TripleImages from './sections/tripleImages/TripleImages.vue';
+import ContactMeSection from '../common/contactMeSection/ContactMeSection.vue';
 
 const props = defineProps<{
     project: Work
@@ -28,18 +29,19 @@ const placeholderImageMedia: MediaUrl = {
 <template>
     <div class="flex flex-col justify-center w-full gap-2">
         <ProjectHeader :project="project" />
-        <SingleImage class="h-[600px] object-cover" :media="placeholderImageMedia" />
-        <DoubleImages class="h-[600px]" :medias="[placeholderImageMedia, placeholderVideoMedia]" />
         <WithTitle class="mt-20" title="TITOLO SEZIONE"
             description="Sono una descrizione di esempio creata per mostrare come potrebbe apparire un testo descrittivo.
 In un contesto reale, questa descrizione includerebbe dettagli chiari e informativi su un argomento specifico, come una panoramica del prodotto.">
             <SingleImage class="h-[600px] object-cover" :media="placeholderImageMedia" />
         </WithTitle>
+        <SingleImage class="h-[600px] object-cover" :media="placeholderImageMedia" />
+        <DoubleImages class="h-[600px]" :medias="[placeholderImageMedia, placeholderVideoMedia]" />
         <DoubleImagesWithText class="h-[600px]" :medias="[placeholderImageMedia, placeholderImageMedia]"
             title="TITOLO SEZIONE"
             description="Sono una descrizione di esempio creata per mostrare come potrebbe apparire un testo descrittivo.
         In un contesto reale, questa descrizione includerebbe dettagli chiari e informativi su un argomento specifico, come una panoramica del prodotto." />
         <TripleImages class="h-[600px]"
             :medias="[placeholderImageMedia, placeholderVideoMedia, placeholderImageMedia]" />
+        <ContactMeSection class="lg:px-64" />
     </div>
 </template>
