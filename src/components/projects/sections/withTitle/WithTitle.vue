@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import HeaderCard from '../../header/HeaderCard.vue';
 
-defineProps<{
+export type Props = {
     title: string,
     description: string
-}>()
+}
+
+defineProps<Props>()
 
 </script>
 

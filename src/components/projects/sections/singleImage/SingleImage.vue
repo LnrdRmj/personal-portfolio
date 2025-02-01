@@ -2,9 +2,11 @@
 import MediaContainer from '../common/MediaContainer.vue';
 import { MediaUrl } from '../common/media';
 
-defineProps<{
+export type Props = {
     media: MediaUrl
-}>()
+}
+
+defineProps<Props>()
 
 </script>
 

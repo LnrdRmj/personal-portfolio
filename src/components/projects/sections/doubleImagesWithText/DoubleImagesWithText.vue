@@ -3,12 +3,14 @@ import HeaderCard from '../../header/HeaderCard.vue';
 import { MediaUrl } from '../common/media';
 import DoubleImages from '../doubleImages/DoubleImages.vue';
 
-withDefaults(defineProps<{
+export type Props = {
     medias: [MediaUrl, MediaUrl],
     title: string,
     description: string,
     textPosition?: "left" | "right"
-}>(), {
+}
+
+withDefaults(defineProps<Props>(), {
     textPosition: 'right'
 })
 
