@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ProjectSection, ProjectSectionToComponent } from '@/services/project/project';
 
-const props = defineProps<{
+defineProps<{
     section: ProjectSection
 }>()
 
