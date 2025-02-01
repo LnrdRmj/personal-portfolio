@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { Work } from '../../../data/works/works';
+import { Project } from '../../../data/works/project';
 import { getSelectedLanguageFromI18nValue } from '../../../i18n/i18n';
 import HeaderCard from './HeaderCard.vue';
 
 defineProps<{
-    project: Work
+    project: Project
 }>()
 </script>
 

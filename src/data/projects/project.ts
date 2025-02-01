@@ -13,7 +13,7 @@ const skills: Record<string, Skill> = {
     react: { name: "REACT", color: "#CE90FF" },
 } as const;
 
-export interface Work {
+export interface Project {
     id: number;
     period: string;
     clientName: string;
@@ -22,7 +22,7 @@ export interface Work {
     bannerPath: string;
     description: I18nValue;
 }
-export function getWorks(): Work[] {
+export function getWorks(): Project[] {
     const { t } = i18next;
     return [
         {

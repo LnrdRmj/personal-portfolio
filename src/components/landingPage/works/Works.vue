@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { useTranslation } from "i18next-vue";
 import { ref } from "vue";
-import { Work } from "../../../data/works/works";
+import { Project } from "../../../data/works/project";
 import { PROJECT_DETAIL } from "../../../routes/routeNames";
 
 defineProps<{
-    works: Work[]
+    works: Project[]
 }>();
 
 const hovered = ref<boolean[]>([]);

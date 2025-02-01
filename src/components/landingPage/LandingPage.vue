@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getWorks } from "../../data/works/works";
+import { getWorks } from "../../data/projects/project";
 
 import { useTranslation } from "i18next-vue";
 import { ref } from "vue";

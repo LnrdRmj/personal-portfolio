@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import { getWorks } from "../../data/works/works";
+import { getWorks } from "../../data/projects/project";
 import MissingProject from "./MissingProject.vue";
 import Project from "./Project.vue";
 

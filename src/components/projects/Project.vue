@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Work } from '../../data/works/works';
+import { Project } from '../../data/works/project';
 import ProjectHeader from './header/ProjectHeader.vue';
 import DoubleImages from './sections/doubleImages/DoubleImages.vue';
 import PlaceholderImage from '../../assets/placeholderImage.png'
@@ -12,7 +12,7 @@ import TripleImages from './sections/tripleImages/TripleImages.vue';
 import ContactMeSection from '../common/contactMeSection/ContactMeSection.vue';
 
 defineProps<{
-    project: Work
+    project: Project
 }>()
 
 const placeholderVideoMedia: MediaUrl = {
