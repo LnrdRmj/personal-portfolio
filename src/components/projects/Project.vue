@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Project } from '../../data/works/project';
+import { Project } from '../../data/projects/project';
 import ProjectHeader from './header/ProjectHeader.vue';
 import DoubleImages from './sections/doubleImages/DoubleImages.vue';
 import PlaceholderImage from '../../assets/placeholderImage.png'
@@ -10,6 +10,7 @@ import WithTitle from './sections/withTitle/WithTitle.vue';
 import DoubleImagesWithText from './sections/doubleImagesWithText/DoubleImagesWithText.vue';
 import TripleImages from './sections/tripleImages/TripleImages.vue';
 import ContactMeSection from '../common/contactMeSection/ContactMeSection.vue';
+import ProjectEvaluator from './projectEvaluator/ProjectEvaluator.vue';
 
 defineProps<{
     project: Project
@@ -29,7 +30,7 @@ const placeholderImageMedia: MediaUrl = {
 <template>
     <div class="flex flex-col justify-center w-full gap-2">
         <ProjectHeader :project="project" />
-        <WithTitle class="mt-20" title="TITOLO SEZIONE"
+        <!-- <WithTitle class="mt-20" title="TITOLO SEZIONE"
             description="Sono una descrizione di esempio creata per mostrare come potrebbe apparire un testo descrittivo.
 In un contesto reale, questa descrizione includerebbe dettagli chiari e informativi su un argomento specifico, come una panoramica del prodotto.">
             <SingleImage class="h-[600px] object-cover" :media="placeholderImageMedia" />
@@ -42,6 +43,7 @@ In un contesto reale, questa descrizione includerebbe dettagli chiari e informat
         In un contesto reale, questa descrizione includerebbe dettagli chiari e informativi su un argomento specifico, come una panoramica del prodotto." />
         <TripleImages class="h-[600px]"
             :medias="[placeholderImageMedia, placeholderVideoMedia, placeholderImageMedia]" />
-        <ContactMeSection class="lg:px-64" />
+        <ContactMeSection class="lg:px-64" /> -->
+        <ProjectEvaluator :sections="project.sections" />
     </div>
 </template>

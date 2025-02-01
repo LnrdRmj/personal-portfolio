@@ -2,6 +2,7 @@ import { I18nValue, createI18ValueWithFromOne } from "../../i18n/i18n";
 
 import i18next from "i18next";
 import YoomyBannerProject from "./assets/yoomyBannerProject.png";
+import { ProjectSection } from "@/services/project/project";
 
 export type Skill = { name: string; color: string };
 const skills: Record<string, Skill> = {
@@ -21,6 +22,7 @@ export interface Project {
     skills: Skill[];
     bannerPath: string;
     description: I18nValue;
+    sections: ProjectSection[];
 }
 export function getWorks(): Project[] {
     const { t } = i18next;
@@ -39,6 +41,35 @@ export function getWorks(): Project[] {
                 en: "Start-up Project for an Application, Development of a Brand Identity<br> suitable for the Target Audience, and Creation of Advertising and Social Media Materials.",
                 it: "Progetto Start-up di un'Applicazione, Studio di una Brand Identity<br> adeguata al Target e Realizzazione di Materiale Pubblicitario e Social.",
             },
+            sections: [
+                {
+                    name: "single-image",
+                    media: {
+                        type: "image",
+                        url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
+                    },
+                },
+                {
+                    name: "with-title",
+                    description: "Some description",
+                    title: "Some title",
+                    child: {
+                        name: "double-image-with-text",
+                        title: "Some other title",
+                        description: "Some more description about this double images",
+                        medias: [
+                            {
+                                type: "image",
+                                url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
+                            },
+                            {
+                                type: "image",
+                                url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
+                            },
+                        ],
+                    },
+                },
+            ],
         },
         {
             id: 2,
@@ -51,6 +82,35 @@ export function getWorks(): Project[] {
                 en: "Start-up Project for an Application, Development of a Brand Identity suitable for the Target Audience, and Creation of Advertising and Social Media Materials.",
                 it: "Progetto Start-up di un'Applicazione, Studio di una Brand Identity adeguata al Target e Realizzazione di Materiale Pubblicitario e Social.",
             },
+            sections: [
+                {
+                    name: "single-image",
+                    media: {
+                        type: "video",
+                        url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
+                    },
+                },
+                {
+                    name: "with-title",
+                    description: "Some description",
+                    title: "Some title",
+                    child: {
+                        name: "double-image-with-text",
+                        title: "Some other title",
+                        description: "Some more description about this double images",
+                        medias: [
+                            {
+                                type: "image",
+                                url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
+                            },
+                            {
+                                type: "image",
+                                url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
+                            },
+                        ],
+                    },
+                },
+            ],
         },
         {
             id: 3,
@@ -63,6 +123,35 @@ export function getWorks(): Project[] {
                 en: "Start-up Project for an Application, Development of a Brand Identity suitable for the Target Audience, and Creation of Advertising and Social Media Materials.",
                 it: "Progetto Start-up di un'Applicazione, Studio di una Brand Identity adeguata al Target e Realizzazione di Materiale Pubblicitario e Social.",
             },
+            sections: [
+                {
+                    name: "single-image",
+                    media: {
+                        type: "video",
+                        url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
+                    },
+                },
+                {
+                    name: "with-title",
+                    description: "Some description",
+                    title: "Some title",
+                    child: {
+                        name: "double-image-with-text",
+                        title: "Some other title",
+                        description: "Some more description about this double images",
+                        medias: [
+                            {
+                                type: "image",
+                                url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
+                            },
+                            {
+                                type: "image",
+                                url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
+                            },
+                        ],
+                    },
+                },
+            ],
         },
         {
             id: 4,
@@ -75,6 +164,35 @@ export function getWorks(): Project[] {
                 en: "Start-up Project for an Application, Development of a Brand Identity suitable for the Target Audience, and Creation of Advertising and Social Media Materials.",
                 it: "Progetto Start-up di un'Applicazione, Studio di una Brand Identity adeguata al Target e Realizzazione di Materiale Pubblicitario e Social.",
             },
+            sections: [
+                {
+                    name: "single-image",
+                    media: {
+                        type: "video",
+                        url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
+                    },
+                },
+                {
+                    name: "with-title",
+                    description: "Some description",
+                    title: "Some title",
+                    child: {
+                        name: "double-image-with-text",
+                        title: "Some other title",
+                        description: "Some more description about this double images",
+                        medias: [
+                            {
+                                type: "image",
+                                url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
+                            },
+                            {
+                                type: "image",
+                                url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
+                            },
+                        ],
+                    },
+                },
+            ],
         },
     ];
 }
