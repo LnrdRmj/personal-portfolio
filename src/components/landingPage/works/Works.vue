@@ -53,7 +53,8 @@ const { i18next } = useTranslation();
                         class="transition-all group-hover:border group-hover:border-white group-hover:text-white sm:px-3 sm:py-[1px] rounded-full sm:bg-transparent sm:size-auto bg-black size-7">
                         <RouterLink :to="{ name: PROJECT_DETAIL, params: { projectId: work.id } }">
                             <div class="hidden sm:block">
-                                <LangChangeAnimation value="worksSection.table.previewProject" />
+                                <LangChangeAnimation value="worksSection.table.previewProject"
+                                    animationName="cube-rotate" />
                             </div>
                             <div class="sm:hidden text-white">></div>
                         </RouterLink>
