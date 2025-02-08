@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-const props = withDefaults(defineProps<{
+withDefaults(defineProps<{
     text1: string,
     text2: string,
     flip: boolean,
