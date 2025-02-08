@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { configs } from '@/data/config/config';
+import { TranslationsPathsOrString } from '@/i18n/i18n';
 import { useTranslation } from 'i18next-vue';
 import { ref } from 'vue';
 import TextSwapper from '../textSwapper/TextSwapper.vue';
 
 const props = withDefaults(defineProps<{
-    value: string,
+    value: TranslationsPathsOrString,
     animationName?: string,
     animation?: boolean
 }>(), {
@@ -15,14 +16,14 @@ const props = withDefaults(defineProps<{
 
 const { i18next, t } = useTranslation()
 
-var currentTranslatedText = ref(t(props.value));
+var currentTranslatedText = ref(t(props.value as string));
 var oldTranslatedText = ref(currentTranslatedText.value);
 
 const flip = ref(false)
 i18next.on("languageChanged", (lng) => {
     flip.value = !flip.value
     oldTranslatedText.value = currentTranslatedText.value
-    currentTranslatedText.value = t(props.value)
+    currentTranslatedText.value = t(props.value as string)
 })
 
 </script>

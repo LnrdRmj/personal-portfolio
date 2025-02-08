@@ -5,6 +5,8 @@ import en from "./en";
 import it from "./en";
 
 export type Translations = typeof en;
+export type TranslationsPaths = ObjectPaths<Translations>;
+export type TranslationsPathsOrString = ObjectPaths<Translations> | (string & {});
 
 const supportedLngs = ["en", "it"] as const;
 export type I18nValue<T = string> = Record<(typeof supportedLngs)[number] | (string & {}), T>;
