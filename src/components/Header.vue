@@ -2,6 +2,7 @@
 import { useTranslation } from "i18next-vue";
 import { ref, watch } from "vue";
 import ContactMe from "./common/ContactMe.vue";
+import LangChangeAnimation from "./common/languageChangeAnimation/LangChangeAnimation.vue";
 const { i18next } = useTranslation();
 
 const language = ref<string>(i18next.language);
@@ -22,9 +23,15 @@ const visibility = ref(false);
                     <option value="it">IT</option>
                     <option value="en">ENG</option>
                 </select>
-                <button>{{ $t("headerSection.work") }}</button>
-                <button>{{ $t("headerSection.whoAmI") }}</button>
-                <button>{{ $t("headerSection.services") }}</button>
+                <button>
+                    <LangChangeAnimation value="headerSection.work" />
+                </button>
+                <button>
+                    <LangChangeAnimation value="headerSection.whoAmI" />
+                </button>
+                <button>
+                    <LangChangeAnimation value="headerSection.services" />
+                </button>
                 <ContactMe />
             </div>
             <div class="lg:hidden text-white">

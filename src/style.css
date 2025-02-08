@@ -54,16 +54,22 @@ html,
         transition: all 0.4s cubic-bezier(0, 0.94, 0.68, 0.98);
     }
 
-    .smaller-leave-from,
-    .smaller-enter-to {
-        transform: translateY(0) scaleY(1);
+    .smaller-leave-from {
+        transform: translateY(0) scale(1);
         opacity: 1;
     }
-
-    .smaller-leave-to,
-    .smaller-enter-from {
-        transform: translateY(0) scaleY(0.6);
+    .smaller-leave-to {
+        transform: translateY(0) scale(0.6);
         opacity: 0;
+    }
+
+    .smaller-enter-from {
+        transform: translateY(100%) scale(1);
+        opacity: 0;
+    }
+    .smaller-enter-to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
     }
 
     /* slide-right */
@@ -228,5 +234,19 @@ html,
 
     .slide-leave-to {
         transform: translateX(100%);
+    }
+
+    /* cube-rotate */
+    .cube-rotate-enter-active,
+    .cube-rotate-leave-active {
+        transition: transform 0.5s;
+    }
+
+    .cube-rotate-enter-from {
+        transform: translateY(50%) rotateX(90deg);
+    }
+
+    .cube-rotate-leave-to {
+        transform: translateY(-50%) rotateX(90deg);
     }
 }

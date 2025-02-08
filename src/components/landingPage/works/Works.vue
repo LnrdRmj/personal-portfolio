@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { useTranslation } from "i18next-vue";
 import { ref } from "vue";
-import { Project } from "../../../data/works/project";
+import { Project } from "../../../data/projects/project";
 import { PROJECT_DETAIL } from "../../../routes/routeNames";
+import I18nChangeAnimation from "@/components/common/languageChangeAnimation/I18nChangeAnimation.vue";
+import LangChangeAnimation from "@/components/common/languageChangeAnimation/LangChangeAnimation.vue";
 
 defineProps<{
     works: Project[]
 }>();
 
 const hovered = ref<boolean[]>([]);
-const { i18next } = useTranslation();
 </script>
 
 <template>
@@ -34,7 +34,7 @@ const { i18next } = useTranslation();
                     {{ work.clientName }}
                 </div>
                 <div class="w-[45%] sm:w-3/12 group-hover:pl-5 group-hover:text-white transition-[padding]">
-                    {{ work.role[i18next.language] }}
+                    <I18nChangeAnimation :value="work.role" />
                 </div>
                 <div class="hidden w-3/12 sm:flex space-x-3 text-sm">
                     <div v-for="skill of work.skills"
@@ -51,7 +51,8 @@ const { i18next } = useTranslation();
                         class="transition-all group-hover:border group-hover:border-white group-hover:text-white sm:px-3 sm:py-[1px] rounded-full sm:bg-transparent sm:size-auto bg-black size-7">
                         <RouterLink :to="{ name: PROJECT_DETAIL, params: { projectId: work.id } }">
                             <div class="hidden sm:block">
-                                {{ $t("worksSection.table.previewProject") }}
+                                <LangChangeAnimation value="worksSection.table.previewProject"
+                                    animationName="cube-rotate" />
                             </div>
                             <div class="sm:hidden text-white">></div>
                         </RouterLink>

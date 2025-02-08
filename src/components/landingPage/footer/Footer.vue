@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import ContactMe from "../../common/ContactMe.vue";
+import LangChangeAnimation from '@/components/common/languageChangeAnimation/LangChangeAnimation.vue';
 </script>
 
 <template>
@@ -21,12 +22,14 @@ import ContactMe from "../../common/ContactMe.vue";
                 <div> +39 345 976 8944 </div>
             </div>
             <!-- For when I'll actually have a P.Iva -->
-            <!-- <div class="flex flex-col">
-                <div class="text-zinc-300 mb-2"> Dati Fiscali </div>
-                <div> P.IVA - 07345890482 </div>
-                <div> Sesto Fiorentino (FI), 50019 </div>
-                <div> Via Beccaria 19 </div>
-            </div> -->
+            <div class="flex flex-col">
+                <div class="text-zinc-300 mb-2">
+                    <LangChangeAnimation value="footerSection.fiscalData" />
+                </div>
+                <div> P.IVA - 02610360972 </div>
+                <div> Prato (PO), 59100 </div>
+                <div> Via Jacopo da Lentini, 17 </div>
+            </div>
         </div>
     </footer>
 </template>
