@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import EmailIcon from "../../../assets/emailicon.png";
 import WhatsappIcon from "../../../assets/whatsappicon.png";
+import LangChangeAnimation from "../languageChangeAnimation/LangChangeAnimation.vue";
 </script>
 
 <template>
@@ -9,11 +10,11 @@ import WhatsappIcon from "../../../assets/whatsappicon.png";
         <div class="uppercase text-2xl mb-16">{{ $t("contactsSection.title") }}</div>
         <div class="flex flex-col">
             <div class="text-4xl sm:text-5xl lg:text-6xl font-semibold">
-                {{ $t("contactMe") }}
+                <LangChangeAnimation value="contactMe" />
             </div>
-            <div class="text-lg leading-5 mt-5">
-                {{ $t("underTitle.phrase1") }}<br />
-                {{ $t("underTitle.phrase2") }}
+            <div class="text-lg leading-3 mt-5">
+                <LangChangeAnimation value="underTitle.phrase1" /><br />
+                <LangChangeAnimation value="underTitle.phrase2" />
             </div>
         </div>
         <div class="mt-10">
@@ -34,7 +35,7 @@ import WhatsappIcon from "../../../assets/whatsappicon.png";
         </div>
         <button
             class="px-8 w-fit rounded-lg mt-20 bg-secondary py-3 text-white text-base lg:text-xl font-semibold hover:bg-blue-600 transition-colors">
-            {{ $t("contactsSection.bookConsultation") }}
+            <LangChangeAnimation value="contactsSection.bookConsultation" />
         </button>
     </div>
 </template>

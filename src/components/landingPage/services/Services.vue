@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import LangChangeAnimation from "@/components/common/languageChangeAnimation/LangChangeAnimation.vue";
 import Image1 from "../../../assets/services/imageService1.png";
 import Image2 from "../../../assets/services/imageService2.png";
 import Image3 from "../../../assets/services/imageService3.png";
 import ContactMe from "../../common/ContactMe.vue";
 import ServiceCard from "./ServiceCard.vue";
+
 </script>
 
 <template>
@@ -20,7 +22,9 @@ import ServiceCard from "./ServiceCard.vue";
         </div>
         <div class="w-full bg-zinc-800 h-[2px] shrink-0 my-16" />
         <div class="flex flex-col items-center">
-            <div class="text-2xl mb-6">{{ $t("services.havearequest") }}</div>
+            <div class="text-2xl mb-6">
+                <LangChangeAnimation value="services.havearequest" />
+            </div>
             <ContactMe />
         </div>
     </div>
