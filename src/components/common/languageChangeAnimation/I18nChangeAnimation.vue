@@ -14,14 +14,19 @@ const currentValue = ref(props.value[i18next.language])
 const oldValue = ref(props.value[i18next.language])
 
 const flip = ref(false)
+const skipAnimation = ref(false)
 i18next.on("languageChanged", (lng) => {
+    skipAnimation.value = false
+
     flip.value = !flip.value
     oldValue.value = currentValue.value
     currentValue.value = props.value[lng]
+
+    if (oldValue.value == currentValue.value) skipAnimation.value = true
 })
 
 </script>
 
 <template>
-    <TextSwapper :flip="flip" :text1="currentValue" :text2="oldValue" />
+    <TextSwapper :flip="flip" :text1="currentValue" :text2="oldValue" :animation="!skipAnimation" />
 </template>
