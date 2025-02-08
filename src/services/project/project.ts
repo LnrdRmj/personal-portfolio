@@ -13,7 +13,6 @@ import TripleImages, {
 import WithTitle, {
     Props as WithTitleProps,
 } from "@/components/projects/sections/withTitle/WithTitle.vue";
-import { DefineComponent } from "vue";
 
 type DoubleImageSection = {
     name: "double-image";
@@ -52,33 +51,3 @@ export const ProjectSectionToComponent = {
     "triple-image": TripleImages,
     "with-title": WithTitle,
 } satisfies Record<ProjectSection["name"], any>;
-
-const example: ProjectSection[] = [
-    {
-        name: "single-image",
-        media: {
-            type: "video",
-            url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
-        },
-    },
-    {
-        name: "with-title",
-        description: "Some description",
-        title: "Some title",
-        child: {
-            name: "double-image-with-text",
-            title: "Some other title",
-            description: "Some more description about this double images",
-            medias: [
-                {
-                    type: "image",
-                    url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
-                },
-                {
-                    type: "image",
-                    url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
-                },
-            ],
-        },
-    },
-];

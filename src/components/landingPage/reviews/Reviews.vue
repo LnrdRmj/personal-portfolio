@@ -5,7 +5,7 @@ import Review from "./Review.vue";
 
 import { onUnmounted, ref } from "vue";
 import LangChangeAnimation from "@/components/common/languageChangeAnimation/LangChangeAnimation.vue";
-const { i18next, t } = useTranslation();
+const { i18next } = useTranslation();
 
 type Review = {
     companyName: string;

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useTranslation } from "i18next-vue";
 import { ref } from "vue";
 import { Project } from "../../../data/projects/project";
 import { PROJECT_DETAIL } from "../../../routes/routeNames";
@@ -11,7 +10,6 @@ defineProps<{
 }>();
 
 const hovered = ref<boolean[]>([]);
-const { i18next } = useTranslation();
 </script>
 
 <template>
