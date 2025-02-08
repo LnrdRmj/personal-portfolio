@@ -2,7 +2,9 @@ import { I18nValue, createI18ValueWithFromOne } from "../../i18n/i18n";
 
 import i18next from "i18next";
 import YoomyBannerProject from "./assets/yoomyBannerProject.png";
+import TrackOneLoginImage from "./assets/trackone-login.png";
 import { ProjectSection } from "@/services/project/project";
+import { createImageMediaUrl } from "@/components/projects/sections/common/media";
 
 export type Skill = { name: string; color: string };
 const skills: Record<string, Skill> = {
@@ -50,45 +52,38 @@ export function getWorks(): Project[] {
                     },
                 },
                 {
-                    name: "with-title",
-                    description: "Some description",
-                    title: "Some title",
-                    child: {
-                        name: "double-image-with-text",
-                        title: "Some other title",
-                        description: "Some more description about this double images",
-                        medias: [
-                            {
-                                type: "image",
-                                url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
-                            },
-                            {
-                                type: "image",
-                                url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
-                            },
-                        ],
-                    },
+                    name: "double-image-with-text",
+                    textPosition: "left",
+                    title: "Some other title",
+                    description: "Some more description about this double images",
+                    medias: [
+                        {
+                            type: "image",
+                            url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
+                        },
+                        {
+                            type: "image",
+                            url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
+                        },
+                    ],
                 },
             ],
         },
         {
             id: 2,
-            period: `2022 - ${t("worksSection.table.toNow")}`,
-            clientName: "Yoomy",
-            role: createI18ValueWithFromOne("Fullstack developer"),
+            period: `2022 - 2024`,
+            clientName: "Trackone",
+            role: createI18ValueWithFromOne("Frontend developer"),
             skills: [skills.web, skills.vue, skills.app],
             bannerPath: YoomyBannerProject,
             description: {
-                en: "Start-up Project for an Application, Development of a Brand Identity suitable for the Target Audience, and Creation of Advertising and Social Media Materials.",
-                it: "Progetto Start-up di un'Applicazione, Studio di una Brand Identity adeguata al Target e Realizzazione di Materiale Pubblicitario e Social.",
+                en: "Platform for the client NGSSensors, which specializes in the sale and installation of certain devices on logistics vehicles.",
+                it: "Piattaforma per il cliente NGSSensors che si occupa della vendita e dell'installazione di alcuni dispositivi su veicoli logistici.",
             },
             sections: [
                 {
                     name: "single-image",
-                    media: {
-                        type: "video",
-                        url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
-                    },
+                    media: createImageMediaUrl(TrackOneLoginImage),
                 },
                 {
                     name: "with-title",
@@ -132,24 +127,19 @@ export function getWorks(): Project[] {
                     },
                 },
                 {
-                    name: "with-title",
-                    description: "Some description",
-                    title: "Some title",
-                    child: {
-                        name: "double-image-with-text",
-                        title: "Some other title",
-                        description: "Some more description about this double images",
-                        medias: [
-                            {
-                                type: "image",
-                                url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
-                            },
-                            {
-                                type: "image",
-                                url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
-                            },
-                        ],
-                    },
+                    name: "double-image-with-text",
+                    title: "Some other title",
+                    description: "Some more description about this double images",
+                    medias: [
+                        {
+                            type: "image",
+                            url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
+                        },
+                        {
+                            type: "image",
+                            url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
+                        },
+                    ],
                 },
             ],
         },
@@ -173,24 +163,19 @@ export function getWorks(): Project[] {
                     },
                 },
                 {
-                    name: "with-title",
-                    description: "Some description",
-                    title: "Some title",
-                    child: {
-                        name: "double-image-with-text",
-                        title: "Some other title",
-                        description: "Some more description about this double images",
-                        medias: [
-                            {
-                                type: "image",
-                                url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
-                            },
-                            {
-                                type: "image",
-                                url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
-                            },
-                        ],
-                    },
+                    name: "double-image-with-text",
+                    title: "Some other title",
+                    description: "Some more description about this double images",
+                    medias: [
+                        {
+                            type: "image",
+                            url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
+                        },
+                        {
+                            type: "image",
+                            url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
+                        },
+                    ],
                 },
             ],
         },
