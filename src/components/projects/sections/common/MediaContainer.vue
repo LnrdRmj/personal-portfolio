@@ -11,5 +11,6 @@ const isVideo = !isImage
 </script>
 
 <template>
-    <component :is="isImage == true ? 'img' : 'video'" :src="media.url" class="" :autoplay="isVideo" muted loop />
+    <component :is="isImage == true ? 'img' : 'video'" :src="media.url" :autoplay="isVideo" muted loop
+        :class="isImage ? 'object-cover' : isVideo ? '' : ''" />
 </template>
