@@ -2,6 +2,7 @@
 import { configs } from '@/data/config/config';
 import { useTranslation } from 'i18next-vue';
 import { ref } from 'vue';
+import TextSwapper from '../textSwapper/TextSwapper.vue';
 
 const props = withDefaults(defineProps<{
     value: string,
@@ -28,14 +29,8 @@ i18next.on("languageChanged", (lng) => {
 
 <template>
 
-    <Transition :name="animation ? animationName : ''" mode="out-in">
-        <div v-if="flip">
-            {{ flip ? oldTranslatedText : currentTranslatedText }}
-        </div>
-        <div v-else>
-            {{ flip ? currentTranslatedText : oldTranslatedText }}
-        </div>
-    </Transition>
+    <TextSwapper :text1="currentTranslatedText" :text2="oldTranslatedText" :flip="flip" :animation="animation"
+        :animationName="animationName" />
 
 </template>
 
