@@ -115,6 +115,7 @@ export default {
     },
     footerSection: {
         writeMe: "Write me",
+        fiscalData: "Fiscal Data",
     },
     position: "position",
     periodOfTime: "period",

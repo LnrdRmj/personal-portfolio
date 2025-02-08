@@ -80,7 +80,7 @@ const itTranslations: Translations = {
         havearequest: "Hai una richiesta specifica?",
     },
     worksSection: {
-        title: "Works",
+        title: "Lavori",
         table: {
             clientCol: "Cliente",
             roleCol: "Posizione",
@@ -119,6 +119,7 @@ const itTranslations: Translations = {
     },
     footerSection: {
         writeMe: "Scrivimi",
+        fiscalData: "Dati Fiscali",
     },
     position: "posizione",
     periodOfTime: "periodo",
