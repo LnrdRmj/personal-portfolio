@@ -1,13 +1,15 @@
 <script setup lang="ts">
+import { configs } from '@/data/config/config';
 import { useTranslation } from 'i18next-vue';
 import { ref } from 'vue';
 
 const props = withDefaults(defineProps<{
     value: string,
     animationName?: string,
-    animation: boolean
+    animation?: boolean
 }>(), {
-    animation: true
+    animation: configs.language.enableAnimation,
+    animationName: configs.language.animationName
 })
 
 const { i18next, t } = useTranslation()
@@ -26,7 +28,7 @@ i18next.on("languageChanged", (lng) => {
 
 <template>
 
-    <Transition :name="animation ? (animationName ?? 'blur') : ''" mode="out-in">
+    <Transition :name="animation ? animationName : ''" mode="out-in">
         <div v-if="flip">
             {{ flip ? oldTranslatedText : currentTranslatedText }}
         </div>
@@ -38,13 +40,14 @@ i18next.on("languageChanged", (lng) => {
 </template>
 
 <style scoped>
-.blur-enter-active,
-.blur-leave-active {
-    transition: opacity 0.3s, filter 0.3s;
+/* Blurs the content of the text */
+.change-language-animation-enter-active,
+.change-language-animation-leave-active {
+    transition: opacity 0.5s, filter 0.5s;
 }
 
-.blur-enter-from,
-.blur-leave-to {
+.change-language-animation-enter-from,
+.change-language-animation-leave-to {
     filter: blur(10px);
 }
 </style>
