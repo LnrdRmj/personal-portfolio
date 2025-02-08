@@ -9,6 +9,7 @@ import Services from "./services/Services.vue";
 import Slider from "./technologies/Slider.vue";
 import Works from "./works/Works.vue";
 import ContactMeSection from "../common/contactMeSection/ContactMeSection.vue";
+import LangChangeAnimation from "../common/languageChangeAnimation/LangChangeAnimation.vue";
 const { i18next } = useTranslation();
 
 const works = ref(getWorks());
@@ -30,16 +31,16 @@ i18next.on("languageChanged", () => {
                     </div>
                     <div class="text-xl mt-12">
                         <div>
-                            {{ $t("underTitle.phrase1") }}
+                            <LangChangeAnimation value="underTitle.phrase1" />
                         </div>
                         <div>
-                            {{ $t("underTitle.phrase2") }}
+                            <LangChangeAnimation value="underTitle.phrase2" />
                         </div>
                     </div>
 
                     <button
                         class="px-8 w-fit rounded-lg mt-24 bg-secondary py-3 text-white text-xl font-semibold hover:bg-blue-600 transition-colors">
-                        {{ $t("knoweachotherbutton") }}
+                        <LangChangeAnimation value="knoweachotherbutton" />
                     </button>
                 </div>
             </div>

@@ -12,6 +12,7 @@ import IconDocker from "./icons/ICON_DOCKER.svg";
 import IconFirebase from "./icons/ICON_FIREBASE.svg";
 
 import { nextTick, onMounted, onUnmounted, ref } from "vue";
+import LangChangeAnimation from "@/components/common/languageChangeAnimation/LangChangeAnimation.vue";
 
 type Technology = {
     imageSrc: string;
@@ -140,7 +141,7 @@ onUnmounted(() => {
     <div class="bg-secondary px-10 py-20">
         <div class="w-full bg-zinc-800 h-[2px] shrink-0 mb-5" />
         <div class="uppercase font-normal text-white text-2xl mb-[80px]">
-            {{ $t("technolgiesSection.title") }}
+            <LangChangeAnimation value="technolgiesSection.title" />
         </div>
         <div class="flex overflow-x-scroll hide-scrollbar" ref="slider" @mouseenter="scrollingSpeed = 0"
             @mouseleave="scrollingSpeed = 1" style="transform: translate3d(0, 0, 0)">
