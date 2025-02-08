@@ -43,17 +43,31 @@ const visibility = ref(false);
             <div
                 class="flex flex-col w-full md:w-1/3 border-t border-t-gray-500 md:border-none pt-20 px-6 md:pt-0 text-2xl">
                 <div class="flex flex-col items-start space-y-4">
-                    <button>{{ $t("headerSection.work") }}</button>
-                    <button>{{ $t("headerSection.services") }}</button>
-                    <button>{{ $t("headerSection.whoAmI") }}</button>
-                    <button>{{ $t("headerSection.contacts") }}</button>
+                    <select name="" id="" class="bg-secondary text-white" v-model="language">
+                        <option value="it">IT</option>
+                        <option value="en">ENG</option>
+                    </select>
+                    <button>
+                        <LangChangeAnimation value="headerSection.work" />
+                    </button>
+                    <button>
+                        <LangChangeAnimation value="headerSection.services" />
+                    </button>
+                    <button>
+                        <LangChangeAnimation value="headerSection.whoAmI" />
+                    </button>
+                    <button>
+                        <LangChangeAnimation value="headerSection.contacts" />
+                    </button>
                 </div>
             </div>
             <div class="bg-gray-500 h-[1px] w-full md:h-auto md:w-[1px] mt-16 mb-10 md:mt-0 md:mb-0"></div>
             <div class="flex flex-col px-6 md:w-2/3">
-                <div class="text-2xl">{{ $t("contactMe") }}!</div>
+                <div class="text-2xl">
+                    <LangChangeAnimation value="contactMe" />
+                </div>
                 <div class="mt-5">
-                    {{ $t("headerSection.menu.catchPhrase") }}
+                    <LangChangeAnimation value="headerSection.menu.catchPhrase" />
                 </div>
                 <ContactMe class="w-fit mt-16" />
             </div>
