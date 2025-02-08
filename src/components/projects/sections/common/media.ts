@@ -14,3 +14,17 @@ export const placeholderImageMedia: MediaUrl = {
     url: PlaceholderImage,
     type: "image",
 };
+
+export function createImageMediaUrl(url: string): MediaUrl {
+    return {
+        type: "image",
+        url,
+    };
+}
+
+export function createVideoMediaUrl(url: string): MediaUrl {
+    return {
+        type: "video",
+        url,
+    };
+}
