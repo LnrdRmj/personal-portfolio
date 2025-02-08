@@ -2,7 +2,7 @@ import i18next from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
 import en from "./en";
-import it from "./en";
+import it from "./it";
 
 export type Translations = typeof en;
 export type TranslationsPaths = ObjectPaths<Translations>;
