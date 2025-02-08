@@ -1,7 +1,10 @@
 import i18next from "i18next";
-import en from "../i18n/en.json";
-import it from "../i18n/it.json";
 import LanguageDetector from "i18next-browser-languagedetector";
+
+import en from "./en";
+import it from "./en";
+
+export type Translations = typeof en;
 
 const supportedLngs = ["en", "it"] as const;
 export type I18nValue<T = string> = Record<(typeof supportedLngs)[number] | (string & {}), T>;
