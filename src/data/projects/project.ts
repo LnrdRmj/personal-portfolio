@@ -122,7 +122,7 @@ export function getWorks(): Project[] {
                 {
                     name: "single-image",
                     media: {
-                        type: "video",
+                        type: "image",
                         url: "https://wallpapercat.com/w/full/9/9/7/2112823-3840x2160-desktop-4k-minimalist-wallpaper-image.jpg",
                     },
                 },
