@@ -39,11 +39,17 @@ i18next.on("languageChanged", (lng) => {
 /* Blurs the content of the text */
 .change-language-animation-enter-active,
 .change-language-animation-leave-active {
-    transition: opacity 0.5s, filter 0.5s;
+    transition: filter 0.5s;
+    transform: translate3d(0, 0, 0);
 }
 
 .change-language-animation-enter-from,
 .change-language-animation-leave-to {
     filter: blur(10px);
+}
+
+.change-language-animation-enter-to,
+.change-language-animation-leave-from {
+    filter: blur(0px);
 }
 </style>
