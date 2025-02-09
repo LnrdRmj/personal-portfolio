@@ -5,8 +5,8 @@ import Footer from './components/landingPage/footer/Footer.vue';
 
 <template>
     <div class="flex flex-col">
-        <div class="fixed w-full z-20">
-            <Header class="w-full"></Header>
+        <div class="fixed w-full z-20 h-20">
+            <Header class="w-full h-full"></Header>
         </div>
         <RouterView v-slot="{ Component }">
             <transition name="fade" mode="out-in">
