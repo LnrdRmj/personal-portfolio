@@ -5,6 +5,7 @@ export const routes = [
     {
         path: "/",
         component: LandingPage,
+        name: routeNames.LANDING,
     },
     {
         path: "/project/:projectId",
