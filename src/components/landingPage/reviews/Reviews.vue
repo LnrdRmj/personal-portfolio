@@ -106,7 +106,7 @@ onUnmounted(() => {
                 </div>
             </div>
         </div>
-        <div class="bg-transparent w-full sm:bg-zinc-800 h-[2px] shrink-0 my-16" />
+        <div class="bg-transparent w-full sm:bg-zinc-800 h-[2px] shrink-0 my-3 md:my-16" />
     </div>
 </template>
 

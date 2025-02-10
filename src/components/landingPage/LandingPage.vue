@@ -51,7 +51,7 @@ i18next.on("languageChanged", () => {
                 <div class="w-full bg-gray-400 h-[2px] shrink-0 mb-5" />
                 <FeaturedWorks />
             </div>
-            <div class="shrink-0 px-3 mt-64 mb-72">
+            <div class="shrink-0 px-3 mt-32 md:mt-64 mb-52">
                 <Services />
             </div>
             <div class="standard-responsive-padding">

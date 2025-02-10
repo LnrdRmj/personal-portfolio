@@ -5,7 +5,7 @@ import LangChangeAnimation from "../languageChangeAnimation/LangChangeAnimation.
 </script>
 
 <template>
-    <div class="flex flex-col standard-responsive-padding lg:px-36 my-52">
+    <div class="flex flex-col standard-responsive-padding lg:px-36 my-20 md:my-52">
         <div class="max-w-full bg-gray-400 h-[2px] shrink-0 mb-5" />
         <div class="uppercase text-2xl mb-16">{{ $t("contactsSection.title") }}</div>
         <div class="flex flex-col">
