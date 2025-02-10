@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { siteConfigs } from "@/data/config/config";
 import ContactMe from "../../common/ContactMe.vue";
 import LangChangeAnimation from '@/components/common/languageChangeAnimation/LangChangeAnimation.vue';
 </script>
@@ -26,9 +27,14 @@ import LangChangeAnimation from '@/components/common/languageChangeAnimation/Lan
                 <div class="text-zinc-300 mb-2">
                     <LangChangeAnimation value="footerSection.fiscalData" />
                 </div>
-                <div> P.IVA - 07345890482 </div>
-                <div> Sesto Fiorentino (FI), 50019 </div>
-                <div> Via Beccaria 19 </div>
+                <div> P.IVA - {{ siteConfigs.fiscalData.VAT }} </div>
+                <div>
+                    {{ `${siteConfigs.fiscalData.address.city} (${siteConfigs.fiscalData.address.province}),
+                    ${siteConfigs.fiscalData.address.postalCode}` }}
+                </div>
+                <div>
+                    {{ `${siteConfigs.fiscalData.address.street}, ${siteConfigs.fiscalData.address.streetNumber}` }}
+                </div>
             </div>
         </div>
     </footer>

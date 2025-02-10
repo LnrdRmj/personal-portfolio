@@ -67,7 +67,7 @@ const technologies = ref<Technology[]>([
 ]);
 
 const slider = ref<HTMLElement | null>(null);
-let autoScrollInterval: number | null;
+let autoScrollInterval: NodeJS.Timeout | undefined = undefined;
 
 let fullyHiddenObserver: IntersectionObserver;
 // Add 100px to the left margin of the slider
@@ -90,7 +90,7 @@ onMounted(() => {
     //     requestAnimationFrame(repeatFunction)
     // })
 
-    setInterval(() => {
+    autoScrollInterval = setInterval(() => {
         updateScrollLeft();
     }, 15);
 
@@ -130,10 +130,8 @@ function loopFirstChildCallback(
 }
 
 onUnmounted(() => {
-    if (autoScrollInterval != null) {
-        clearInterval(autoScrollInterval);
-        fullyHiddenObserver.disconnect();
-    }
+    autoScrollInterval != null && clearInterval(autoScrollInterval);
+    fullyHiddenObserver?.disconnect();
 });
 </script>
 

@@ -2,7 +2,7 @@
 import { getWorks } from "../../data/projects/project";
 
 import { useTranslation } from "i18next-vue";
-import { ref } from "vue";
+import { ref, useTemplateRef } from "vue";
 import FeaturedWorks from "./feturedWorks/FeaturedWorks.vue";
 import Reviews from "./reviews/Reviews.vue";
 import Services from "./services/Services.vue";
@@ -18,6 +18,14 @@ const works = ref(getWorks());
 i18next.on("languageChanged", () => {
     works.value = getWorks();
 });
+
+const contactMeSection = useTemplateRef('landingContactMeSection')
+function goToContactMeSection() {
+    if (contactMeSection.value == null) return
+
+    contactMeSection.value.scrollIntoView({ behavior: 'smooth', block: 'center' })
+}
+
 </script>
 
 <template>
@@ -39,7 +47,8 @@ i18next.on("languageChanged", () => {
                     </div>
 
                     <button
-                        class="px-8 w-fit rounded-lg mt-24 bg-secondary py-3 text-white text-xl font-semibold hover:bg-blue-600 transition-colors">
+                        class="px-8 w-fit rounded-lg mt-24 bg-secondary py-3 text-white text-xl font-semibold hover:bg-blue-600 transition-colors"
+                        @click="goToContactMeSection">
                         <LangChangeAnimation value="knoweachotherbutton" />
                     </button>
                 </div>
@@ -51,7 +60,7 @@ i18next.on("languageChanged", () => {
                 <div class="w-full bg-gray-400 h-[2px] shrink-0 mb-5" />
                 <FeaturedWorks />
             </div>
-            <div class="shrink-0 px-3 mt-64 mb-72">
+            <div class="shrink-0 px-3 mt-32 md:mt-64 mb-52">
                 <Services />
             </div>
             <div class="standard-responsive-padding">
@@ -61,7 +70,9 @@ i18next.on("languageChanged", () => {
             <div class="px-3 shrink-0">
                 <Reviews />
             </div>
-            <ContactMeSection />
+            <div ref="landingContactMeSection" id="landingContactMeSection">
+                <ContactMeSection />
+            </div>
         </div>
     </div>
 </template>

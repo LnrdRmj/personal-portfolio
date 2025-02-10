@@ -1,11 +1,17 @@
 <script setup lang="ts">
 import LangChangeAnimation from './languageChangeAnimation/LangChangeAnimation.vue';
 
-// import WhiteArrow from '../../assets/white_arrow.svg'
+function goToContactMeSection() {
+
+    const contactMeSection = document.getElementById('landingContactMeSection')
+    if (contactMeSection == null) return
+
+    contactMeSection.scrollIntoView({ behavior: 'smooth', block: 'center' })
+}
 </script>
 
 <template>
-    <button
+    <button @click="goToContactMeSection"
         class="rounded-full border flex items-center py-2 px-4 group transition-colors border-primary bg-secondary hover:bg-primary">
         <div class="mr-2 group-hover:text-black leading-none mb-[2px]">
             <LangChangeAnimation value="contactMe" />
