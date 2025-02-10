@@ -12,7 +12,7 @@ import LangChangeAnimation from "../languageChangeAnimation/LangChangeAnimation.
             <div class="text-4xl sm:text-5xl lg:text-6xl font-semibold">
                 <LangChangeAnimation value="contactMe" />
             </div>
-            <div class="text-lg leading-3 mt-5">
+            <div class="text-lg leading-4 mt-5">
                 <LangChangeAnimation value="underTitle.phrase1" /><br />
                 <LangChangeAnimation value="underTitle.phrase2" />
             </div>
