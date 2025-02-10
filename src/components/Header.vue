@@ -4,6 +4,7 @@ import { ref, watch } from "vue";
 import ContactMe from "./common/ContactMe.vue";
 import LangChangeAnimation from "./common/languageChangeAnimation/LangChangeAnimation.vue";
 import { LANDING } from "@/routes/routeNames";
+import { siteConfigs } from "@/data/config/config";
 const { i18next } = useTranslation();
 
 const language = ref<string>(i18next.language);
@@ -18,7 +19,7 @@ const visibility = ref(false);
 <template>
     <div class="flex flex-col relative">
         <div class="bg-black flex justify-between items-center text-white text-xl py-5 px-10 relative z-20 h-full">
-            <RouterLink :to="{ name: LANDING }">Leonardo Ramaj</RouterLink>
+            <RouterLink :to="{ name: LANDING }">{{ siteConfigs.name }}</RouterLink>
             <div class="hidden lg:flex lg:justify-between lg:items-center lg:space-x-20">
                 <select name="" id="" class="bg-secondary text-white" v-model="language">
                     <option value="it">IT</option>

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { siteConfigs } from "@/data/config/config";
 import EmailIcon from "../../../assets/emailicon.png";
 import WhatsappIcon from "../../../assets/whatsappicon.png";
 import LangChangeAnimation from "../languageChangeAnimation/LangChangeAnimation.vue";
@@ -22,14 +23,20 @@ import LangChangeAnimation from "../languageChangeAnimation/LangChangeAnimation.
                 <img class="h-4 mt-[5px] mr-2" :src="WhatsappIcon" alt="" />
                 <div class="flex flex-col font-semibold">
                     <div class="text-lg">Whatsapp</div>
-                    <div><a href="https://wa.me/393279551219" target="_blank">+39 327 955 1219</a></div>
+                    <div>
+                        <a :href="`https://wa.me/${siteConfigs.contactInfo.phoneNoSpace}`" target="_blank">
+                            {{ siteConfigs.contactInfo.phone }}
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="flex mt-6">
                 <img class="h-4 mt-[5px] mr-2" :src="EmailIcon" alt="" />
                 <div class="flex flex-col font-semibold">
                     <div class="text-lg">Email</div>
-                    <div><a href="mailto:leonardo.ra14@icloud.com">leonardo.ra14@icloud.com</a></div>
+                    <div>
+                        <a :href="`mailto:${siteConfigs.contactInfo.email}`">{{ siteConfigs.contactInfo.email }}</a>
+                    </div>
                 </div>
             </div>
         </div>
