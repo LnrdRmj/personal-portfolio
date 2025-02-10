@@ -22,20 +22,20 @@ import LangChangeAnimation from "../languageChangeAnimation/LangChangeAnimation.
                 <img class="h-4 mt-[5px] mr-2" :src="WhatsappIcon" alt="" />
                 <div class="flex flex-col font-semibold">
                     <div class="text-lg">Whatsapp</div>
-                    <div>+39 327 955 1219</div>
+                    <div><a href="https://wa.me/393279551219" target="_blank">+39 327 955 1219</a></div>
                 </div>
             </div>
             <div class="flex mt-6">
                 <img class="h-4 mt-[5px] mr-2" :src="EmailIcon" alt="" />
                 <div class="flex flex-col font-semibold">
                     <div class="text-lg">Email</div>
-                    <div>leonardo.ra14@icloud.com</div>
+                    <div><a href="mailto:leonardo.ra14@icloud.com">leonardo.ra14@icloud.com</a></div>
                 </div>
             </div>
         </div>
-        <button
-            class="px-8 w-fit rounded-lg mt-20 bg-secondary py-3 text-white text-base lg:text-xl font-semibold hover:bg-blue-600 transition-colors">
+        <a href="mailto:leonardo.ra14@icloud.com" class="px-8 w-fit rounded-lg mt-20 bg-secondary py-3 text-white text-base lg:text-xl font-semibold
+            hover:bg-blue-600 transition-colors">
             <LangChangeAnimation value="contactsSection.bookConsultation" />
-        </button>
+        </a>
     </div>
 </template>
