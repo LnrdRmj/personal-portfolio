@@ -12,7 +12,7 @@ defineProps<{
 
 <template>
     <div class="flex flex-col justify-center w-full gap-2">
-        <ProjectHeader :project="project" />
+        <ProjectHeader :project="project" class="w-full" />
         <div class="flex-center w-full">
             <ProjectEvaluator :sections="project.sections" class="max-w-[1200px]" />
         </div>

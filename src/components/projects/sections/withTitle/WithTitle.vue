@@ -1,9 +1,10 @@
 <script setup lang="ts">
+import { I18nValue } from '@/i18n/i18n';
 import HeaderCard from '../../header/HeaderCard.vue';
 
 export type Props = {
-    title: string,
-    description: string
+    title: I18nValue,
+    description: I18nValue
 }
 
 defineProps<Props>()

@@ -9,7 +9,10 @@ import { Skill, projectSkills } from "./projectSkills";
 
 export interface Project {
     id: number;
-    period: string;
+    period: {
+        startYear: number;
+        endYear?: number;
+    };
     clientName: string;
     role: I18nValue;
     skills: Skill[];
@@ -18,12 +21,13 @@ export interface Project {
     sections: ProjectSection[];
 }
 export function getWorks(): Project[] {
-    const { t } = i18next;
     return [
         YoomyProject,
         {
             id: 2,
-            period: `2022 - 2024`,
+            period: {
+                startYear: 2022,
+            },
             clientName: "Trackone",
             role: createI18ValueWithFromOne("Frontend developer"),
             skills: [projectSkills.web, projectSkills.vue, projectSkills.app],
@@ -39,12 +43,24 @@ export function getWorks(): Project[] {
                 },
                 {
                     name: "with-title",
-                    description: "Some description",
-                    title: "Some title",
+                    description: {
+                        en: "Some more description about this double images",
+                        it: "Una descrizione",
+                    },
+                    title: {
+                        en: "Some description in English",
+                        it: "Una descrizione in italiano",
+                    },
                     child: {
                         name: "double-image-with-text",
-                        title: "Some other title",
-                        description: "Some more description about this double images",
+                        title: {
+                            en: "Some description in English",
+                            it: "Una descrizione in italiano",
+                        },
+                        description: {
+                            en: "Some more description about this double images",
+                            it: "Una descrizione",
+                        },
                         medias: [
                             {
                                 type: "image",
@@ -61,7 +77,9 @@ export function getWorks(): Project[] {
         },
         {
             id: 3,
-            period: `2024 - ${t("worksSection.table.toNow")}`,
+            period: {
+                startYear: 2024,
+            },
             clientName: "NGSensors",
             role: createI18ValueWithFromOne("Web developer"),
             skills: [projectSkills.web, projectSkills.react],
@@ -80,8 +98,14 @@ export function getWorks(): Project[] {
                 },
                 {
                     name: "double-image-with-text",
-                    title: "Some other title",
-                    description: "Some more description about this double images",
+                    title: {
+                        en: "Some description in English",
+                        it: "Una descrizione in italiano",
+                    },
+                    description: {
+                        en: "Some more description about this double images",
+                        it: "Una descrizione",
+                    },
                     medias: [
                         {
                             type: "image",
@@ -97,7 +121,9 @@ export function getWorks(): Project[] {
         },
         {
             id: 4,
-            period: `2024 - ${t("worksSection.table.toNow")}`,
+            period: {
+                startYear: 2024,
+            },
             clientName: "Paust Auction",
             role: createI18ValueWithFromOne("Web developer"),
             skills: [projectSkills.vue, projectSkills.web],
@@ -116,8 +142,14 @@ export function getWorks(): Project[] {
                 },
                 {
                     name: "double-image-with-text",
-                    title: "Some other title",
-                    description: "Some more description about this double images",
+                    title: {
+                        en: "Some description in English",
+                        it: "Una descrizione in italiano",
+                    },
+                    description: {
+                        en: "Some more description about this double images",
+                        it: "Una descrizione",
+                    },
                     medias: [
                         {
                             type: "image",

@@ -13,6 +13,9 @@ import TripleImages, {
 import WithTitle, {
     Props as WithTitleProps,
 } from "@/components/projects/sections/withTitle/WithTitle.vue";
+import ImageWithText, {
+    Props as ImageWithTextProps,
+} from "@/components/projects/sections/imageWithText/ImageWithText.vue";
 
 type DoubleImageSection = {
     name: "double-image";
@@ -30,11 +33,16 @@ type TripleImagesSection = {
     name: "triple-image";
 } & TripleImagesProps;
 
+type ImageWithTextSection = {
+    name: "single-image-with-text";
+} & ImageWithTextProps;
+
 type PrimitiveSections =
     | DoubleImageSection
     | DoubleImageWithTextSection
     | SingleImageSection
-    | TripleImagesSection;
+    | TripleImagesSection
+    | ImageWithTextSection;
 
 type WithTitleSection = {
     name: "with-title";
@@ -50,4 +58,5 @@ export const ProjectSectionToComponent = {
     "single-image": SingleImage,
     "triple-image": TripleImages,
     "with-title": WithTitle,
+    "single-image-with-text": ImageWithText,
 } satisfies Record<ProjectSection["name"], any>;
