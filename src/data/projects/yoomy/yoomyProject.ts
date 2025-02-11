@@ -1,11 +1,10 @@
-import i18next from "i18next";
 import { Project } from "../project";
+import { projectSkills } from "../projectSkills";
 import YoomyBannerProject from "./assets/yoomyBannerProject.png";
 import Yoomy2 from "./assets/yoomy_2.png";
 import YoomyImage3 from "./assets/yoomy_image_3.png";
-import { projectSkills } from "../projectSkills";
+import YoomyImage4 from "./assets/yoomy_image_4.png";
 
-const { t } = i18next;
 export const YoomyProject: Project = {
     id: 1,
     period: {
@@ -44,6 +43,40 @@ export const YoomyProject: Project = {
             media: {
                 type: "image",
                 url: YoomyImage3,
+            },
+        },
+        {
+            name: "single-image-with-text",
+            textPosition: "right",
+            title: {
+                en: "WHAT DID I DO?",
+                it: "COSA HO FATTO?",
+            },
+            description: {
+                en: "I developed both the frontend and backend of this platform, and you can now find the Yoomy app on both the App Store and Play Store. <br> <br> The technologies used include Vue 3, Capacitor JS, and Node.js. Additionally, I tested the platform using the Jest testing framework.",
+                it: "Ho sviluppato sia il frontend che il backend di questa piattaforma, e ora puoi trovare l'app Yoomy su App Store e Play Store. <br> <br> Le tecnologie utilizzate includono Vue 3, Capacitor JS e Node.js. Inoltre, ho testato la piattaforma utilizzando il framework di test Jest.",
+            },
+            media: {
+                type: "image",
+                url: YoomyImage4,
+            },
+        },
+        {
+            name: "with-title",
+            title: {
+                en: "THE RESULTS?",
+                it: "I RISULTATI?",
+            },
+            description: {
+                en: "Yoomy is now in use in various schools in Florence and has well over 1000+ registered users 🎉. The app is expected to grow more and we're on the verge of acquiring new schools with new features.",
+                it: "Yoomy è ora utilizzato in diverse scuole di Firenze e conta ben oltre 1000+ utenti registrati 🎉. L'app è destinata a crescere ulteriormente e siamo sul punto di acquisire nuove scuole con nuove funzionalità.",
+            },
+            child: {
+                name: "single-image",
+                media: {
+                    type: "image",
+                    url: YoomyImage4,
+                },
             },
         },
     ],

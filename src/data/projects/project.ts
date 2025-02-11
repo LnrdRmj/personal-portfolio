@@ -1,11 +1,10 @@
-import { I18nValue, createI18ValueWithFromOne } from "../../i18n/i18n";
 import { createImageMediaUrl } from "@/components/projects/sections/common/media";
 import { ProjectSection } from "@/services/project/project";
-import i18next from "i18next";
+import { I18nValue, createI18ValueWithFromOne } from "../../i18n/i18n";
 import TrackOneLoginImage from "./assets/trackone-login.png";
 import YoomyBannerProject from "./assets/yoomyBannerProject.png";
-import { YoomyProject } from "./yoomy/yoomyProject";
 import { Skill, projectSkills } from "./projectSkills";
+import { YoomyProject } from "./yoomy/yoomyProject";
 
 export interface Project {
     id: number;
