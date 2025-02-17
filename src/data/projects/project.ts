@@ -4,8 +4,9 @@ import { I18nValue, createI18ValueFromOne } from "../../i18n/i18n";
 import TrackOneLoginImage from "./assets/trackone-login.png";
 import YoomyBannerProject from "./assets/yoomyBannerProject.png";
 import { Skill, projectSkills } from "./projectSkills";
-import { YoomyProject } from "./yoomy/yoomyProject";
 import { SampleProject } from "./yoomy/sampleProject";
+import { YoomyProject } from "./yoomy/yoomyProject";
+import { t } from "i18next";
 
 export interface Project {
     id: number;
@@ -20,6 +21,11 @@ export interface Project {
     description: I18nValue;
     sections: ProjectSection[];
 }
+
+export function getProjectPeriodString(period: Project["period"]) {
+    return `${period.startYear} - ${period.endYear ?? t("worksSection.table.toNow")}`;
+}
+
 export function getWorks(): Project[] {
     return [
         YoomyProject,
