@@ -11,5 +11,5 @@ defineProps<Props>()
 </script>
 
 <template>
-    <MediaContainer :media="media" />
+    <MediaContainer :media="media" class="aspect-video" />
 </template>

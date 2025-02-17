@@ -13,7 +13,7 @@ defineProps<Props>()
 
 <template>
     <div class="flex flex-col">
-        <HeaderCard :title="title" :description="description" class="px-20 mb-10" />
+        <HeaderCard :title="title" :description="description" class="px-10 md:px-20 mb-10 mt-20" />
         <slot />
     </div>
 </template>
