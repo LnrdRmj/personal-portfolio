@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { Project } from "../../../data/projects/project";
+import { Project, getProjectPeriodString } from "../../../data/projects/project";
 import { PROJECT_DETAIL } from "../../../routes/routeNames";
 import I18nChangeAnimation from "@/components/common/languageChangeAnimation/I18nChangeAnimation.vue";
 import LangChangeAnimation from "@/components/common/languageChangeAnimation/LangChangeAnimation.vue";
@@ -28,7 +28,7 @@ const hovered = ref<boolean[]>([]);
             <div v-for="(work, index) of works" @mouseenter="hovered[index] = true" @mouseleave="hovered[index] = false"
                 class="flex items-center border-t border-t-black w-full font-medium h-16 group hover:bg-black hover:rounded-md [&:hover+div]:border-t-transparent transition-colors text-lg sm:text-base">
                 <div class="hidden sm:block w-2/12 text-zinc-400 group-hover:pl-5 transition-[padding]">
-                    {{ work.period }}
+                    {{ getProjectPeriodString(work.period) }}
                 </div>
                 <div class="w-[45%] sm:w-2/12 group-hover:pl-5 group-hover:text-white transition-[padding]">
                     {{ work.clientName }}
