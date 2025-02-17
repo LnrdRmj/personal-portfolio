@@ -25,7 +25,7 @@ export function setup() {
     });
 }
 
-export function createI18ValueWithFromOne<T>(value: T): I18nValue<T> {
+export function createI18ValueFromOne<T>(value: T): I18nValue<T> {
     return {
         en: value,
         it: value,
