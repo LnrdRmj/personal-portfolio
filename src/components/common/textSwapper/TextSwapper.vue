@@ -16,12 +16,8 @@ withDefaults(defineProps<{
 <template>
 
     <Transition :name="animation ? animationName : ''" mode="out-in">
-        <div v-if="flip">
-            {{ flip ? text1 : text2 }}
-        </div>
-        <div v-else>
-            {{ flip ? text2 : text1 }}
-        </div>
+        <div v-if="flip" v-html="flip ? text1 : text2"></div>
+        <div v-else v-html="flip ? text2 : text1"></div>
     </Transition>
 
 </template>

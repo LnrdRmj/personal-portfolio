@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { I18nValue } from '@/i18n/i18n';
 import HeaderCard from '../../header/HeaderCard.vue';
+import MediaContainer from '../common/MediaContainer.vue';
 import { MediaUrl } from '../common/media';
-import DoubleImages from '../doubleImages/DoubleImages.vue';
 
 export type Props = {
-    medias: [MediaUrl, MediaUrl],
+    media: MediaUrl,
     title: I18nValue,
     description: I18nValue,
     textPosition?: "left" | "right"
@@ -19,7 +19,7 @@ withDefaults(defineProps<Props>(), {
 
 <template>
     <div class="flex" :class="textPosition == 'left' ? 'flex-row-reverse' : 'flex-row'">
-        <DoubleImages :medias="medias" class="w-1/2" />
+        <MediaContainer :media="media" class="w-1/2" />
         <div class="w-1/2 px-20 pt-32 flex flex-col">
             <HeaderCard :title="title" :description="description" />
         </div>
