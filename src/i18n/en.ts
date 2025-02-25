@@ -87,27 +87,6 @@ export default {
     },
     reviewsSection: {
         title: "WHAT MY CLIENTS SAY",
-        review1: {
-            description:
-                "I recently entrusted the creation of my website to Iacopo Pazzaglia and I couldn't be more satisfied with the result! From the beginning, the team was extremely professional, attentive, and responsive to my needs.",
-            role: "Team of Yoomy",
-        },
-        review2: {
-            description: "Description 2.",
-            role: "Founder of Voricel",
-        },
-        review3: {
-            description: "Description 3.",
-            role: "Founder of Naturae Firenze",
-        },
-        review4: {
-            description: "Description 4.",
-            role: "Owner of Softkeys",
-        },
-        review5: {
-            description: "Description 5.",
-            role: "Founder of I'Rè",
-        },
     },
     contactsSection: {
         title: "Want to Collaborate?",
