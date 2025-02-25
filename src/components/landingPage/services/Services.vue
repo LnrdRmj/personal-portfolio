@@ -5,6 +5,7 @@ import Image2 from "../../../assets/services/imageService2.png";
 import Image3 from "../../../assets/services/imageService3.png";
 import ContactMe from "../../common/ContactMe.vue";
 import ServiceCard from "./ServiceCard.vue";
+import { workServices } from "@/data/workService/services";
 
 </script>
 
@@ -14,12 +15,13 @@ import ServiceCard from "./ServiceCard.vue";
         <div class="w-full bg-zinc-800 h-[2px] shrink-0 mb-5" />
         <div class="uppercase font-normal text-2xl mb-[80px]">{{ $t("services.title") }}</div>
         <div class="flex flex-col space-x-0 space-y-10 sm:flex-row sm:space-x-10 sm:space-y-0 w-full [&>*]:h-[700px]">
-            <ServiceCard class="flex-1" :description="$t('services.service1.description')"
+            <!-- <ServiceCard class="flex-1" :description="$t('services.service1.description')"
                 :skills="$t('services.service1.skills', { returnObjects: true })" :imageSrc="Image1" />
             <ServiceCard class="flex-1" :description="$t('services.service2.description')"
                 :skills="$t('services.service2.skills', { returnObjects: true })" :imageSrc="Image2" />
             <ServiceCard class="flex-1" :description="$t('services.service3.description')"
-                :skills="$t('services.service3.skills', { returnObjects: true })" :imageSrc="Image3" />
+                :skills="$t('services.service3.skills', { returnObjects: true })" :imageSrc="Image3" /> -->
+            <ServiceCard v-for="workService of workServices" :service="workService"></ServiceCard>
         </div>
         <div class="w-full bg-zinc-800 h-[2px] shrink-0 my-16" />
         <div class="flex flex-col items-center">
