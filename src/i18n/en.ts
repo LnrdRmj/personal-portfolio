@@ -53,26 +53,6 @@ export default {
     },
     services: {
         title: "Main Services",
-        service1: {
-            description:
-                "Corporate rebranding including the creation of color palettes, social network strategy, and a merchandising line.",
-            skills: [
-                "User Flows (UX)",
-                "Website Design (UI)",
-                "Figma",
-                "Responsive / Mobile",
-                "Management",
-            ],
-        },
-        service2: {
-            description:
-                "Development of a visual identity in line with the company's distinctive values.",
-            skills: ["Logo", "Color Palettes", "Figma", "Responsive / Mobile", "Management"],
-        },
-        service3: {
-            description: "Creation of multimedia content to enhance the company's market presence.",
-            skills: ["3D Animation", "Advertising", "Images", "Social Network", "Merchandising"],
-        },
         havearequest: "Do you have a specific request?",
     },
     worksSection: {

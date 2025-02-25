@@ -56,27 +56,6 @@ const itTranslations: Translations = {
     },
     services: {
         title: "Servici principali",
-        service1: {
-            description:
-                "Rebranding aziendale che comprende la creazione di Palette colori, strategia Social Network e linea di Merchandising.",
-            skills: [
-                "Flussi Utente (UX)",
-                "Website Design (UI)",
-                "Figma",
-                "Responsive / Mobile",
-                "Gestione",
-            ],
-        },
-        service2: {
-            description:
-                "Sviluppo di un’identità visiva conforme ai valori distintivi dell’azienda.",
-            skills: ["Logo", "Palette colori", "Figma", "Responsive / Mobile", "Gestione"],
-        },
-        service3: {
-            description:
-                "Realizzazione di contenuti multimediali per elevare la presenza sul mercato dell’azienda.",
-            skills: ["Animazione 3D", "Pubblicità", "Immagini", "Social Network", "Merchandising"],
-        },
         havearequest: "Hai una richiesta specifica?",
     },
     worksSection: {
