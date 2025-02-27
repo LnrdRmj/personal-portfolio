@@ -1,15 +1,16 @@
 <script setup lang="ts">
-    import { computed, ref } from "vue";
+    import I18nChangeAnimation from "@/components/common/languageChangeAnimation/I18nChangeAnimation.vue";
+import LangChangeAnimation from "@/components/common/languageChangeAnimation/LangChangeAnimation.vue";
+import { Project } from "@/data/projects/project";
+import { getSelectedLanguageFromI18nValue } from "@/i18n/i18n";
+import { computed, ref } from "vue";
 
     type Variant = "big" | "small";
 
     const props = withDefaults(
         defineProps<{
             variant?: Variant;
-            imageSrc: string;
-            client: string;
-            role: string;
-            description: string;
+            project: Project
         }>(),
         {
             variant: "small",
@@ -26,7 +27,7 @@
             class="size-full overflow-hidden transition-[border-radius] duration-700 rounded-[20px] hover:rounded-[40px]"
         >
             <img
-                :src="imageSrc"
+                :src="project.bannerPath"
                 class="object-cover size-full transition-transform duration-700 hover:scale-110"
             />
         </div>
@@ -52,7 +53,7 @@
                             : 'opacity-100 translate-y-0'
                     "
                 >
-                    {{ client }}
+                    {{ project.clientName }}
                 </div>
                 <div
                     class="font-bold h-fit absolute transition-all duration-300 w-full"
@@ -62,7 +63,7 @@
                             : 'opacity-100 translate-y-0'
                     "
                 >
-                    {{ role }}
+                    {{ getSelectedLanguageFromI18nValue(project.role) }}
                 </div>
             </div>
             <div
@@ -71,7 +72,7 @@
                     'sm:w-1/2': isBigVariant,
                 }"
             >
-                {{ description }}
+                <I18nChangeAnimation :value="project.description"/>
             </div>
         </div>
     </div>
