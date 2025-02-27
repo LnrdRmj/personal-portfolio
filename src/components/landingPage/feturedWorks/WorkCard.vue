@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import I18nChangeAnimation from "@/components/common/languageChangeAnimation/I18nChangeAnimation.vue";
-import LangChangeAnimation from "@/components/common/languageChangeAnimation/LangChangeAnimation.vue";
 import { Project } from "@/data/projects/project";
 import { getSelectedLanguageFromI18nValue } from "@/i18n/i18n";
-import { computed, ref } from "vue";
+import { PROJECT_DETAIL } from "@/routes/routeNames";
+import { computed, ref, useTemplateRef } from "vue";
+import { useRouter } from "vue-router";
 
+const router = useRouter();
 type Variant = "big" | "small";
 
 const props = withDefaults(
@@ -17,16 +19,35 @@ const props = withDefaults(
     },
 );
 
+const workImageImgElement = useTemplateRef<HTMLImageElement>('workImage')
 const isBigVariant = computed(() => props.variant == "big");
 const hovered = ref(false);
+
+function goToProjectDetailPage() {
+
+    if (!(document as any).startViewTransition) {
+        console.log('not supported')
+        router.push({ name: PROJECT_DETAIL, params: { projectId: props.project.id } })
+    }
+    else {
+        (workImageImgElement.value?.style as any).viewTransitionName = 'project-header';
+        (document as any).startViewTransition(async () => {
+            (workImageImgElement.value?.style as any).viewTransitionName = '';
+            router.push({ name: PROJECT_DETAIL, params: { projectId: props.project.id } })
+        })
+    }
+
+}
+
 </script>
 
 <template>
-    <div class="flex flex-col" @mouseover="hovered = true" @mouseleave="hovered = false">
+    <div class="flex flex-col" @mouseover="hovered = true" @mouseleave="hovered = false"
+        @click="goToProjectDetailPage()">
         <div
             class="size-full overflow-hidden transition-[border-radius] duration-700 rounded-[20px] hover:rounded-[40px]">
-            <img :src="project.bannerPath"
-                class="object-cover size-full transition-transform duration-700 hover:scale-110" />
+            <img :src="project.bannerPath" ref="workImage"
+                class="object-cover transition-transform duration-700 hover:scale-110" />
         </div>
         <div class="w-full bg-slate-300 h-[2px] shrink-0 mt-3 mb-1" />
         <div class="flex flex-col" :class="{
