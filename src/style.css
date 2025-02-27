@@ -26,6 +26,20 @@ html,
     @apply animate-background-scroll text-transparent bg-gradient-to-tl from-amber-500 to-pink-500 bg-clip-text;
 }
 
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 3s;
+}
+
+::view-transition-old(project-header),
+::view-transition-new(project-header) {
+    animation-duration: 3s;
+}
+
+::view-transition-image-pair(project-header) {
+    isolation: none;
+}
+
 @layer global-animations {
     /* 1. declare transition */
     .group-fade-move {
