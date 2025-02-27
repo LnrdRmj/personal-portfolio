@@ -11,7 +11,7 @@ defineProps<{
 <template>
     <div class="flex flex-col gap-2">
         <div v-for="section of sections">
-            <SectionEvaluator :section="section" class="h-[675px] size-full" />
+            <SectionEvaluator :section="section" class="w-full" />
         </div>
     </div>
 </template>

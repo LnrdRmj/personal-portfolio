@@ -17,7 +17,7 @@ defineProps<{
             </div>
             <I18nChangeAnimation v-else :value="title" />
         </div>
-        <div class="text-xl mt-5 leading-tight">
+        <div class="text-xl mt-0 md:mt-5 leading-tight">
             <div v-if="typeof description == 'string'" v-html="description"></div>
             <I18nChangeAnimation v-else :value="description" />
         </div>

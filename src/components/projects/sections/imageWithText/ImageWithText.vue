@@ -18,9 +18,9 @@ withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-    <div class="flex" :class="textPosition == 'left' ? 'flex-row-reverse' : 'flex-row'">
-        <MediaContainer :media="media" class="w-1/2" />
-        <div class="w-1/2 px-20 pt-32 flex flex-col">
+    <div class="flex flex-col" :class="textPosition == 'left' ? 'md:flex-row-reverse' : 'md:flex-row'">
+        <MediaContainer :media="media" class="w-full h-[500px] md:h-auto md:w-1/2" />
+        <div class="md:w-1/2 px-10 md:px-20 py-16 md:pt-32 flex flex-col">
             <HeaderCard :title="title" :description="description" />
         </div>
     </div>

@@ -11,7 +11,7 @@ defineProps<Props>()
 </script>
 
 <template>
-    <div class="flex gap-2">
-        <MediaContainer v-for="media in medias" :media="media" class="object-cover h-full min-w-0" />
+    <div class="flex flex-col md:flex-row gap-2">
+        <MediaContainer v-for="media in medias" :media="media" class="object-cover h-full min-w-0 flex-1" />
     </div>
 </template>

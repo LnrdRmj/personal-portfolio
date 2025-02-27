@@ -56,27 +56,6 @@ const itTranslations: Translations = {
     },
     services: {
         title: "Servici principali",
-        service1: {
-            description:
-                "Rebranding aziendale che comprende la creazione di Palette colori, strategia Social Network e linea di Merchandising.",
-            skills: [
-                "Flussi Utente (UX)",
-                "Website Design (UI)",
-                "Figma",
-                "Responsive / Mobile",
-                "Gestione",
-            ],
-        },
-        service2: {
-            description:
-                "Sviluppo di un’identità visiva conforme ai valori distintivi dell’azienda.",
-            skills: ["Logo", "Palette colori", "Figma", "Responsive / Mobile", "Gestione"],
-        },
-        service3: {
-            description:
-                "Realizzazione di contenuti multimediali per elevare la presenza sul mercato dell’azienda.",
-            skills: ["Animazione 3D", "Pubblicità", "Immagini", "Social Network", "Merchandising"],
-        },
         havearequest: "Hai una richiesta specifica?",
     },
     worksSection: {
@@ -91,27 +70,6 @@ const itTranslations: Translations = {
     },
     reviewsSection: {
         title: "COSA DICONO I MIEI CLIENTI",
-        review1: {
-            description:
-                "Ho recentemente affidato la creazione del mio sito web a Iacopo Pazzaglia e non potrei essere più soddisfatto del risultato! Sin dall'inizio, il team è stato estremamente professionale, attento e ricettivo alle mie esigenze.",
-            role: "Team di Yoomy",
-        },
-        review2: {
-            description: "Descrizione 2.",
-            role: "Founder di Voricel",
-        },
-        review3: {
-            description: "Descrizione 3.",
-            role: "Founder di Naturae Firenze",
-        },
-        review4: {
-            description: "Descrizione 4.",
-            role: "Owner di softkeys",
-        },
-        review5: {
-            description: "Descrizione 5.",
-            role: "Founde di I'Rè",
-        },
     },
     contactsSection: {
         title: "Cosa aspetti?",

@@ -53,26 +53,6 @@ export default {
     },
     services: {
         title: "Main Services",
-        service1: {
-            description:
-                "Corporate rebranding including the creation of color palettes, social network strategy, and a merchandising line.",
-            skills: [
-                "User Flows (UX)",
-                "Website Design (UI)",
-                "Figma",
-                "Responsive / Mobile",
-                "Management",
-            ],
-        },
-        service2: {
-            description:
-                "Development of a visual identity in line with the company's distinctive values.",
-            skills: ["Logo", "Color Palettes", "Figma", "Responsive / Mobile", "Management"],
-        },
-        service3: {
-            description: "Creation of multimedia content to enhance the company's market presence.",
-            skills: ["3D Animation", "Advertising", "Images", "Social Network", "Merchandising"],
-        },
         havearequest: "Do you have a specific request?",
     },
     worksSection: {
@@ -87,27 +67,6 @@ export default {
     },
     reviewsSection: {
         title: "WHAT MY CLIENTS SAY",
-        review1: {
-            description:
-                "I recently entrusted the creation of my website to Iacopo Pazzaglia and I couldn't be more satisfied with the result! From the beginning, the team was extremely professional, attentive, and responsive to my needs.",
-            role: "Team of Yoomy",
-        },
-        review2: {
-            description: "Description 2.",
-            role: "Founder of Voricel",
-        },
-        review3: {
-            description: "Description 3.",
-            role: "Founder of Naturae Firenze",
-        },
-        review4: {
-            description: "Description 4.",
-            role: "Owner of Softkeys",
-        },
-        review5: {
-            description: "Description 5.",
-            role: "Founder of I'Rè",
-        },
     },
     contactsSection: {
         title: "Want to Collaborate?",

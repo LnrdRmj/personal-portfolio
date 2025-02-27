@@ -1,72 +1,16 @@
 <script setup lang="ts">
-import { useTranslation } from "i18next-vue";
 import Client from "./Client.vue";
-import Review from "./Review.vue";
+import ReviewContainer from "./Review.vue";
 
 import { onUnmounted, ref } from "vue";
 import LangChangeAnimation from "@/components/common/languageChangeAnimation/LangChangeAnimation.vue";
-const { i18next } = useTranslation();
-
-type Review = {
-    companyName: string;
-    logo: string;
-    review: string;
-    reviewer: string;
-    role: string;
-};
-
-const reviews = ref(getReviews());
-
-// Unfortunatelly when we change the languages we also have to "recalculate" the works
-i18next.on("languageChanged", () => {
-    reviews.value = getReviews();
-});
-
-function getReviews(): Review[] {
-    return [
-        {
-            companyName: "Yoomy",
-            logo: "/images/clients/icons/yoomy.svg",
-            review: "reviewsSection.review1.description",
-            reviewer: "Yoomy Group",
-            role: "reviewsSection.review1.role",
-        },
-        {
-            companyName: "Voricel",
-            logo: "/images/clients/icons/voricel.svg",
-            review: "reviewsSection.review2.description",
-            reviewer: "Farid Sanhaji",
-            role: "reviewsSection.review2.role",
-        },
-        {
-            companyName: "Naturae Firenze",
-            logo: "/images/clients/icons/naturaeFirenze.svg",
-            review: "reviewsSection.review3.description",
-            reviewer: "Fabio Canestrini",
-            role: "reviewsSection.review3.role",
-        },
-        {
-            companyName: "Softkeys",
-            logo: "/images/clients/icons/softKeys.svg",
-            review: "reviewsSection.review4.description",
-            reviewer: "Giulio Rossini",
-            role: "reviewsSection.review4.role",
-        },
-        {
-            companyName: "i'Re",
-            logo: "/images/clients/icons/ire.svg",
-            review: "reviewsSection.review5.description",
-            reviewer: "Ettore Canestrini",
-            role: "reviewsSection.review5.role",
-        },
-    ];
-}
+import { reviews } from "@/data/reviews/reviews";
 
 const selectedReviewIndex = ref(0);
 const animationDuration = ".5s";
 
 const interval = setInterval(() => {
-    selectedReviewIndex.value = (selectedReviewIndex.value + 1) % getReviews().length;
+    selectedReviewIndex.value = (selectedReviewIndex.value + 1) % reviews.length;
 }, 4 * 1000);
 
 onUnmounted(() => {
@@ -96,11 +40,7 @@ onUnmounted(() => {
                         class="w-full flex h-full absolute left-0 top-0 px-0 lg:px-10"
                         :class="index === selectedReviewIndex ? 'z-10' : ''">
                         <Transition name="review-switch" mode="in-out" :duration="1000">
-                            <Review class="w-full" v-if="index === selectedReviewIndex" v-bind="{
-                                review: review.review,
-                                name: review.reviewer,
-                                role: review.role,
-                            }" />
+                            <ReviewContainer class="w-full" v-if="index === selectedReviewIndex" :review="review" />
                         </Transition>
                     </div>
                 </div>
