@@ -19,7 +19,7 @@ const props = withDefaults(
     },
 );
 
-const workImageImgElement = useTemplateRef<HTMLImageElement>('workImage')
+const workImageImgElement = useTemplateRef<HTMLElement>('workImage')
 const isBigVariant = computed(() => props.variant == "big");
 const hovered = ref(false);
 
