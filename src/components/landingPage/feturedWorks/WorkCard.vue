@@ -33,7 +33,7 @@ function goToProjectDetailPage() {
         (workImageImgElement.value?.style as any).viewTransitionName = 'project-header';
         (document as any).startViewTransition(async () => {
             (workImageImgElement.value?.style as any).viewTransitionName = '';
-            router.push({ name: PROJECT_DETAIL, params: { projectId: props.project.id } })
+            router.push({ name: PROJECT_DETAIL, params: { projectId: props.project.id }, query: { noRouteAnimation: null } })
         })
     }
 
@@ -44,10 +44,10 @@ function goToProjectDetailPage() {
 <template>
     <div class="flex flex-col" @mouseover="hovered = true" @mouseleave="hovered = false"
         @click="goToProjectDetailPage()">
-        <div
+        <div ref="workImage"
             class="size-full overflow-hidden transition-[border-radius] duration-700 rounded-[20px] hover:rounded-[40px]">
-            <img :src="project.bannerPath" ref="workImage"
-                class="object-cover transition-transform duration-700 hover:scale-110" />
+            <img :src="project.bannerPath"
+                class="object-cover size-full transition-transform duration-700 hover1:scale-110" />
         </div>
         <div class="w-full bg-slate-300 h-[2px] shrink-0 mt-3 mb-1" />
         <div class="flex flex-col" :class="{
