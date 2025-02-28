@@ -40,6 +40,29 @@ html,
     animation-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
 }
 
+@keyframes roundedBorder {
+    0% {
+        border-radius: 40px;
+    }
+    100% {
+        border-radius: 0px;
+    }
+}
+
+::view-transition-new(project-header) {
+    height: 100%;
+    opacity: 1;
+    overflow: hidden;
+    object-fit: cover;
+    animation: roundedBorder var(--view-transition-duration) both;
+}
+
+::view-transition-old(project-header) {
+    height: 100%;
+    opacity: 0;
+    display: none;
+}
+
 @layer global-animations {
     /* 1. declare transition */
     .group-fade-move {
