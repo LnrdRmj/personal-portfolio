@@ -5,7 +5,7 @@
 body,
 html,
 #app {
-    @apply h-screen w-screen;
+    @apply h-screen w-full;
 }
 
 .flex-center {
