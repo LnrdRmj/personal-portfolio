@@ -64,6 +64,14 @@ html,
 }
 
 @layer global-animations {
+    .no-animation-leave-active {
+        transition: none;
+    }
+
+    .no-animation-enter-active {
+        transition: none;
+    }
+
     /* 1. declare transition */
     .group-fade-move {
         transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
