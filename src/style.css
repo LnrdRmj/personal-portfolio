@@ -26,6 +26,10 @@ html,
     @apply animate-background-scroll text-transparent bg-gradient-to-tl from-amber-500 to-pink-500 bg-clip-text;
 }
 
+.standard-responsive-padding {
+    @apply px-10 sm:px-20 md:px-32;
+}
+
 :root {
     --view-transition-duration: 0.5s;
 }
