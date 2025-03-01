@@ -18,7 +18,7 @@ function buildProjectPeriod() {
 
 <template>
     <div class="size-full max-w-[1920px]">
-        <div class="w-full h-full">
+        <div class="w-full h-full rounded-none" style="view-transition-name: project-header">
             <img :src="project.bannerPath" alt="" class="size-full object-cover">
         </div>
         <div class="flex-center">

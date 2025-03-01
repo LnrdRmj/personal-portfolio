@@ -12,5 +12,6 @@ export const routes = [
         component: () => import("../components/projects/ProjectPage.vue"),
         name: routeNames.PROJECT_DETAIL,
         props: true,
+        meta: { scrollToTop: true },
     },
 ];

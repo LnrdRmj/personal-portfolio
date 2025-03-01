@@ -30,7 +30,7 @@ function goToContactMeSection() {
 
 <template>
     <div>
-        <div class="flex flex-col w-full h-full overflow-y-scroll bg-primary">
+        <div class="flex flex-col w-full h-full bg-primary">
             <div class="flex flex-col h-screen w-full shrink-0">
                 <div class="flex flex-col standard-responsive-padding">
                     <div

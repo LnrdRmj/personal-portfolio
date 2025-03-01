@@ -5,7 +5,7 @@
 body,
 html,
 #app {
-    @apply h-screen w-screen;
+    @apply h-screen w-full;
 }
 
 .flex-center {
@@ -26,7 +26,56 @@ html,
     @apply animate-background-scroll text-transparent bg-gradient-to-tl from-amber-500 to-pink-500 bg-clip-text;
 }
 
+.standard-responsive-padding {
+    @apply px-10 sm:px-20 md:px-32;
+}
+
+:root {
+    --view-transition-duration: 0.5s;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: var(--view-transition-duration);
+}
+
+::view-transition-group(project-header) {
+    animation-duration: var(--view-transition-duration);
+    animation-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+@keyframes roundedBorder {
+    0% {
+        border-radius: 40px;
+    }
+    100% {
+        border-radius: 0px;
+    }
+}
+
+::view-transition-new(project-header) {
+    height: 100%;
+    opacity: 1;
+    overflow: hidden;
+    object-fit: cover;
+    animation: roundedBorder var(--view-transition-duration) both;
+}
+
+::view-transition-old(project-header) {
+    height: 100%;
+    opacity: 0;
+    display: none;
+}
+
 @layer global-animations {
+    .no-animation-leave-active {
+        transition: none;
+    }
+
+    .no-animation-enter-active {
+        transition: none;
+    }
+
     /* 1. declare transition */
     .group-fade-move {
         transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);

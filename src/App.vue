@@ -1,6 +1,12 @@
 <script setup lang="ts">
+import { useRoute } from 'vue-router';
 import Header from './components/Header.vue';
 import Footer from './components/landingPage/footer/Footer.vue';
+import { computed } from 'vue';
+
+const route = useRoute()
+const noRouteAnimation = computed(() => route.query['noRouteAnimation'] === null)
+
 </script>
 
 <template>
@@ -9,16 +15,11 @@ import Footer from './components/landingPage/footer/Footer.vue';
             <Header class="w-full h-full"></Header>
         </div>
         <RouterView v-slot="{ Component }">
-            <transition name="fade" mode="out-in">
-                <component :is="Component" class="w-full flex-1 min-h-0 mt-20" />
+            <transition :name="noRouteAnimation ? 'no-animation' : 'fade'"
+                :mode="noRouteAnimation ? 'default' : 'out-in'">
+                <component :is="Component" class="w-full flex-1 min-h-0 mt-20 router-transition-duration" />
             </transition>
         </RouterView>
         <Footer />
     </div>
 </template>
-
-<style>
-.standard-responsive-padding {
-    @apply px-10 sm:px-20 md:px-32;
-}
-</style>
