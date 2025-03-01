@@ -20,6 +20,7 @@ export const configs = {
                 postalCode: "59100",
             },
         },
+        showTechnologiesSlider: true,
     },
 };
 
