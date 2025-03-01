@@ -1,5 +1,5 @@
 export default {
-    title: 'Hi, I\'m Leonardo Ramaj and I\'m a Freelance <span style="background-size: 200% 200%" class="gradient-text">Full Stack Developer</span>',
+    title: "Hi, my name is <br> Iacopo Pazzaglia and I am a<br> Creative Director and<br> Web Designer",
     underTitle: {
         phrase1: "Ready to turn your digital vision into reality?",
         phrase2: "Contact me today to schedule a free consultation and discuss your project.",

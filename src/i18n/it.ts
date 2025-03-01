@@ -1,7 +1,7 @@
 import { Translations } from "./i18n";
 
 const itTranslations: Translations = {
-    title: 'Ciao, sono Leonardo Ramaj e sono un <span style="background-size: 200% 200%" class="gradient-text">Full Stack Developer</span> freelancer',
+    title: "Ciao, mi chiamo<br> Iacopo Pazzaglia e sono un<br> Creative Director e<br> Web Designer",
     underTitle: {
         phrase1: "Pronto a trasformare la tua visione digitale in realtà?",
         phrase2:
