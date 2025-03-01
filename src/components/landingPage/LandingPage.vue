@@ -10,6 +10,7 @@ import Slider from "./technologies/Slider.vue";
 import Works from "./works/Works.vue";
 import ContactMeSection from "../common/contactMeSection/ContactMeSection.vue";
 import LangChangeAnimation from "../common/languageChangeAnimation/LangChangeAnimation.vue";
+import { siteConfigs } from "@/data/config/config";
 const { i18next } = useTranslation();
 
 const works = ref(getWorks());
@@ -53,7 +54,7 @@ function goToContactMeSection() {
                     </button>
                 </div>
             </div>
-            <div class="mb-32">
+            <div class="mb-32" v-if="siteConfigs.showTechnologiesSlider">
                 <Slider />
             </div>
             <div class="w-full shrink-0 standard-responsive-padding">

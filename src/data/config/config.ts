@@ -20,6 +20,7 @@ export const configs = {
                 postalCode: "50019",
             },
         },
+        showTechnologiesSlider: true,
     },
 };
 
