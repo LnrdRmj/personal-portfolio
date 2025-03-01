@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import LangChangeAnimation from "@/components/common/languageChangeAnimation/LangChangeAnimation.vue";
-import Image1 from "../../../assets/services/imageService1.png";
-import Image2 from "../../../assets/services/imageService2.png";
-import Image3 from "../../../assets/services/imageService3.png";
+// import Image1 from "../../../assets/services/imageService1.png";
+// import Image2 from "../../../assets/services/imageService2.png";
+// import Image3 from "../../../assets/services/imageService3.png";
 import ContactMe from "../../common/ContactMe.vue";
 import ServiceCard from "./ServiceCard.vue";
 import { workServices } from "@/data/workService/services";

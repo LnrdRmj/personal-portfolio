@@ -14,7 +14,7 @@ const noRouteAnimation = computed(() => route.query['noRouteAnimation'] === null
         <div class="fixed w-full z-20 h-20">
             <Header class="w-full h-full"></Header>
         </div>
-        <RouterView v-slot="{ Component, route }">
+        <RouterView v-slot="{ Component }">
             <transition :name="noRouteAnimation ? 'no-animation' : 'fade'"
                 :mode="noRouteAnimation ? 'default' : 'out-in'">
                 <component :is="Component" class="w-full flex-1 min-h-0 mt-20 router-transition-duration" />
