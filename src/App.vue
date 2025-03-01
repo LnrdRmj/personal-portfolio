@@ -3,9 +3,9 @@ import { useRoute } from 'vue-router';
 import Header from './components/Header.vue';
 import Footer from './components/landingPage/footer/Footer.vue';
 import { computed } from 'vue';
+import { routerAnimationDurationString } from './services/animations/animations';
 
 const route = useRoute()
-
 const noRouteAnimation = computed(() => route.query['noRouteAnimation'] === null)
 
 </script>
@@ -18,7 +18,8 @@ const noRouteAnimation = computed(() => route.query['noRouteAnimation'] === null
         <RouterView v-slot="{ Component, route }">
             <transition :name="noRouteAnimation ? 'no-animation' : 'fade'"
                 :mode="noRouteAnimation ? 'default' : 'out-in'">
-                <component :is="Component" class="w-full flex-1 min-h-0 mt-20" />
+                <component :is="Component" class="w-full flex-1 min-h-0 mt-20 router-transition-duration"
+                    :style="{ '--router-animation-duration': routerAnimationDurationString }" />
             </transition>
         </RouterView>
         <Footer />
@@ -26,7 +27,8 @@ const noRouteAnimation = computed(() => route.query['noRouteAnimation'] === null
 </template>
 
 <style>
-.standard-responsive-padding {
-    @apply px-10 sm:px-20 md:px-32;
+.router-transition-duration {
+    animation-duration: var(--router-animation-duration);
+    transition-duration: var(--router-animation-duration);
 }
 </style>
