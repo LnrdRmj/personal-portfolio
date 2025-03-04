@@ -18,9 +18,13 @@ export const router = createRouter({
         }
 
         if (savedPosition) {
+            // This delay makes sure that the savedPosition is set correctly
+            const delay = 10; //ms
             // return when the router animation ends
             return new Promise((resolve) => {
-                setTimeout(() => resolve(savedPosition), routerAnimationDuration);
+                setTimeout(() => {
+                    resolve(savedPosition);
+                }, routeAnimationDuration + delay);
             });
         }
 
