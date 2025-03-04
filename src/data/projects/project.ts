@@ -15,6 +15,7 @@ export interface Project {
     clientName: string;
     role: I18nValue;
     skills: Skill[];
+    // Banner images must be of 3840x1440 or have the same aspect ratio (2,67)
     bannerPath: string;
     description: I18nValue;
     sections: ProjectSection[];
