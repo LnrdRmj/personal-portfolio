@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-    <component :is="ProjectSectionToComponent[section.name]" v-bind="section" class="size-full">
+    <component :is="ProjectSectionToComponent[section.name]" v-bind="section" class="">
         <SectionEvaluator v-if="section.name == 'with-title'" :section="section.child"></SectionEvaluator>
     </component>
 </template>
