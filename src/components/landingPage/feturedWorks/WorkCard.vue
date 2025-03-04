@@ -26,7 +26,6 @@ const hovered = ref(false);
 function goToProjectDetailPage() {
 
     if (!(document as any).startViewTransition) {
-        console.log('not supported')
         router.push({ name: PROJECT_DETAIL, params: { projectId: props.project.id } })
     }
     else {
