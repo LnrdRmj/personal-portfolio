@@ -9,7 +9,8 @@ import { Project } from "../project";
 export const TrackOneProject: Project = {
     id: 2,
     period: {
-        startYear: 2022,
+        startYear: 2024,
+        endYear: 2025,
     },
     clientName: "Trackone",
     role: createI18ValueFromOne("Frontend developer"),
