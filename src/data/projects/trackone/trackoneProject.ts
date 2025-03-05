@@ -7,7 +7,7 @@ import {
 } from "@/components/projects/sections/common/media";
 import { Project } from "../project";
 import DevicesPageVideo from "./assets/Devices Video.mp4";
-import DeviceDetailPageVideo from "./assets/Device Detail Video.mp4";
+import DeviceDetailPageVideo from "./assets/Devices Details.mp4";
 import MapModesVideo from "./assets/Map Modes.mp4";
 import TrackOneLoginImage from "./assets/trackone-login.png";
 import TrackoneBannerImage from "./assets/trackone_project_banner.png";
