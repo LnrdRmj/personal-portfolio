@@ -19,19 +19,19 @@ export const TrackOneProject: Project = {
         endYear: 2025,
     },
     clientName: "Trackone",
-    role: createI18ValueFromOne("Frontend developer"),
+    role: createI18ValueFromOne("Frontend Developer"),
     skills: [projectSkills.web, projectSkills.vue, projectSkills.docker],
     bannerPath: TrackoneBannerImage,
     description: {
-        en: "Platform for the client NGSSensors, which specializes in the sale and installation of measurement devices on logistics vehicles.",
-        it: "Piattaforma per il cliente NGSSensors che si occupa della vendita e dell'installazione di alcuni dispositivi su veicoli logistici.",
+        en: "A platform developed for NGSSensors, a company specializing in the sale and installation of measurement devices for logistics vehicles.",
+        it: "Una piattaforma sviluppata per NGSSensors, un'azienda specializzata nella vendita e installazione di dispositivi di misurazione per veicoli logistici.",
     },
     sections: [
         {
             name: "single-image-with-text",
             description: {
-                en: "The client required me to build the frontend for their already existing Trackone project. This was a fun little project were I tested my abilities with maps and charts but in the end the client was happy and satisfied. Trackone aims to simplify the management of all of their devices with beautiful maps and charts",
-                it: "The client required me to build the frontend for their already existing Trackone project. This was a fun little project were I tested my abilities with maps and charts but in the end the client was happy and satisfied. Trackone aims to simplify the management of all of their devices with beautiful maps and charts",
+                en: "I was tasked with developing the frontend for the existing Trackone project. This was an exciting challenge that allowed me to refine my skills in working with maps and charts. In the end, the client was extremely satisfied. Trackone simplifies the management of their devices by providing visually rich maps and insightful charts.",
+                it: "Mi è stato affidato lo sviluppo del frontend per il progetto Trackone esistente. È stata una sfida stimolante che mi ha permesso di affinare le mie competenze nella gestione di mappe e grafici. Alla fine, il cliente è rimasto molto soddisfatto. Trackone semplifica la gestione dei loro dispositivi attraverso mappe visivamente ricche e grafici informativi.",
             },
             media: createImageMediaUrl(TrackOneLoginImage),
             title: createI18ValueFromOne("TRACKONE"),
@@ -39,12 +39,12 @@ export const TrackOneProject: Project = {
         {
             name: "with-title",
             title: {
-                en: "LOTS OF MAPS IN TRACKONE",
-                it: "LOTS OF MAPS IN TRACKONE",
+                en: "EXTENSIVE MAP USAGE IN TRACKONE",
+                it: "USO ESTENSIVO DELLE MAPPE IN TRACKONE",
             },
             description: {
-                en: "Maps were built with the help of Leaflet, a powerful library to display and control maps in your site. Have a look!",
-                it: "Maps were built with the help of Leaflet, a powerful library to display and control maps in your site. Have a look!",
+                en: "Trackone integrates maps using Leaflet, a powerful library for displaying and interacting with geographic data. Check it out!",
+                it: "Trackone integra mappe utilizzando Leaflet, una potente libreria per visualizzare e interagire con dati geografici. Dai un'occhiata!",
             },
             child: {
                 name: "single-image",
@@ -55,19 +55,21 @@ export const TrackOneProject: Project = {
             name: "with-title",
             title: {
                 en: "FEATURES",
-                it: "FEATURES",
+                it: "FUNZIONALITÀ",
             },
             description: {
                 en:
-                    "The customer asked for an interactive map where they could analyze the behaviour of the device and the measurements that it gathered throughout time. <br>" +
-                    "Maps are feature rich and you can:" +
-                    "" +
-                    "<li>Have a look at where the device has been</li>" +
-                    "<li>Take a look of each and every single message a device has sent over</li>" +
-                    "<li>Display a chart that displays the values of a measurement throughout time</li>" +
-                    "<li>Change the observed time period</li>" +
-                    "",
-                it: "Maps were built with the help of Leaflet, a powerful library to display and control maps in your site. Have a look!",
+                    "The client requested an interactive map to analyze device behavior and measurements over time. The map is packed with features, including:<br>" +
+                    "<li>Tracking the device’s historical locations</li>" +
+                    "<li>Reviewing every message sent by the device</li>" +
+                    "<li>Displaying charts that visualize measurement data over time</li>" +
+                    "<li>Adjusting the observed time period</li>",
+                it:
+                    "Il cliente ha richiesto una mappa interattiva per analizzare il comportamento del dispositivo e le misurazioni nel tempo. La mappa offre numerose funzionalità, tra cui:<br>" +
+                    "<li>Monitorare gli spostamenti storici del dispositivo</li>" +
+                    "<li>Visualizzare ogni messaggio inviato dal dispositivo</li>" +
+                    "<li>Mostrare grafici con l'andamento delle misurazioni nel tempo</li>" +
+                    "<li>Modificare il periodo di osservazione</li>",
             },
             child: {
                 name: "single-image",
@@ -77,19 +79,22 @@ export const TrackOneProject: Project = {
         {
             name: "with-title",
             title: {
-                en: "AND EVEN MORE FEATURES",
-                it: "AND EVEN MORE FEATURES",
+                en: "ADDITIONAL FEATURES",
+                it: "FUNZIONALITÀ AGGIUNTIVE",
             },
             description: {
                 en:
-                    "There's also \"Map Modes\" that let's thes user change how the points on the map are visualized. Here you can see a bunch of examples but the possibilities are endless.<br>" +
-                    "In the video below you can choose between: " +
-                    "<li>The number of satellites a certain point has</li>" +
-                    "<li>The speed of the device on a certain point colored accordingly</li>" +
-                    "<li>The temperature</li>" +
-                    "<li>The angle the device was facing</li>" +
-                    "",
-                it: "Maps were built with the help of Leaflet, a powerful library to display and control maps in your site. Have a look!",
+                    'Trackone also includes "Map Modes," allowing users to customize how data points are displayed on the map. Below are some examples:<br>' +
+                    "<li>Viewing satellite coverage at each location</li>" +
+                    "<li>Visualizing device speed with color-coded markers</li>" +
+                    "<li>Displaying temperature readings</li>" +
+                    "<li>Indicating the device’s orientation</li>",
+                it:
+                    'Trackone include anche le "Modalità Mappa" che permettono agli utenti di personalizzare la visualizzazione dei dati sulla mappa. Ecco alcuni esempi:<br>' +
+                    "<li>Visualizzazione della copertura satellitare per ogni posizione</li>" +
+                    "<li>Rappresentazione della velocità del dispositivo con indicatori colorati</li>" +
+                    "<li>Visualizzazione delle temperature rilevate</li>" +
+                    "<li>Indicazione dell'orientamento del dispositivo</li>",
             },
             child: {
                 name: "single-image",
