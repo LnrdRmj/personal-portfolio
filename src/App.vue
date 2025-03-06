@@ -11,13 +11,13 @@ const noRouteAnimation = computed(() => route.query['noRouteAnimation'] === null
 
 <template>
     <div class="flex flex-col">
-        <div class="fixed w-full z-20 h-20">
+        <div class="fixed w-full z-20 h-16">
             <Header class="w-full h-full"></Header>
         </div>
         <RouterView v-slot="{ Component }">
             <transition :name="noRouteAnimation ? 'no-animation' : 'fade'"
                 :mode="noRouteAnimation ? 'default' : 'out-in'">
-                <component :is="Component" class="w-full flex-1 min-h-0 mt-20 router-transition-duration" />
+                <component :is="Component" class="w-full flex-1 min-h-0 mt-16 router-transition-duration" />
             </transition>
         </RouterView>
         <Footer />

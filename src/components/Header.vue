@@ -18,7 +18,8 @@ const visibility = ref(false);
 
 <template>
     <div class="flex flex-col relative">
-        <div class="bg-black flex justify-between items-center text-white text-xl py-5 px-10 relative z-20 h-full">
+        <div
+            class="bg-black flex justify-between items-center text-white text-base py-5 standard-responsive-padding relative z-20 h-full">
             <RouterLink :to="{ name: LANDING }">{{ siteConfigs.name }}</RouterLink>
             <div class="hidden lg:flex lg:justify-between lg:items-center lg:space-x-20">
                 <select name="" id="" class="bg-secondary text-white" v-model="language">
