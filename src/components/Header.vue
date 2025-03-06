@@ -7,6 +7,15 @@ import { LANDING } from "@/routes/routeNames";
 import { siteConfigs } from "@/data/config/config";
 const { i18next } = useTranslation();
 
+export type HeaderRoutes = {
+    title: string,
+    onClick: () => void
+}
+
+defineProps<{
+    routes: HeaderRoutes[]
+}>()
+
 const language = ref<string>(i18next.language);
 
 watch(language, () => {
@@ -26,7 +35,10 @@ const visibility = ref(false);
                     <option value="it">IT</option>
                     <option value="en">ENG</option>
                 </select>
-                <button>
+                <button v-for="route of routes" @click="route.onClick">
+                    {{ route.title }}
+                </button>
+                <!-- <button>
                     <LangChangeAnimation value="headerSection.work" />
                 </button>
                 <button>
@@ -34,7 +46,7 @@ const visibility = ref(false);
                 </button>
                 <button>
                     <LangChangeAnimation value="headerSection.services" />
-                </button>
+                </button> -->
                 <ContactMe />
             </div>
             <div class="lg:hidden text-white">
@@ -51,18 +63,21 @@ const visibility = ref(false);
                         <option value="it">IT</option>
                         <option value="en">ENG</option>
                     </select>
-                    <button>
+                    <button v-for="route of routes" @click="route.onClick">
+                        {{ route.title }}
+                    </button>
+                    <!-- <button @click="visibility = !visibility">
                         <LangChangeAnimation value="headerSection.work" />
                     </button>
-                    <button>
+                    <button @click="visibility = !visibility">
                         <LangChangeAnimation value="headerSection.services" />
                     </button>
-                    <button>
+                    <button @click="visibility = !visibility">
                         <LangChangeAnimation value="headerSection.whoAmI" />
                     </button>
-                    <button>
+                    <button @click="visibility = !visibility">
                         <LangChangeAnimation value="headerSection.contacts" />
-                    </button>
+                    </button> -->
                 </div>
             </div>
             <div class="bg-gray-500 h-[1px] w-full md:h-auto md:w-[1px] mt-16 mb-10 md:mt-0 md:mb-0"></div>
