@@ -11,7 +11,7 @@ import Works from "./works/Works.vue";
 import ContactMeSection from "../common/contactMeSection/ContactMeSection.vue";
 import LangChangeAnimation from "../common/languageChangeAnimation/LangChangeAnimation.vue";
 import { siteConfigs } from "@/data/config/config";
-const { i18next, t } = useTranslation();
+const { i18next } = useTranslation();
 
 const works = ref(getWorks());
 
@@ -32,7 +32,7 @@ function goToContactMeSection() {
 <template>
     <div>
         <div class="flex flex-col w-full h-full bg-primary">
-            <div class="flex flex-col h-dvh w-full shrink-0" id="whoami-container">
+            <div class="flex flex-col h-dvh w-full shrink-0">
                 <div class="flex flex-col standard-responsive-padding">
                     <div
                         class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl w-full font-semibold sm:font-semibold max-w-[1100px] mt-14 sm:mt-20 md:mt-24">
@@ -61,13 +61,13 @@ function goToContactMeSection() {
                 <div class="w-full bg-gray-400 h-[2px] shrink-0 mb-5" />
                 <FeaturedWorks />
             </div>
-            <div class="shrink-0 px-3 mt-32 md:mt-64 mb-52" id="service-container">
+            <div class="shrink-0 px-3 mt-32 md:mt-64 mb-52">
                 <Services />
             </div>
             <div class="standard-responsive-padding">
                 <div class="max-w-full bg-gray-400 h-[2px] shrink-0 mb-5" />
             </div>
-            <Works :works="works" class="max-w-full mb-32 standard-responsive-padding" id="works-container" />
+            <Works :works="works" class="max-w-full mb-32 standard-responsive-padding" />
             <div class="px-3 shrink-0">
                 <Reviews />
             </div>
