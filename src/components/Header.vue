@@ -38,15 +38,6 @@ const visibility = ref(false);
                 <button v-for="route of routes" @click="route.onClick">
                     {{ route.title }}
                 </button>
-                <!-- <button>
-                    <LangChangeAnimation value="headerSection.work" />
-                </button>
-                <button>
-                    <LangChangeAnimation value="headerSection.whoAmI" />
-                </button>
-                <button>
-                    <LangChangeAnimation value="headerSection.services" />
-                </button> -->
                 <ContactMe />
             </div>
             <div class="lg:hidden text-white">
@@ -66,18 +57,6 @@ const visibility = ref(false);
                     <button v-for="route of routes" @click="route.onClick(); visibility = false">
                         {{ route.title }}
                     </button>
-                    <!-- <button>
-                        <LangChangeAnimation value="headerSection.work" />
-                    </button>
-                    <button>
-                        <LangChangeAnimation value="headerSection.services" />
-                    </button>
-                    <button>
-                        <LangChangeAnimation value="headerSection.whoAmI" />
-                    </button>
-                    <button>
-                        <LangChangeAnimation value="headerSection.contacts" />
-                    </button> -->
                 </div>
             </div>
             <div class="bg-gray-500 h-[1px] w-full md:h-auto md:w-[1px] mt-16 mb-10 md:mt-0 md:mb-0"></div>
