@@ -63,7 +63,7 @@ const visibility = ref(false);
                         <option value="it">IT</option>
                         <option value="en">ENG</option>
                     </select>
-                    <button v-for="route of routes" @click="route.onClick">
+                    <button v-for="route of routes" @click="route.onClick(); visibility = false">
                         {{ route.title }}
                     </button>
                     <!-- <button>
