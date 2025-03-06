@@ -32,10 +32,10 @@ function goToContactMeSection() {
 <template>
     <div>
         <div class="flex flex-col w-full h-full bg-primary">
-            <div class="flex flex-col h-screen w-full shrink-0">
+            <div class="flex flex-col h-dvh w-full shrink-0">
                 <div class="flex flex-col standard-responsive-padding">
                     <div
-                        class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl w-full font-semibold sm:font-semibold max-w-[1100px] mt-14 sm:mt-20 md:mt-36">
+                        class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl w-full font-semibold sm:font-semibold max-w-[1100px] mt-14 sm:mt-20 md:mt-24">
                         <div v-html="$t('title')"></div>
                     </div>
                     <div class="text-xl mt-12">
