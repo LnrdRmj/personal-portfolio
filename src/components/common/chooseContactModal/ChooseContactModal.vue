@@ -8,6 +8,6 @@ const open = defineModel('open', { required: true })
 
 <template>
     <Modal v-model:open="open">
-        <ChooseContact class="max-w-[1000px] w-full h-[750px]" />
+        <ChooseContact class="max-w-[1000px] w-full h-[750px]" @close="open = false" />
     </Modal>
 </template>
