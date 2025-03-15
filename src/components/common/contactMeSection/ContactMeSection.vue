@@ -3,6 +3,23 @@ import { siteConfigs } from "@/data/config/config";
 import EmailIcon from "../../../assets/emailicon.png";
 import WhatsappIcon from "../../../assets/whatsappicon.png";
 import LangChangeAnimation from "../languageChangeAnimation/LangChangeAnimation.vue";
+import { onMounted, ref } from "vue";
+
+onMounted(() => {
+    // @ts-ignore
+    grecaptcha?.render('recap-container', {
+        sitekey: '6LeCU_UqAAAAADWDz8xukf9Oz7_pU27yLV6yrvvo'
+    })
+})
+
+const globalRecaptchaCallbackFuncName = "recaptchaResponse"
+const recaptchaIsValid = ref(false)
+// Expose the function above globally for recaptcha button
+// @ts-ignore
+window[globalRecaptchaCallbackFuncName] = function successfullRecaptcharResponse(responseToken: string) {
+    if (responseToken != null && typeof responseToken === "string")
+        recaptchaIsValid.value = true
+}
 </script>
 
 <template>
@@ -24,9 +41,15 @@ import LangChangeAnimation from "../languageChangeAnimation/LangChangeAnimation.
                 <div class="flex flex-col font-semibold">
                     <div class="text-lg">Whatsapp</div>
                     <div>
-                        <a :href="`https://wa.me/${siteConfigs.contactInfo.phoneNoSpace}`" target="_blank">
-                            {{ siteConfigs.contactInfo.phone }}
-                        </a>
+                        <Transition name="fade" mode="out-in">
+                            <a v-if="recaptchaIsValid" :href="`https://wa.me/${siteConfigs.contactInfo.phoneNoSpace}`"
+                                target="_blank">
+                                {{ siteConfigs.contactInfo.phone }}
+                            </a>
+                            <div v-else id="recap-container" :data-callback="globalRecaptchaCallbackFuncName">
+
+                            </div>
+                        </Transition>
                     </div>
                 </div>
             </div>
