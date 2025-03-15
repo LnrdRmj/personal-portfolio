@@ -2,6 +2,10 @@
 import { siteConfigs } from "@/data/config/config";
 import LangChangeAnimation from "../languageChangeAnimation/LangChangeAnimation.vue";
 import AppCaptchaPhoneNumber from "../phoneNumber/AppCaptchaPhoneNumber.vue";
+import ChooseContactModal from "../chooseContactModal/ChooseContactModal.vue";
+import { ref } from "vue";
+
+const openContactModal = ref(false)
 
 </script>
 
@@ -37,9 +41,10 @@ import AppCaptchaPhoneNumber from "../phoneNumber/AppCaptchaPhoneNumber.vue";
                 </div>
             </div>
         </div>
-        <a href="mailto:leonardo.ra14@icloud.com" class="px-8 w-fit rounded-lg mt-20 bg-secondary py-3 text-white text-base lg:text-xl font-semibold
-            hover:bg-blue-600 transition-colors">
+        <button class="px-8 w-fit rounded-lg mt-20 bg-secondary py-3 text-white text-base lg:text-xl font-semibold
+            hover:bg-blue-600 transition-colors" @click="openContactModal = true">
             <LangChangeAnimation value="contactsSection.bookConsultation" />
-        </a>
+        </button>
+        <ChooseContactModal v-model:open="openContactModal" />
     </div>
 </template>
