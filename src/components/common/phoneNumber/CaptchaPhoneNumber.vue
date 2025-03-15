@@ -3,6 +3,10 @@ import { siteConfigs } from '@/data/config/config';
 import { createRandomString } from '@/services/strings/stringUtils';
 import { onMounted, ref, useTemplateRef } from 'vue';
 
+const emits = defineEmits<{
+    success: [string]
+}>()
+
 defineProps<{
     phoneNumber: string,
     phoneNumberNoSpace: string,
@@ -24,8 +28,10 @@ const recaptchaIsValid = ref(false)
 // Expose the function above globally for recaptcha button
 // @ts-ignore
 window[globalRecaptchaCallbackFuncName] = function successfullRecaptcharResponse(responseToken: string) {
-    if (responseToken != null && typeof responseToken === "string")
+    if (responseToken != null && typeof responseToken === "string") {
         recaptchaIsValid.value = true
+        emits('success', responseToken)
+    }
 }
 </script>
 
