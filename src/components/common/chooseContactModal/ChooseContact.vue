@@ -1,5 +1,5 @@
 <template>
-    <div class="max-w-[1000px] w-full h-[750px] flex rounded-3xl overflow-hidden">
+    <div class="flex rounded-3xl overflow-hidden">
         <div class="w-1/3 h-full bg-orange-400">
 
         </div>
