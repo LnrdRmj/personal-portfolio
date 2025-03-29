@@ -8,7 +8,8 @@ defineProps<{
 </script>
 
 <template>
-    <component :is="ProjectSectionToComponent[section.name]" v-bind="section" class="">
+    <component :is="ProjectSectionToComponent[section.name]" v-bind="section"
+        :class="section.fluid == true ? 'h-fit' : 'h-project-section'">
         <SectionEvaluator v-if="section.name == 'with-title'" :section="section.child"></SectionEvaluator>
     </component>
 </template>
