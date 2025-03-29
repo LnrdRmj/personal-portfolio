@@ -24,47 +24,96 @@ function openEmail() {
 </script>
 
 <template>
-    <div class="flex rounded-3xl overflow-hidden">
-        <div class="w-1/3 h-full bg-orange-600">
+    <div class="relative">
 
+        <div class="absolute top-0 left-0 size-full flex rounded-3xl overflow-hidden -z-10 animate-bg-zoom">
+            <div class="w-1/3 h-full bg-orange-600">
+
+            </div>
+            <div class="flex-1 min-w-0 bg-primary">
+
+            </div>
         </div>
-        <div class="flex-1 min-w-0 flex flex-col p-12 bg-primary">
-            <div class="w-full flex justify-between">
-                <div>
-                    <!-- Logo or (name and surname) -->
-                </div>
-                <OutlinedButton @click="emits('close')">
-                    <LangChangeAnimation value="close" class="capitalize text-xl" />
-                    <template v-slot:icon>
-                        <X class="stroke-black group-hover:stroke-white"></X>
-                    </template>
-                </OutlinedButton>
+
+        <div class="flex rounded-3xl overflow-hidden z-10">
+            <div class="w-1/3 h-full">
+
             </div>
-            <div class="flex flex-col">
-                <div class="text-4xl font-bold uppercase mt-20">
-                    Ehi,<br>
-                    Conosciamoci
+            <div class="flex-1 min-w-0 p-12">
+                <div class="flex flex-col size-full animate-little-slidefromleft">
+                    <div class="w-full flex justify-between">
+                        <div>
+                            <!-- Logo or (name and surname) -->
+                        </div>
+                        <OutlinedButton @click="emits('close')">
+                            <LangChangeAnimation value="close" class="capitalize text-xl" />
+                            <template v-slot:icon>
+                                <X class="stroke-black group-hover:stroke-white"></X>
+                            </template>
+                        </OutlinedButton>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="text-4xl font-bold uppercase mt-20">
+                            Ehi,<br>
+                            Conosciamoci
+                        </div>
+                        <div class="text-xl mt-10">
+                            Prenota una consulenza gratuita e scopri come migliorare la tua presenza online. Scegli il
+                            metodo di
+                            contatto che preferisci e mettiamoci in contatto per fissare un appuntamento.
+                        </div>
+                    </div>
+                    <div class="flex flex-col space-y-10">
+                        <div></div>
+                        <ContactMethod name="Whatsapp" :contact="siteConfigs.contactInfo.phone"
+                            :openContact="openWhatsappContact">
+                            <template v-slot:contact>
+                                <AppCaptchaPhoneNumber @success="phoneCaptchaSuccess = true" />
+                            </template>
+                            <template v-slot:button>
+                                <AppButton class="h-12 text-xl" :disabled="!phoneCaptchaSuccess">
+                                    <LangChangeAnimation value="contactMe" />
+                                </AppButton>
+                            </template>
+                        </ContactMethod>
+                        <ContactMethod name="Email" :contact="siteConfigs.contactInfo.email" :openContact="openEmail" />
+                    </div>
                 </div>
-                <div class="text-xl mt-10">
-                    Prenota una consulenza gratuita e scopri come migliorare la tua presenza online. Scegli il metodo di
-                    contatto che preferisci e mettiamoci in contatto per fissare un appuntamento.
-                </div>
-            </div>
-            <div class="flex flex-col space-y-10">
-                <div></div>
-                <ContactMethod name="Whatsapp" :contact="siteConfigs.contactInfo.phone"
-                    :openContact="openWhatsappContact">
-                    <template v-slot:contact>
-                        <AppCaptchaPhoneNumber @success="phoneCaptchaSuccess = true" />
-                    </template>
-                    <template v-slot:button>
-                        <AppButton class="h-12 text-xl" :disabled="!phoneCaptchaSuccess">
-                            <LangChangeAnimation value="contactMe" />
-                        </AppButton>
-                    </template>
-                </ContactMethod>
-                <ContactMethod name="Email" :contact="siteConfigs.contactInfo.email" :openContact="openEmail" />
             </div>
         </div>
     </div>
 </template>
+
+<style>
+:root {
+    --modal-animation-duration: .3s;
+}
+
+@keyframes little-slidefromleft {
+    0% {
+        transform: translateX(-100px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.animate-little-slidefromleft {
+    animation: little-slidefromleft var(--modal-animation-duration);
+}
+
+@keyframes bg-zoom {
+    0% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animate-bg-zoom {
+    animation: bg-zoom var(--modal-animation-duration);
+}
+</style>
