@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import MediaContainer from '../common/MediaContainer.vue';
 import { MediaUrl } from '../common/media';
+import { BaseSectionProp } from '../common/section';
 
 export type Props = {
     medias: [MediaUrl, MediaUrl]
-}
+} & BaseSectionProp;
 
 defineProps<Props>()
 

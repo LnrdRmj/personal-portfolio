@@ -3,13 +3,14 @@ import { I18nValue } from '@/i18n/i18n';
 import HeaderCard from '../../header/HeaderCard.vue';
 import MediaContainer from '../common/MediaContainer.vue';
 import { MediaUrl } from '../common/media';
+import { BaseSectionProp } from '../common/section';
 
 export type Props = {
     media: MediaUrl,
     title: I18nValue,
     description: I18nValue,
     textPosition?: "left" | "right"
-}
+} & BaseSectionProp
 
 withDefaults(defineProps<Props>(), {
     textPosition: 'right'
