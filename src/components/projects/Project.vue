@@ -16,6 +16,8 @@ defineProps<{
         <div class="flex-center w-full">
             <ProjectEvaluator :sections="project.sections" class="max-w-[1200px]" />
         </div>
-        <ContactMeSection class="lg:px-64" id="landingContactMeSection" />
+        <div class="w-full flex-center">
+            <ContactMeSection class="w-full max-w-[1000px]" id="landingContactMeSection" />
+        </div>
     </div>
 </template>
