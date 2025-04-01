@@ -28,3 +28,7 @@ export function createVideoMediaUrl(url: string): MediaUrl {
         url,
     };
 }
+
+export function fluidClassForMedia(fluid?: boolean) {
+    return (fluid ?? false) == false ? "object-cover" : "";
+}
