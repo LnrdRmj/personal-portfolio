@@ -3,6 +3,9 @@ export default {
     content: ["./src/**/*.{vue,js,ts,jsx,tsx}"],
     theme: {
         extend: {
+            height: {
+                "project-section": 600
+            },
             fontFamily: {
                 area: ["AreaNormalTrial", "sans-serif"],
             },

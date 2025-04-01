@@ -44,7 +44,7 @@ type PrimitiveSections =
     | TripleImagesSection
     | ImageWithTextSection;
 
-type WithTitleSection = {
+export type WithTitleSection = {
     name: "with-title";
 } & WithTitleProps & {
         child: PrimitiveSections;

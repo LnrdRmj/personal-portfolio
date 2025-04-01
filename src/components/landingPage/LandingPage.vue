@@ -71,7 +71,7 @@ function goToContactMeSection() {
             <div class="px-3 shrink-0">
                 <Reviews />
             </div>
-            <div ref="landingContactMeSection" id="landingContactMeSection">
+            <div ref="landingContactMeSection" id="landingContactMeSection" class="flex-center">
                 <ContactMeSection />
             </div>
         </div>

@@ -78,4 +78,5 @@ export default {
     },
     position: "position",
     periodOfTime: "period",
+    close: "close",
 };

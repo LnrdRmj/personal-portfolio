@@ -1,15 +1,18 @@
 <script setup lang="ts">
 import MediaContainer from '../common/MediaContainer.vue';
-import { MediaUrl } from '../common/media';
+import { MediaUrl, fluidClassForMedia } from '../common/media';
+import { BaseSectionProp } from '../common/section';
 
 export type Props = {
-    media: MediaUrl
-}
+    media: MediaUrl,
+} & BaseSectionProp
 
-defineProps<Props>()
+withDefaults(defineProps<Props>(), {
+    fluid: false
+})
 
 </script>
 
 <template>
-    <MediaContainer :media="media" :class="media.type == 'video' ? '' : ''" />
+    <MediaContainer :media="media" :class="[media.type == 'video' ? 'aspect-video' : '', fluidClassForMedia(fluid)]" />
 </template>

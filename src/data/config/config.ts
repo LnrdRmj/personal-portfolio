@@ -21,6 +21,7 @@ export const configs = {
             },
         },
         showTechnologiesSlider: true,
+        captchaForPhoneNumber: true,
     },
 };
 

@@ -81,6 +81,7 @@ const itTranslations: Translations = {
     },
     position: "posizione",
     periodOfTime: "periodo",
+    close: "chiudi",
 };
 
 export default itTranslations;
