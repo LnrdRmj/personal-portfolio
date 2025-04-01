@@ -20,7 +20,7 @@ withDefaults(defineProps<Props>(), {
 
 <template>
     <div class="flex" :class="textPosition == 'left' ? 'flex-row-reverse' : 'flex-row'">
-        <DoubleImages :medias="medias" class="w-1/2" />
+        <DoubleImages :medias="medias" class="w-1/2" :fluid="fluid" />
         <div class="w-1/2 px-10 md:px-20 py-16 md:pt-32 flex flex-col">
             <HeaderCard :title="title" :description="description" />
         </div>
