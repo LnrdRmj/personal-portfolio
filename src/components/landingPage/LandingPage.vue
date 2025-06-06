@@ -30,10 +30,10 @@ function goToContactMeSection() {
 </script>
 
 <template>
-    <div>
-        <div class="flex flex-col w-full h-full bg-primary">
-            <div class="flex flex-col h-dvh w-full shrink-0" id="whoami-container">
-                <div class="flex flex-col standard-responsive-padding">
+    <div class="bg-primary">
+        <div class="flex flex-col w-full h-full">
+            <div class="flex flex-col h-dvh max-h-250 w-full shrink-0 container-center" id="whoami-container">
+                <div class="flex flex-col">
                     <div
                         class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl w-full font-extrabold sm:font-extrabold max-w-[1100px] mt-14 sm:mt-20 md:mt-24">
                         <div v-html="$t('title')"></div>
@@ -57,18 +57,18 @@ function goToContactMeSection() {
             <div class="mb-32" v-if="siteConfigs.showTechnologiesSlider">
                 <Slider />
             </div>
-            <div class="w-full shrink-0 standard-responsive-padding">
+            <div class="w-full shrink-0 container-center">
                 <div class="w-full bg-gray-400 h-[2px] shrink-0 mb-5" />
                 <FeaturedWorks />
             </div>
-            <div class="shrink-0 px-3 mt-32 md:mt-64 mb-52" id="service-container">
+            <div class="shrink-0 px-3 mt-32 md:mt-64 mb-52 container-center" id="service-container">
                 <Services />
             </div>
-            <div class="standard-responsive-padding">
+            <div class="container-center">
                 <div class="max-w-full bg-gray-400 h-[2px] shrink-0 mb-5" />
             </div>
-            <Works :works="works" class="max-w-full mb-32 standard-responsive-padding" id="works-container" />
-            <div class="px-3 shrink-0">
+            <Works :works="works" class="container-center mb-32" id="works-container" />
+            <div class="px-3 shrink-0 container-center">
                 <Reviews />
             </div>
             <div ref="landingContactMeSection" id="landingContactMeSection" class="flex-center">

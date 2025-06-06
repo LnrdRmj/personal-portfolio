@@ -564,3 +564,9 @@
         transform: translateY(-50%) rotateX(90deg);
     }
 }
+
+@utility container-center {
+    @apply container px-5;
+    margin-right: auto;
+    margin-left: auto;
+}

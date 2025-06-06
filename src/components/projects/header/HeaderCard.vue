@@ -11,7 +11,7 @@ defineProps<{
 
 <template>
     <div class="flex flex-col">
-        <div class="text-2xl uppercase font-semibold">
+        <div class="text-2xl uppercase font-extrabold">
             <div v-if="typeof title == 'string'">
                 {{ title }}
             </div>
