@@ -5,6 +5,7 @@ import YoomyBannerProject from "./assets/yoomyBannerProject.png";
 import { Skill, projectSkills } from "./projectSkills";
 import { YoomyProject } from "./yoomy/yoomyProject";
 import { TrackOneProject } from "./trackone/trackoneProject";
+import { NaturaeProject } from "./naturae/naturaeProject";
 
 export interface Project {
     id: number;
@@ -30,6 +31,7 @@ export function getWorks(): Project[] {
         YoomyProject,
         TrackOneProject,
         // SampleProject,
+        NaturaeProject,
         {
             id: 3,
             period: {
