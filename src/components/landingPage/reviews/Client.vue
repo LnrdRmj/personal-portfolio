@@ -8,7 +8,7 @@
 
 <template>
     <div
-        class="border h-fit w-fit px-2 py-1 rounded-[4px] sm:flex sm:justify-center sm:items-center sm:rounded-lg sm:h-20 sm:w-72 sm:p-2 transition-colors duration-500 [&_*]:transition-colors [&_*]:duration-500"
+        class="border h-fit w-fit px-2 py-1 rounded-[4px] sm:flex sm:justify-center sm:items-center sm:rounded-lg sm:h-20 sm:w-72 sm:p-2 transition-colors duration-500 **:transition-colors **:duration-500"
         :class="selected == true ? 'border-white' : 'border-zinc-800 '"
     >
         <div

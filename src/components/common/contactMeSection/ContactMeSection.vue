@@ -30,7 +30,7 @@ const openContactModal = ref(false)
                     <AppCaptchaPhoneNumber />
                 </div>
             </div>
-            <div class="max-h-full w-[1px] bg-gray-300 shrink-0" />
+            <div class="max-h-full w-px bg-gray-300 shrink-0" />
             <div class="flex">
                 <!-- <img class="h-4 mr-2" :src="EmailIcon" alt="" /> -->
                 <div class="flex flex-col font-semibold">

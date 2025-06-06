@@ -53,7 +53,7 @@ function goToProjectDetailPage() {
             'justify-between sm:flex-row': isBigVariant,
             'sm:flex-col': !isBigVariant,
         }">
-            <div class="relative h-8 w-full [&>*]:uppercase" :class="{
+            <div class="relative h-8 w-full *:uppercase" :class="{
                 'sm:w-1/2': isBigVariant,
             }">
                 <div class="font-bold h-fit absolute transition-all duration-300" :class="hovered == true
