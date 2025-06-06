@@ -138,7 +138,7 @@ onUnmounted(() => {
 <template>
     <div class="bg-secondary px-10 py-20">
         <div class="w-full bg-zinc-800 h-[2px] shrink-0 mb-5" />
-        <div class="uppercase font-normal text-white text-2xl mb-[80px]">
+        <div class="uppercase font-extrabold text-white text-2xl mb-[80px]">
             <LangChangeAnimation value="technolgiesSection.title" />
         </div>
         <div class="flex overflow-x-scroll hide-scrollbar" ref="slider" @mouseenter="scrollingSpeed = 0"

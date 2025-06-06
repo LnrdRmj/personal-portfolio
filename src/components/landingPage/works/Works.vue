@@ -14,10 +14,10 @@ const hovered = ref<boolean[]>([]);
 
 <template>
     <div class="flex flex-col">
-        <div class="text-2xl font-semibold mb-10 uppercase">
+        <div class="text-2xl font-extrabold mb-10 uppercase">
             {{ $t("worksSection.title") }}
         </div>
-        <div class="w-full [&>*]:items-center [&>*:last-child]:border-b [&>*:last-child]:border-b-black">
+        <div class="w-full *:items-center [&>*:last-child]:border-b [&>*:last-child]:border-b-black">
             <div class="flex w-full text-lg sm:text-sm font-medium text-zinc-400 h-10 uppercase">
                 <div class="hidden sm:block sm:w-2/12"></div>
                 <div class="w-[45%] sm:w-2/12">{{ $t("worksSection.table.clientCol") }}</div>
@@ -48,7 +48,7 @@ const hovered = ref<boolean[]>([]);
                 </div>
                 <div class="w-2/12">
                     <button
-                        class="transition-all group-hover:border group-hover:border-white group-hover:text-white sm:px-3 sm:py-[1px] rounded-full sm:bg-transparent sm:size-auto bg-black size-7">
+                        class="transition-all group-hover:border group-hover:border-white group-hover:text-white sm:px-3 sm:py-px rounded-full sm:bg-transparent sm:size-auto bg-black size-7">
                         <RouterLink :to="{ name: PROJECT_DETAIL, params: { projectId: work.id } }">
                             <div class="hidden sm:block">
                                 <LangChangeAnimation value="worksSection.table.previewProject"

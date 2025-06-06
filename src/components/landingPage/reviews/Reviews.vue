@@ -21,7 +21,7 @@ onUnmounted(() => {
 <template>
     <div class="flex flex-col bg-secondary rounded-[20px] px-5 sm:px-16">
         <div class="w-full bg-zinc-800 h-[2px] shrink-0 mt-[50px] mb-4" />
-        <div class="uppercase font-normal text-2xl mb-[80px] text-white">
+        <div class="uppercase font-extrabold text-2xl mb-[80px] text-white">
             <LangChangeAnimation value="reviewsSection.title" />
         </div>
         <div class="flex flex-col sm:flex-row sm:h-[650px] sm:space-x-5">
