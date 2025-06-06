@@ -35,7 +35,7 @@ function goToContactMeSection() {
             <div class="flex flex-col h-dvh w-full shrink-0" id="whoami-container">
                 <div class="flex flex-col standard-responsive-padding">
                     <div
-                        class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl w-full font-semibold sm:font-semibold max-w-[1100px] mt-14 sm:mt-20 md:mt-24">
+                        class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl w-full font-extrabold sm:font-extrabold max-w-[1100px] mt-14 sm:mt-20 md:mt-24">
                         <div v-html="$t('title')"></div>
                     </div>
                     <div class="text-xl mt-12">
