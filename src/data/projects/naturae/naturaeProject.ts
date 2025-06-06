@@ -11,7 +11,7 @@ export const NaturaeProject: Project = {
         endYear: 2025,
     },
     clientName: "Naturae",
-    role: createI18ValueFromOne("Sviluppatore Frontend"),
+    role: createI18ValueFromOne("Frontend Developer"),
     skills: [projectSkills.web, projectSkills.vue, projectSkills.nuxt],
     bannerPath: NaturaeBanner,
     description: {
