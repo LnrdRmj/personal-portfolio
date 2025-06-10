@@ -12,17 +12,17 @@ const openContactModal = ref(false)
 <template>
     <div class="flex flex-col standard-responsive-padding my-20 md:my-52 max-w-[1000px]">
         <div class="max-w-full bg-gray-400 h-[2px] shrink-0 mb-5" />
-        <div class="uppercase text-2xl mb-16">{{ $t("contactsSection.title") }}</div>
+        <div class="uppercase text-2xl mb-16 font-extrabold">{{ $t("contactsSection.title") }}</div>
         <div class="flex flex-col">
             <div class="text-4xl sm:text-5xl lg:text-6xl font-semibold">
                 <LangChangeAnimation value="contactMe" />
             </div>
-            <div class="text-lg leading-4 mt-5">
-                <LangChangeAnimation value="underTitle.phrase1" /><br />
+            <div class="text-lg font-semibold mt-5">
+                <LangChangeAnimation value="underTitle.phrase1" />
                 <LangChangeAnimation value="underTitle.phrase2" />
             </div>
         </div>
-        <div class="flex space-x-10 mt-10">
+        <div class="flex flex-col md:flex-row space-y-5 space-x-10 mt-10">
             <div class="flex">
                 <!-- <img class="h-4 mr-2" :src="WhatsappIcon" alt="" /> -->
                 <div class="flex flex-col font-semibold">
