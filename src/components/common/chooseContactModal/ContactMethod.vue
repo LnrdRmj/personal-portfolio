@@ -19,7 +19,7 @@ defineProps<ContactMethod>()
             <div class="text-xl md:text-3xl font-semibold capitalize">
                 {{ name }}
             </div>
-            <div class="text-xl">
+            <div class="hidden md:block text-xl">
                 <slot name="contact">
                     {{ contact }}
                 </slot>
