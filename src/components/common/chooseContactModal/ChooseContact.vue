@@ -7,6 +7,7 @@ import ContactMethod from './ContactMethod.vue';
 import AppCaptchaPhoneNumber from '../phoneNumber/AppCaptchaPhoneNumber.vue';
 import AppButton from '../buttons/AppButton.vue';
 import { ref } from 'vue';
+import { useScreenSizeIsActive } from '@/services/tailwind/breakPoints';
 
 const emits = defineEmits<{
     close: []
@@ -23,6 +24,8 @@ function openEmail() {
 
 const barClassList = 'w-full md:w-1/3 h-30 md:h-full'
 const contentClassList = 'flex-1 md:min-w-0 min-h-0'
+
+const isAtLeastMedium = useScreenSizeIsActive('md')
 
 </script>
 
@@ -75,9 +78,17 @@ const contentClassList = 'flex-1 md:min-w-0 min-h-0'
                                 <AppCaptchaPhoneNumber @success="phoneCaptchaSuccess = true" />
                             </template>
                             <template v-slot:button>
-                                <AppButton class="h-12 text-xl" :disabled="!phoneCaptchaSuccess">
+                                <!-- Probably a bit too complicated way to handle responsiveness but its okay, spent way too much time to find another solution -->
+                                <AppButton class="h-12 text-xl" v-if="isAtLeastMedium" :disabled="!phoneCaptchaSuccess">
                                     <LangChangeAnimation value="contactMe" />
                                 </AppButton>
+                                <Transition v-else name="fade" mode="out-in">
+                                    <AppCaptchaPhoneNumber v-if="!phoneCaptchaSuccess"
+                                        @success="phoneCaptchaSuccess = true" />
+                                    <AppButton v-else class="h-12 text-xl" :disabled="!phoneCaptchaSuccess">
+                                        <LangChangeAnimation value="contactMe" />
+                                    </AppButton>
+                                </Transition>
                             </template>
                         </ContactMethod>
                         <ContactMethod name="Email" :contact="siteConfigs.contactInfo.email" :openContact="openEmail" />
