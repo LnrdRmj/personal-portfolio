@@ -21,25 +21,29 @@ function openEmail() {
     window.open(`mailto:${siteConfigs.contactInfo.email}`, '_blank')
 }
 
+const barClassList = 'w-full md:w-1/3 h-30 md:h-full'
+const contentClassList = 'flex-1 md:min-w-0 min-h-0'
+
 </script>
 
 <template>
     <div class="relative">
 
-        <div class="absolute top-0 left-0 size-full flex rounded-3xl overflow-hidden -z-10 animate-bg-zoom">
-            <div class="w-1/3 h-full bg-orange-600">
+        <div
+            class="absolute top-0 left-0 size-full flex flex-col md:flex-row rounded-3xl overflow-hidden -z-10 animate-bg-zoom">
+            <div class="bg-orange-600" :class="[barClassList]">
 
             </div>
-            <div class="flex-1 min-w-0 bg-primary">
+            <div class="bg-primary" :class="[contentClassList]">
 
             </div>
         </div>
 
-        <div class="flex rounded-3xl overflow-hidden z-10">
-            <div class="w-1/3 h-full">
+        <div class="flex flex-col md:flex-row rounded-3xl overflow-hidden z-10">
+            <div class="" :class="[barClassList]">
 
             </div>
-            <div class="flex-1 min-w-0 p-12">
+            <div class="p-5 md:p-12" :class="[contentClassList]">
                 <div class="flex flex-col size-full animate-little-slidefromleft">
                     <div class="w-full flex justify-between">
                         <div>
@@ -53,11 +57,11 @@ function openEmail() {
                         </OutlinedButton>
                     </div>
                     <div class="flex flex-col">
-                        <div class="text-4xl font-bold uppercase mt-20">
+                        <div class="text-2xl md:text-4xl font-bold uppercase mt-10 md:mt-20">
                             Ehi,<br>
                             Conosciamoci
                         </div>
-                        <div class="text-xl mt-10">
+                        <div class="text-xl mt-5 md:mt-10">
                             Prenota una consulenza gratuita e scopri come migliorare la tua presenza online. Scegli il
                             metodo di
                             contatto che preferisci e mettiamoci in contatto per fissare un appuntamento.
