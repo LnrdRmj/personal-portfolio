@@ -16,10 +16,10 @@ defineProps<ContactMethod>()
 <template>
     <div class="flex items-center">
         <div class="flex flex-col flex-1 min-w-0">
-            <div class="text-3xl font-semibold capitalize">
+            <div class="text-xl md:text-3xl font-semibold capitalize">
                 {{ name }}
             </div>
-            <div class="text-xl">
+            <div class="hidden md:block text-xl">
                 <slot name="contact">
                     {{ contact }}
                 </slot>
