@@ -76,6 +76,12 @@ export default {
         writeMe: "Write me",
         fiscalData: "Fiscal Data",
     },
+    contactModal: {
+        letsMeet: `Ehi, 
+        let's meet`,
+        bookConsultation:
+            "Book a free consultation and discover how to improve your online presence. Choose your preferred contact method and let's get in touch to schedule an appointment",
+    },
     position: "position",
     periodOfTime: "period",
     close: "close",
