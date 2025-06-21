@@ -79,6 +79,10 @@ const itTranslations: Translations = {
         writeMe: "Scrivimi",
         fiscalData: "Dati Fiscali",
     },
+    contactModal: {
+        letsMeet: `Ehi, <br>conosciamoci`,
+        bookConsultation: `Prenota una consulenza gratuita e scopri come migliorare la tua presenza online. Scegli il metodo di contatto che preferisci e mettiamoci in contatto per fissare un appuntamento.`,
+    },
     position: "posizione",
     periodOfTime: "periodo",
     close: "chiudi",
