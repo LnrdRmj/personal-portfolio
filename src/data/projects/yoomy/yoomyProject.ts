@@ -4,6 +4,7 @@ import YoomyBannerProject from "./assets/yoomyBannerProject.png";
 import Yoomy2 from "./assets/yoomy_2.png";
 import YoomyImage3 from "./assets/yoomy_image_3.png";
 import YoomyImage4 from "./assets/yoomy_image_4.png";
+import YoomyStorePerformance from "./assets/yoomy_stores_performance.png";
 
 export const YoomyProject: Project = {
     id: 1,
@@ -75,7 +76,7 @@ export const YoomyProject: Project = {
                 name: "single-image",
                 media: {
                     type: "image",
-                    url: YoomyImage4,
+                    url: YoomyStorePerformance,
                 },
             },
         },
