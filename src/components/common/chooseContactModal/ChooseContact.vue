@@ -61,13 +61,10 @@ const isAtLeastMedium = useScreenSizeIsActive('md')
                     </div>
                     <div class="flex flex-col">
                         <div class="text-2xl md:text-4xl font-bold uppercase mt-10 md:mt-20">
-                            Ehi,<br>
-                            Conosciamoci
+                            <LangChangeAnimation value="contactModal.letsMeet" />
                         </div>
                         <div class="text-xl mt-5 md:mt-10">
-                            Prenota una consulenza gratuita e scopri come migliorare la tua presenza online. Scegli il
-                            metodo di
-                            contatto che preferisci e mettiamoci in contatto per fissare un appuntamento.
+                            <LangChangeAnimation value="contactModal.bookConsultation" class="whitespace-pre-line" />
                         </div>
                     </div>
                     <div class="flex flex-col space-y-10">
