@@ -1,5 +1,5 @@
 /* Hairline */
-@font-face {
+/* @font-face {
     font-family: "AreaNormalTrial";
     src: url("fonts/AreaNormalTrial-Hairline-BF65ea75c69d8bd.otf") format("opentype");
     font-weight: 100;
@@ -11,10 +11,10 @@
     src: url("fonts/AreaNormalTrial-HairlineItalic-BF65ea75c66b06b.otf") format("opentype");
     font-weight: 100;
     font-style: italic;
-}
+} */
 
 /* Thin */
-@font-face {
+/* @font-face {
     font-family: "AreaNormalTrial";
     src: url("fonts/AreaNormalTrial-Thin-BF65ea75c6d622a.otf") format("opentype");
     font-weight: 200;
@@ -26,10 +26,10 @@
     src: url("fonts/AreaNormalTrial-ThinItalic-BF65ea75c6ad701.otf") format("opentype");
     font-weight: 200;
     font-style: italic;
-}
+} */
 
 /* Light */
-@font-face {
+/* @font-face {
     font-family: "AreaNormalTrial";
     src: url("fonts/AreaNormalTrial-Light-BF65ea75c6c87b9.otf") format("opentype");
     font-weight: 300;
@@ -41,10 +41,10 @@
     src: url("fonts/AreaNormalTrial-LightItalic-BF65ea75c6bb3a8.otf") format("opentype");
     font-weight: 300;
     font-style: italic;
-}
+} */
 
 /* Regular */
-@font-face {
+/* @font-face {
     font-family: "AreaNormalTrial";
     src: url("fonts/AreaNormalTrial-Regular-BF65ea75c666f34.otf") format("opentype");
     font-weight: 400;
@@ -56,10 +56,10 @@
     src: url("fonts/AreaNormalTrial-RegularItalic-BF65ea75c6ba3fa.otf") format("opentype");
     font-weight: 400;
     font-style: italic;
-}
+} */
 
 /* Medium */
-@font-face {
+/* @font-face {
     font-family: "AreaNormalTrial";
     src: url("fonts/AreaNormalTrial-Medium-BF65ea75c66b01c.otf") format("opentype");
     font-weight: 500;
@@ -71,10 +71,10 @@
     src: url("fonts/AreaNormalTrial-MediumItalic-BF65ea75c6898b0.otf") format("opentype");
     font-weight: 500;
     font-style: italic;
-}
+} */
 
 /* Semibold */
-@font-face {
+/* @font-face {
     font-family: "AreaNormalTrial";
     src: url("fonts/AreaNormalTrial-Semibold-BF65ea75c6b547e.otf") format("opentype");
     font-weight: 600;
@@ -86,10 +86,10 @@
     src: url("fonts/AreaNormalTrial-SemiboldItalic-BF65ea75c667970.otf") format("opentype");
     font-weight: 600;
     font-style: italic;
-}
+} */
 
 /* Bold */
-@font-face {
+/* @font-face {
     font-family: "AreaNormalTrial";
     src: url("fonts/AreaNormalTrial-Bold-BF65ea75c6a7619.otf") format("opentype");
     font-weight: 700;
@@ -101,10 +101,10 @@
     src: url("fonts/AreaNormalTrial-BoldItalic-BF65ea75c66fd8e.otf") format("opentype");
     font-weight: 700;
     font-style: italic;
-}
+} */
 
 /* Extrabold */
-@font-face {
+/* @font-face {
     font-family: "AreaNormalTrial";
     src: url("fonts/AreaNormalTrial-Extrabold-BF65ea75c66d287.otf") format("opentype");
     font-weight: 800;
@@ -116,10 +116,10 @@
     src: url("fonts/AreaNormalTrial-ExtraboldItalic-BF65ea75c65953d.otf") format("opentype");
     font-weight: 800;
     font-style: italic;
-}
+} */
 
 /* Black */
-@font-face {
+/* @font-face {
     font-family: "AreaNormalTrial";
     src: url("fonts/AreaNormalTrial-Black-BF65ea75c66612f.otf") format("opentype");
     font-weight: 900;
@@ -131,4 +131,4 @@
     src: url("fonts/AreaNormalTrial-BlackItalic-BF65ea75c6b5101.otf") format("opentype");
     font-weight: 900;
     font-style: italic;
-}
+} */
