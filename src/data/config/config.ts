@@ -6,7 +6,7 @@ export const configs = {
     site: {
         name: "Leonardo Ramaj",
         contactInfo: {
-            email: "leonardo.ra14@icloud.com",
+            email: "",
             phone: "+39 327 955 1219",
             phoneNoSpace: "393279551219",
         },
