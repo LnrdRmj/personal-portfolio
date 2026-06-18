@@ -50,20 +50,6 @@ const NaturaeFirenzeReview: Review = {
     },
 };
 
-const SoftkeysReview: Review = {
-    companyName: "Softkeys",
-    logo: "/images/clients/icons/softKeys.svg",
-    review: {
-        en: "Description 4.",
-        it: "Descrizione 4 per softkeys.",
-    },
-    reviewer: "Giulio Rossini",
-    role: {
-        en: "Owner of Softkeys",
-        it: "Proprietario di Softkeys",
-    },
-};
-
 const IReReview: Review = {
     companyName: "i'Re",
     logo: "/images/clients/icons/ire.svg",
@@ -78,10 +64,4 @@ const IReReview: Review = {
     },
 };
 
-export const reviews: Review[] = [
-    YoomyReview,
-    VoricelReview,
-    NaturaeFirenzeReview,
-    SoftkeysReview,
-    IReReview,
-];
+export const reviews: Review[] = [YoomyReview, VoricelReview, NaturaeFirenzeReview, IReReview];
