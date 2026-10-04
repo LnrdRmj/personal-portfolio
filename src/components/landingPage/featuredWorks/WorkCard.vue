@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import I18nChangeAnimation from "@/components/common/languageChangeAnimation/I18nChangeAnimation.vue";
+import LangChangeAnimation from "@/components/common/languageChangeAnimation/LangChangeAnimation.vue";
 import { Project } from "@/data/projects/project";
-import { getSelectedLanguageFromI18nValue } from "@/i18n/i18n";
+import { useI18nValue } from "@/composables/useI18nValue";
 import { PROJECT_DETAIL } from "@/routes/routeNames";
 import { computed, ref, useTemplateRef } from "vue";
 import { useRouter } from "vue-router";
@@ -22,6 +22,7 @@ const props = withDefaults(
 const workImageImgElement = useTemplateRef<HTMLElement>('workImage')
 const isBigVariant = computed(() => props.variant == "big");
 const hovered = ref(false);
+const role = useI18nValue(() => props.project.role);
 
 function goToProjectDetailPage() {
 
@@ -41,12 +42,12 @@ function goToProjectDetailPage() {
 </script>
 
 <template>
-    <div class="flex flex-col" @mouseover="hovered = true" @mouseleave="hovered = false"
+    <div class="flex flex-col group cursor-pointer" @mouseover="hovered = true" @mouseleave="hovered = false"
         @click="goToProjectDetailPage()">
         <div ref="workImage"
-            class="size-full overflow-hidden transition-[border-radius] duration-700 rounded-[20px] hover:rounded-[40px]">
-            <img :src="project.bannerPath"
-                class="object-cover size-full transition-transform duration-700 hover1:scale-110" />
+            class="size-full overflow-hidden transition-[border-radius] duration-700 rounded-[20px] group-hover:rounded-[40px]">
+            <img :src="project.bannerPath" :alt="`${project.clientName} project banner`"
+                class="object-cover size-full transition-transform duration-700 group-hover:scale-105" />
         </div>
         <div class="w-full bg-slate-300 h-[2px] shrink-0 mt-3 mb-1" />
         <div class="flex flex-col" :class="{
@@ -66,13 +67,13 @@ function goToProjectDetailPage() {
                     ? 'opacity-0 translate-y-full'
                     : 'opacity-100 translate-y-0'
                     ">
-                    {{ getSelectedLanguageFromI18nValue(project.role) }}
+                    {{ role }}
                 </div>
             </div>
             <div class="font-semibold" :class="{
                 'sm:w-1/2': isBigVariant,
             }">
-                <I18nChangeAnimation :value="project.description" />
+                <LangChangeAnimation :i18nValue="project.description" />
             </div>
         </div>
     </div>

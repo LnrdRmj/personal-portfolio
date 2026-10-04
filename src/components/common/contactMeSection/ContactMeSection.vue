@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { siteConfigs } from "@/data/config/config";
 import LangChangeAnimation from "../languageChangeAnimation/LangChangeAnimation.vue";
-import AppCaptchaPhoneNumber from "../phoneNumber/AppCaptchaPhoneNumber.vue";
+import CaptchaPhoneNumber from "../phoneNumber/CaptchaPhoneNumber.vue";
 import ChooseContactModal from "../chooseContactModal/ChooseContactModal.vue";
 import { ref } from "vue";
 
@@ -11,10 +11,12 @@ const openContactModal = ref(false)
 
 <template>
     <div class="flex flex-col standard-responsive-padding my-20 md:my-52 max-w-[1000px]">
-        <div class="max-w-full bg-gray-400 h-[2px] shrink-0 mb-5" />
-        <div class="uppercase text-2xl mb-16 font-extrabold">{{ $t("contactsSection.title") }}</div>
+        <div class="max-w-full bg-secondary/20 h-[2px] shrink-0 mb-5" />
+        <h2 class="uppercase font-display font-bold tracking-tight text-2xl md:text-3xl mb-16">
+            {{ $t("contactsSection.title") }}
+        </h2>
         <div class="flex flex-col">
-            <div class="text-4xl sm:text-5xl lg:text-6xl font-semibold">
+            <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
                 <LangChangeAnimation value="contactMe" />
             </div>
             <div class="text-lg font-semibold mt-5">
@@ -27,7 +29,7 @@ const openContactModal = ref(false)
                 <!-- <img class="h-4 mr-2" :src="WhatsappIcon" alt="" /> -->
                 <div class="flex flex-col font-semibold">
                     <div class="text-xl">Whatsapp</div>
-                    <AppCaptchaPhoneNumber />
+                    <CaptchaPhoneNumber />
                 </div>
             </div>
             <div class="max-h-full w-px bg-gray-300 shrink-0" />
@@ -42,7 +44,7 @@ const openContactModal = ref(false)
             </div>
         </div>
         <button class="px-8 w-fit rounded-lg mt-20 bg-secondary py-3 text-white text-base lg:text-xl font-semibold
-            hover:bg-blue-600 transition-colors" @click="openContactModal = true">
+            hover:bg-secondary/80 focus-ring transition-colors" @click="openContactModal = true">
             <LangChangeAnimation value="contactsSection.bookConsultation" />
         </button>
         <ChooseContactModal v-model:open="openContactModal" />

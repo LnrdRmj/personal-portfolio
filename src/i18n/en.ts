@@ -20,36 +20,6 @@ export default {
     },
     featuredWorks: {
         title: "Featured Works",
-        work1: {
-            client: "Yoomy",
-            role: "CO-OWNER / CREATIVE DIRECTOR",
-            description:
-                "Start-up project of an application, study of a brand identity suitable for the target, and creation of advertising and social media material.",
-        },
-        work2: {
-            client: "Yoomy",
-            role: "CO-OWNER / CREATIVE DIRECTOR",
-            description:
-                "Complete design and prototyping of the website on Figma, study of a new brand identity, and creation of a photo product and Google Ads.",
-        },
-        work3: {
-            client: "Yoomy",
-            role: "CO-OWNER / CREATIVE DIRECTOR",
-            description:
-                "Complete design and prototyping of the website on Figma, study of a new brand identity, and creation of a photo product and Google Ads.",
-        },
-        work4: {
-            client: "Yoomy",
-            role: "CO-OWNER / CREATIVE DIRECTOR",
-            description:
-                "Corporate rebranding including the creation of color palettes, social network strategy, and a merchandising line.",
-        },
-        work5: {
-            client: "Yoomy",
-            role: "CO-OWNER / CREATIVE DIRECTOR",
-            description:
-                "Corporate rebranding including the creation of color palettes, social network strategy, and a merchandising line.",
-        },
     },
     services: {
         title: "Main Services",
@@ -81,6 +51,11 @@ export default {
         let's meet`,
         bookConsultation:
             "Book a free consultation and discover how to improve your online presence. Choose your preferred contact method and let's get in touch to schedule an appointment",
+    },
+    notFound: {
+        title: "Page not found",
+        message: "The page you're looking for doesn't exist or has been moved.",
+        backHome: "Back to home",
     },
     position: "position",
     periodOfTime: "period",

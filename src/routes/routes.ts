@@ -1,4 +1,4 @@
-import LandingPage from "../components/landingPage/LandingPage.vue";
+import LandingPage from "../views/LandingPage.vue";
 import * as routeNames from "./routeNames";
 
 export const routes = [
@@ -9,9 +9,14 @@ export const routes = [
     },
     {
         path: "/project/:projectId",
-        component: () => import("../components/projects/ProjectPage.vue"),
+        component: () => import("../views/ProjectPage.vue"),
         name: routeNames.PROJECT_DETAIL,
         props: true,
         meta: { scrollToTop: true },
+    },
+    {
+        path: "/:pathMatch(.*)*",
+        component: () => import("../views/NotFoundPage.vue"),
+        name: routeNames.NOT_FOUND,
     },
 ];

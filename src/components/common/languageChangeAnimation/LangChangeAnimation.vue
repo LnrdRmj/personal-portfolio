@@ -1,12 +1,16 @@
 <script setup lang="ts">
 import { configs } from '@/data/config/config';
-import { TranslationsPathsOrString } from '@/i18n/i18n';
-import { useTranslation } from 'i18next-vue';
-import { ref } from 'vue';
+import { I18nValue, TranslationsPathsOrString } from '@/i18n/i18n';
+import { useCurrentLanguage } from '@/composables/useCurrentLanguage';
+import { t } from 'i18next';
+import { ref, watch } from 'vue';
 import TextSwapper from '../textSwapper/TextSwapper.vue';
 
 const props = withDefaults(defineProps<{
-    value: TranslationsPathsOrString,
+    /** Translation key resolved through t() */
+    value?: TranslationsPathsOrString,
+    /** Inline translations object, alternative to `value` */
+    i18nValue?: I18nValue,
     animationName?: string,
     animation?: boolean
 }>(), {
@@ -14,29 +18,33 @@ const props = withDefaults(defineProps<{
     animationName: configs.language.animationName
 })
 
-const { i18next, t } = useTranslation()
+const language = useCurrentLanguage()
 
-var currentTranslatedText = ref(t(props.value as string));
-var oldTranslatedText = ref(currentTranslatedText.value);
+function resolve(): string {
+    if (props.i18nValue != null) return props.i18nValue[language.value]
+    return t(props.value ?? "")
+}
 
+const currentText = ref(resolve())
+const oldText = ref(currentText.value)
 const flip = ref(false)
-i18next.on("languageChanged", (lng) => {
-    flip.value = !flip.value
-    oldTranslatedText.value = currentTranslatedText.value
-    currentTranslatedText.value = t(props.value as string)
-})
+const skipAnimation = ref(false)
 
+watch([language, () => props.value, () => props.i18nValue], () => {
+    oldText.value = currentText.value
+    currentText.value = resolve()
+    skipAnimation.value = oldText.value === currentText.value
+    flip.value = !flip.value
+})
 </script>
 
 <template>
-
-    <TextSwapper :text1="currentTranslatedText" :text2="oldTranslatedText" :flip="flip" :animation="animation"
+    <TextSwapper :text1="currentText" :text2="oldText" :flip="flip" :animation="animation && !skipAnimation"
         :animationName="animationName" />
-
 </template>
 
 <style scoped>
-/* Blurs the content of the text */
+/* Blurs the content of the text while it swaps */
 .change-language-animation-enter-active,
 .change-language-animation-leave-active {
     transition: filter 0.5s;

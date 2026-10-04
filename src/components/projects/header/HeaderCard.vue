@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import I18nChangeAnimation from '@/components/common/languageChangeAnimation/I18nChangeAnimation.vue';
+import LangChangeAnimation from '@/components/common/languageChangeAnimation/LangChangeAnimation.vue';
 import { I18nValue } from '@/i18n/i18n';
 
 defineProps<{
@@ -15,11 +15,11 @@ defineProps<{
             <div v-if="typeof title == 'string'">
                 {{ title }}
             </div>
-            <I18nChangeAnimation v-else :value="title" />
+            <LangChangeAnimation v-else :i18nValue="title" />
         </div>
         <div class="text-xl mt-3 md:mt-5 leading-tight">
             <div v-if="typeof description == 'string'" v-html="description"></div>
-            <I18nChangeAnimation v-else :value="description" />
+            <LangChangeAnimation v-else :i18nValue="description" />
         </div>
     </div>
 </template>

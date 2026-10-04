@@ -23,39 +23,9 @@ const itTranslations: Translations = {
     },
     featuredWorks: {
         title: "Lavori in evidenza",
-        work1: {
-            client: "Yoomy",
-            role: "FULLSTACK DEVELOPER",
-            description:
-                "Sviluppo full stack dell'app Yoomy tramite. L'app mira a modernizzare il mondo della ristorazione all'interno delle scuole. Il servizio è già attivo in 4 scuole con più di mille utenti registrati",
-        },
-        work2: {
-            client: "Virtual Support Oppo",
-            role: "Fullstack developer",
-            description:
-                "Sviluppo della piattaforma di customer service per alcuni prodotti di alta fascia di Oppo",
-        },
-        work3: {
-            client: "Yoomy",
-            role: "CO-OWNER / CREATIVE DIRECTOR",
-            description:
-                "Progettazione e Prototipazione completa del Sito Web su Figma, Studio di una nuova Brand Identity e Realizzazione di un Foto-Prodotto e Google Ads.",
-        },
-        work4: {
-            client: "Yoomy",
-            role: "CO-OWNER / CREATIVE DIRECTOR",
-            description:
-                "Rebranding aziendale che comprende la creazione di Palette colori, strategia Social Network e linea di Merchandising.",
-        },
-        work5: {
-            client: "Yoomy",
-            role: "CO-OWNER / CREATIVE DIRECTOR",
-            description:
-                "Rebranding aziendale che comprende la creazione di Palette colori, strategia Social Network e linea di Merchandising.",
-        },
     },
     services: {
-        title: "Servici principali",
+        title: "Servizi principali",
         havearequest: "Hai una richiesta specifica?",
     },
     worksSection: {
@@ -82,6 +52,11 @@ const itTranslations: Translations = {
     contactModal: {
         letsMeet: `Ehi, <br>conosciamoci`,
         bookConsultation: `Prenota una consulenza gratuita e scopri come migliorare la tua presenza online. Scegli il metodo di contatto che preferisci e mettiamoci in contatto per fissare un appuntamento.`,
+    },
+    notFound: {
+        title: "Pagina non trovata",
+        message: "La pagina che stai cercando non esiste o è stata spostata.",
+        backHome: "Torna alla home",
     },
     position: "posizione",
     periodOfTime: "periodo",

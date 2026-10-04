@@ -6,8 +6,8 @@ export const router = createRouter({
     history: createWebHistory(),
     routes,
     scrollBehavior(to, from, savedPosition) {
-        const nowRouteAnimation = to.query["noRouteAnimation"] === null;
-        const routeAnimationDuration = nowRouteAnimation ? 0 : routerAnimationDuration; //ms
+        const skipRouteAnimation = to.query["noRouteAnimation"] === null;
+        const routeAnimationDuration = skipRouteAnimation ? 0 : routerAnimationDuration; //ms
 
         if (to.meta.scrollToTop) {
             return new Promise((resolve) => {

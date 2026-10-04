@@ -1,46 +1,22 @@
 <script setup lang="ts">
+import { useTemplateRef } from 'vue';
 import { siteConfigs } from '@/data/config/config';
-import { createRandomString } from '@/services/strings/stringUtils';
-import { onMounted, ref, useTemplateRef } from 'vue';
+import { useRecaptcha } from '@/composables/useRecaptcha';
 
 const emits = defineEmits<{
     success: [string]
 }>()
 
-defineProps<{
-    phoneNumber: string,
-    phoneNumberNoSpace: string,
-}>()
-
 const captchaContainer = useTemplateRef('captchaContainer')
-
-onMounted(() => {
-    if (captchaContainer.value)
-        // @ts-ignore
-        grecaptcha?.render(captchaContainer.value, {
-            sitekey: '6LeCU_UqAAAAADWDz8xukf9Oz7_pU27yLV6yrvvo'
-        })
-})
-
-
-const globalRecaptchaCallbackFuncName = createRandomString(10)
-const recaptchaIsValid = ref(false)
-// Expose the function above globally for recaptcha button
-// @ts-ignore
-window[globalRecaptchaCallbackFuncName] = function successfullRecaptcharResponse(responseToken: string) {
-    if (responseToken != null && typeof responseToken === "string") {
-        recaptchaIsValid.value = true
-        emits('success', responseToken)
-    }
-}
+const { isValid } = useRecaptcha(captchaContainer, (token) => emits('success', token))
 </script>
 
 <template>
     <Transition name="fade" mode="out-in">
-        <a v-if="recaptchaIsValid || !siteConfigs.captchaForPhoneNumber" :href="`https://wa.me/${phoneNumberNoSpace}`"
-            target="_blank">
-            {{ phoneNumber }}
+        <a v-if="isValid || !siteConfigs.captchaForPhoneNumber" class="focus-ring"
+            :href="`https://wa.me/${siteConfigs.contactInfo.phoneNoSpace}`" target="_blank" rel="noopener">
+            {{ siteConfigs.contactInfo.phone }}
         </a>
-        <div v-else :data-callback="globalRecaptchaCallbackFuncName" ref="captchaContainer"></div>
+        <div v-else ref="captchaContainer"></div>
     </Transition>
 </template>

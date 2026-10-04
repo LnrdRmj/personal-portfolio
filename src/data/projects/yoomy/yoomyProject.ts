@@ -1,5 +1,6 @@
 import { Project } from "../project";
 import { projectSkills } from "../projectSkills";
+import { YoomyReview } from "@/data/reviews/reviews";
 import YoomyBannerProject from "./assets/yoomyBannerProject.png";
 import Yoomy2 from "./assets/yoomy_2.png";
 import YoomyImage3 from "./assets/yoomy_image_3.png";
@@ -79,6 +80,10 @@ export const YoomyProject: Project = {
                     url: YoomyStorePerformance,
                 },
             },
+        },
+        {
+            name: "review",
+            review: YoomyReview,
         },
     ],
 };

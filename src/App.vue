@@ -1,29 +1,38 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router';
-import Header from './components/Header.vue';
-import Footer from './components/landingPage/footer/Footer.vue';
 import { computed } from 'vue';
-import { useTranslation } from 'i18next-vue';
+import { t } from 'i18next';
+import Header from '@components/header/Header.vue';
+import Footer from '@components/landingPage/footer/Footer.vue';
+import { useCurrentLanguage } from '@/composables/useCurrentLanguage';
+import type { HeaderRoute } from '@components/header/headerRoutes';
 
 const route = useRoute()
 const noRouteAnimation = computed(() => route.query['noRouteAnimation'] === null)
 
-const { t } = useTranslation()
+const language = useCurrentLanguage()
 
-const headerRoutes = [
-    {
-        title: t('headerSection.services'),
-        onClick: () => { document.querySelector('#service-container')?.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' }) },
-    },
-    {
-        title: t('headerSection.work'),
-        onClick: () => { document.querySelector('#works-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' }) },
-    },
-    {
-        title: t('headerSection.whoAmI'),
-        onClick: () => { document.querySelector('#whoami-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' }) },
-    },
-]
+function scrollToSection(selector: string, block: ScrollLogicalPosition) {
+    document.querySelector(selector)?.scrollIntoView({ behavior: 'smooth', block })
+}
+
+const headerRoutes = computed<HeaderRoute[]>(() => {
+    void language.value; // re-resolve titles on language change
+    return [
+        {
+            title: t('headerSection.services'),
+            onClick: () => scrollToSection('#service-container', 'start'),
+        },
+        {
+            title: t('headerSection.work'),
+            onClick: () => scrollToSection('#works-container', 'center'),
+        },
+        {
+            title: t('headerSection.whoAmI'),
+            onClick: () => scrollToSection('#whoami-container', 'center'),
+        },
+    ]
+})
 
 </script>
 

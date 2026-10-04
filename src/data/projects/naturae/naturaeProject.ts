@@ -1,13 +1,14 @@
 import { createI18ValueFromOne } from "@/i18n/i18n";
 import { Project } from "../project";
 import { projectSkills } from "../projectSkills";
+import { NaturaeFirenzeReview } from "@/data/reviews/reviews";
 
 import NaturaeBanner from "./assets/NaturaeProjectBanner.png";
 import NuxtAndGoogle from "./assets/nuxt and google image.png";
 import ResponsiveNaturae from "./assets/Responsive Naturae.mp4";
 
 export const NaturaeProject: Project = {
-    id: 123478901234789,
+    id: 3,
     period: {
         startYear: 2024,
         endYear: 2025,
@@ -48,7 +49,9 @@ export const NaturaeProject: Project = {
                 it: `Il cliente aveva espresso una forte esigenza di ottenere una buona visibilità sui principali motori di ricerca, con particolare attenzione alla qualità del SEO.
 Per soddisfare questa richiesta, ho deciso di adottare Nuxt, una tecnologia per costruire siti che offre, tra i suoi vantaggi, un’ottima gestione dell’ottimizzazione per i motori di ricerca.
 Tuttavia, per garantire una corretta indicizzazione non è sufficiente affidarsi solo a questo tipo di soluzione, perciò ho utilizzato anche Google Search Console, uno strumento fornito da Google che permette di richiedere direttamente l’indicizzazione del sito.`,
-                en: ``,
+                en: `The client had a strong need for good visibility on the main search engines, with particular attention to SEO quality.
+To meet this requirement, I chose Nuxt, a technology for building websites that offers, among its advantages, excellent search engine optimization handling.
+However, relying on this kind of solution alone is not enough to guarantee proper indexing, so I also used Google Search Console, a tool provided by Google that allows you to directly request the indexing of the site.`,
             },
             media: {
                 type: "image",
@@ -63,20 +66,24 @@ Tuttavia, per garantire una corretta indicizzazione non è sufficiente affidarsi
             },
             description: {
                 it: `Oltre alla creazione del sito mi è stata affidata anche la gestione del dominio. Il cliente aveva già un dominio suo, io ho provveduto a collegare il dominio col nuovo sito.`,
-                en: ``,
+                en: `In addition to building the site, I was also entrusted with managing the domain. The client already owned a domain, and I took care of connecting it to the new website.`,
             },
             child: {
                 name: "single-image-with-text",
                 title: createI18ValueFromOne("RESPONSIVE DESIGN"),
                 description: {
-                    it: `Il sito, come la maggior parte dei miei progetti, è stato reso copletamente responsive. Questo vuol dire che il sito si adatta per tutte le tipologie di schermo: da telefoni, a tablet e computer. Fruibili ovunque insomma.`,
-                    en: ``,
+                    it: `Il sito, come la maggior parte dei miei progetti, è stato reso completamente responsive. Questo vuol dire che il sito si adatta per tutte le tipologie di schermo: da telefoni, a tablet e computer. Fruibili ovunque insomma.`,
+                    en: `Like most of my projects, the site was made fully responsive. This means it adapts to every type of screen: phones, tablets, and computers. Enjoyable everywhere, in short.`,
                 },
                 media: {
                     type: "video",
                     url: ResponsiveNaturae,
                 },
             },
+        },
+        {
+            name: "review",
+            review: NaturaeFirenzeReview,
         },
     ],
 };

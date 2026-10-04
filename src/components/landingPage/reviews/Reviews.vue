@@ -21,9 +21,9 @@ onUnmounted(() => {
 <template>
     <div class="flex flex-col bg-secondary rounded-[20px] px-5 sm:px-16">
         <div class="w-full bg-zinc-800 h-[2px] shrink-0 mt-[50px] mb-4" />
-        <div class="uppercase font-extrabold text-2xl mb-[80px] text-white">
+        <h2 class="uppercase font-display font-bold tracking-tight text-2xl md:text-3xl mb-[80px] text-white">
             <LangChangeAnimation value="reviewsSection.title" />
-        </div>
+        </h2>
         <div class="flex flex-col sm:flex-row sm:h-[650px] sm:space-x-5">
             <div class="flex flex-wrap sm:flex-col sm:flex-nowrap sm:space-y-2">
                 <Client v-for="(review, index) of reviews" class="mr-3 mb-3" @click="selectedReviewIndex = index"
@@ -32,7 +32,11 @@ onUnmounted(() => {
             </div>
             <div class="flex flex-col w-full lg:flex-row">
                 <div class="w-full h-56 lg:h-auto lg:w-[50%]">
-                    <div class="bg-green-400 size-full rounded-[20px]"></div>
+                    <div class="bg-zinc-900 size-full rounded-[20px] flex-center">
+                        <div class="bg-white size-32 md:size-44 transition-[mask] duration-500" :style="{
+                            mask: `url(${reviews[selectedReviewIndex].logo}) no-repeat center / contain`,
+                        }"></div>
+                    </div>
                 </div>
 
                 <div class="relative max-h-96 h-96 w-full mt-5 sm:h-auto flex sm:flex-1 sm:max-h-none lg:w-[50%]">
