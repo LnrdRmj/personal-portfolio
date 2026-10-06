@@ -1,0 +1,37 @@
+# Builds the site and deploys it to Cloudflare Workers on every push to `personal`.
+# Setup (secrets, variables, domain): docs/deployment/README.md
+name: Deploy to Cloudflare
+
+on:
+    push:
+        branches: [personal]
+    workflow_dispatch:
+
+concurrency:
+    group: production
+    cancel-in-progress: false
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v7
+
+            - uses: actions/setup-node@v7
+              with:
+                  node-version: 24
+                  cache: npm
+
+            - run: npm ci
+
+            # Public values are baked into the prerendered pages, so they're needed at build time.
+            - run: npm run build
+              env:
+                  NUXT_SITE_URL: ${{ vars.NUXT_SITE_URL }}
+                  NUXT_SITE_ENV: ${{ vars.NUXT_SITE_ENV }}
+                  NUXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ vars.NUXT_PUBLIC_TURNSTILE_SITE_KEY }}
+
+            - run: npx wrangler deploy
+              env:
+                  CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+                  CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
