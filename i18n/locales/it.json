@@ -1,0 +1,134 @@
+{
+    "nav": {
+        "label": "Navigazione principale",
+        "about": "chi-sono",
+        "skills": "competenze",
+        "projects": "progetti",
+        "contact": "contatti",
+        "openMenu": "Apri il menu",
+        "closeMenu": "Chiudi il menu",
+        "home": "Leonardo Ramaj, torna alla home",
+        "skipToContent": "Vai al contenuto"
+    },
+    "theme": {
+        "toggle": "Tema: {mode}. Clicca per cambiare",
+        "system": "sistema",
+        "light": "chiaro",
+        "dark": "scuro"
+    },
+    "lang": {
+        "switchTo": "Leggi in {language}"
+    },
+    "cta": {
+        "contact": "Contattami"
+    },
+    "hero": {
+        "location": "Prato, Italia · freelance",
+        "lead": "Realizzo web app, siti e app mobili veloci, curati e pensati per farsi trovare su Google. E oggi porto l’intelligenza artificiale nei progetti dei miei clienti.",
+        "primary": "Parliamo del tuo progetto",
+        "secondary": "Guarda i progetti",
+        "terminalLabel": "Terminale decorativo con gli ultimi progetti"
+    },
+    "about": {
+        "title": "Chi sono",
+        "facts": {
+            "based": "base",
+            "basedValue": "Prato, Italia",
+            "work": "lavoro",
+            "workValue": "freelance con partita IVA",
+            "focus": "focus",
+            "focusValue": "web app, siti, mobile, AI"
+        }
+    },
+    "skills": {
+        "title": "Cosa conosco",
+        "intro": "Le tecnologie che uso nei progetti, dal frontend al backend fino all’intelligenza artificiale.",
+        "groups": {
+            "languages": "Linguaggi",
+            "frameworks": "Framework e librerie",
+            "tools": "Strumenti e piattaforme",
+            "ai": "Intelligenza artificiale"
+        },
+        "new": "novità"
+    },
+    "projects": {
+        "title": "Progetti",
+        "intro": "Alcuni dei lavori che ho seguito per i miei clienti, dall’idea alla messa online.",
+        "view": "Vedi il progetto",
+        "present": "oggi"
+    },
+    "project": {
+        "breadcrumb": "progetti",
+        "role": "Ruolo",
+        "period": "Periodo",
+        "stack": "Stack",
+        "next": "Prossimo progetto",
+        "ctaTitle": "Hai un progetto simile in mente?",
+        "ctaBody": "Raccontami di cosa hai bisogno e troviamo insieme la soluzione giusta.",
+        "videoFallback": "Il tuo browser non riproduce questo video."
+    },
+    "contact": {
+        "title": "Contatti",
+        "intro": "Hai un’idea, un sito da rifare o vuoi solo un parere? Scrivimi: ti rispondo il prima possibile.",
+        "reveal": {
+            "title": "Telefono ed email",
+            "body": "Per proteggerli dallo spam li mostro dopo una rapida verifica anti-bot.",
+            "button": "Mostra i contatti",
+            "verifying": "Verifica in corso…",
+            "error": "Verifica non riuscita. Riprova.",
+            "retry": "Riprova",
+            "phone": "Telefono",
+            "email": "Email",
+            "whatsapp": "Scrivimi su WhatsApp"
+        },
+        "form": {
+            "title": "Scrivimi",
+            "name": "Nome",
+            "email": "Email",
+            "message": "Messaggio",
+            "messagePlaceholder": "Raccontami del tuo progetto…",
+            "honeypot": "Lascia vuoto questo campo",
+            "captcha": "Verifica anti-spam",
+            "submit": "Invia messaggio",
+            "sending": "Invio in corso…",
+            "success": "Messaggio inviato! Ti risponderò il prima possibile.",
+            "error": "Qualcosa è andato storto. Riprova tra poco.",
+            "privacy": "Inviando il messaggio dichiari di aver letto l’{link}.",
+            "privacyLink": "informativa privacy",
+            "errors": {
+                "name": "Inserisci il tuo nome (almeno 2 caratteri).",
+                "email": "Inserisci un indirizzo email valido.",
+                "message": "Scrivi un messaggio di almeno 10 caratteri.",
+                "token": "Completa la verifica anti-spam."
+            }
+        }
+    },
+    "footer": {
+        "tagline": "Sviluppatore full-stack freelance. Web app, siti, mobile e AI.",
+        "social": "Social",
+        "legal": "Dati legali",
+        "vat": "P.IVA",
+        "privacy": "Informativa privacy",
+        "rights": "Tutti i diritti riservati."
+    },
+    "privacy": {
+        "title": "Informativa privacy",
+        "updated": "Ultimo aggiornamento: {date}"
+    },
+    "error": {
+        "notFoundTitle": "Pagina non trovata",
+        "notFound": "Nessun file o cartella con questo nome.",
+        "genericTitle": "Qualcosa è andato storto",
+        "generic": "Si è verificato un errore imprevisto.",
+        "home": "Torna alla home"
+    },
+    "seo": {
+        "home": {
+            "title": "Leonardo Ramaj · Sviluppatore full-stack freelance a Prato",
+            "description": "Sviluppatore full-stack freelance a Prato: web app, siti vetrina ottimizzati SEO, app mobili e integrazioni AI con Vue, Nuxt, Node.js, Laravel e Symfony."
+        },
+        "privacy": {
+            "description": "Come vengono trattati i dati personali raccolti dal sito di Leonardo Ramaj."
+        }
+    }
+}

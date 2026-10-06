@@ -1,0 +1,134 @@
+{
+    "nav": {
+        "label": "Main navigation",
+        "about": "about",
+        "skills": "skills",
+        "projects": "projects",
+        "contact": "contact",
+        "openMenu": "Open menu",
+        "closeMenu": "Close menu",
+        "home": "Leonardo Ramaj, back to home",
+        "skipToContent": "Skip to content"
+    },
+    "theme": {
+        "toggle": "Theme: {mode}. Click to change",
+        "system": "system",
+        "light": "light",
+        "dark": "dark"
+    },
+    "lang": {
+        "switchTo": "Read in {language}"
+    },
+    "cta": {
+        "contact": "Contact me"
+    },
+    "hero": {
+        "location": "Prato, Italy · freelance",
+        "lead": "I build fast, polished web apps, websites and mobile apps that are made to be found on Google. And today I bring AI into my clients’ projects.",
+        "primary": "Let’s talk about your project",
+        "secondary": "See my work",
+        "terminalLabel": "Decorative terminal listing recent projects"
+    },
+    "about": {
+        "title": "About me",
+        "facts": {
+            "based": "based",
+            "basedValue": "Prato, Italy",
+            "work": "work",
+            "workValue": "freelance, VAT registered",
+            "focus": "focus",
+            "focusValue": "web apps, websites, mobile, AI"
+        }
+    },
+    "skills": {
+        "title": "What I know",
+        "intro": "The technologies I use in my projects, from frontend to backend all the way to AI.",
+        "groups": {
+            "languages": "Languages",
+            "frameworks": "Frameworks and libraries",
+            "tools": "Tools and platforms",
+            "ai": "Artificial intelligence"
+        },
+        "new": "new"
+    },
+    "projects": {
+        "title": "Projects",
+        "intro": "A selection of work I’ve done for my clients, from the first idea to launch.",
+        "view": "View project",
+        "present": "present"
+    },
+    "project": {
+        "breadcrumb": "projects",
+        "role": "Role",
+        "period": "Period",
+        "stack": "Stack",
+        "next": "Next project",
+        "ctaTitle": "Have a similar project in mind?",
+        "ctaBody": "Tell me what you need and let’s find the right solution together.",
+        "videoFallback": "Your browser can’t play this video."
+    },
+    "contact": {
+        "title": "Contact",
+        "intro": "Got an idea, a website to rebuild, or just want an opinion? Write to me and I’ll get back to you as soon as I can.",
+        "reveal": {
+            "title": "Phone and email",
+            "body": "To keep them away from spam, I show them after a quick anti-bot check.",
+            "button": "Show contact details",
+            "verifying": "Verifying…",
+            "error": "Verification failed. Please try again.",
+            "retry": "Try again",
+            "phone": "Phone",
+            "email": "Email",
+            "whatsapp": "Message me on WhatsApp"
+        },
+        "form": {
+            "title": "Write to me",
+            "name": "Name",
+            "email": "Email",
+            "message": "Message",
+            "messagePlaceholder": "Tell me about your project…",
+            "honeypot": "Leave this field empty",
+            "captcha": "Anti-spam check",
+            "submit": "Send message",
+            "sending": "Sending…",
+            "success": "Message sent! I’ll get back to you as soon as I can.",
+            "error": "Something went wrong. Please try again shortly.",
+            "privacy": "By sending this message you confirm you have read the {link}.",
+            "privacyLink": "privacy notice",
+            "errors": {
+                "name": "Enter your name (at least 2 characters).",
+                "email": "Enter a valid email address.",
+                "message": "Write a message of at least 10 characters.",
+                "token": "Complete the anti-spam check."
+            }
+        }
+    },
+    "footer": {
+        "tagline": "Freelance full-stack developer. Web apps, websites, mobile and AI.",
+        "social": "Social",
+        "legal": "Legal",
+        "vat": "VAT",
+        "privacy": "Privacy notice",
+        "rights": "All rights reserved."
+    },
+    "privacy": {
+        "title": "Privacy notice",
+        "updated": "Last updated: {date}"
+    },
+    "error": {
+        "notFoundTitle": "Page not found",
+        "notFound": "No such file or directory.",
+        "genericTitle": "Something went wrong",
+        "generic": "An unexpected error occurred.",
+        "home": "Back to home"
+    },
+    "seo": {
+        "home": {
+            "title": "Leonardo Ramaj · Freelance full-stack developer in Prato, Italy",
+            "description": "Freelance full-stack developer in Prato, Italy: web apps, SEO-friendly websites, mobile apps and AI integrations with Vue, Nuxt, Node.js, Laravel and Symfony."
+        },
+        "privacy": {
+            "description": "How personal data collected by Leonardo Ramaj’s website is processed."
+        }
+    }
+}
