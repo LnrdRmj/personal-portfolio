@@ -1,0 +1,15 @@
+{
+    // Nitro merges this into .output/server/wrangler.json (adds main, assets and compat flags).
+    "$schema": "./node_modules/wrangler/config-schema.json",
+    "name": "ramaj-portfolio",
+    "compatibility_date": "2026-07-15",
+    "workers_dev": true,
+    "preview_urls": true,
+    "observability": { "enabled": true },
+    // Testing on workers.dev for now. Re-enable once ramaj.dev's nameservers are on Cloudflare:
+    // "routes": [{ "pattern": "ramaj.dev", "custom_domain": true }],
+    "vars": {
+        // ramaj.dev is verified in Resend, so the form can send from it.
+        "NUXT_RESEND_FROM": "Portfolio <portfolio@ramaj.dev>"
+    }
+}
