@@ -9,16 +9,16 @@ The domain stays registered at Hostinger, and its mailboxes stay on **Hostinger 
 its **DNS moves to Cloudflare**: a Worker custom domain only works on a domain whose
 nameservers are Cloudflare's.
 
-1. **Move DNS without breaking email**: Cloudflare dashboard → *Add a domain* → `ramaj.dev` →
+1. **Move DNS without breaking email**: Cloudflare dashboard → _Add a domain_ → `ramaj.dev` →
    Free plan. Before switching, make sure Cloudflare has every mail record from Hostinger's DNS
-   zone (hPanel → *Emails → DNS settings* lists them); the import can miss some:
-   - MX records (Hostinger's `mx1`/`mx2`)
-   - the SPF TXT on the root (`v=spf1 include:...hostinger...`)
-   - DKIM records (`*._domainkey`) and any `autodiscover`/`autoconfig` records
-   Mail-related CNAMEs must be **DNS only** (grey cloud). Then in hPanel → *Domains → ramaj.dev
-   → Nameservers* set the two Cloudflare gives you. Activation takes minutes, at most 24 h.
-   Do **not** enable Cloudflare Email Routing: it would replace Hostinger's MX records.
-2. **Send form mail from the domain**: Resend → *Domains → Add domain* → `ramaj.dev`. Add the
+   zone (hPanel → _Emails → DNS settings_ lists them); the import can miss some:
+    - MX records (Hostinger's `mx1`/`mx2`)
+    - the SPF TXT on the root (`v=spf1 include:...hostinger...`)
+    - DKIM records (`*._domainkey`) and any `autodiscover`/`autoconfig` records
+      Mail-related CNAMEs must be **DNS only** (grey cloud). Then in hPanel → _Domains → ramaj.dev
+      → Nameservers_ set the two Cloudflare gives you. Activation takes minutes, at most 24 h.
+      Do **not** enable Cloudflare Email Routing: it would replace Hostinger's MX records.
+2. **Send form mail from the domain**: Resend → _Domains → Add domain_ → `ramaj.dev`. Add the
    records it lists (DKIM on its own selector, MX + SPF on the `send` subdomain) to Cloudflare
    DNS. They don't touch Hostinger's root MX/SPF. If there's no `_dmarc` record yet, add TXT
    `_dmarc` = `v=DMARC1; p=none;` (never two).
@@ -34,19 +34,19 @@ nameservers are Cloudflare's.
    the `workers.dev` host. Note the site key and secret.
 3. **Resend**: create an API key (and verify the domain as above).
 4. **GitHub repo → Settings → Secrets and variables → Actions**:
-   - Secrets: `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`
-   - Variables: `NUXT_SITE_URL` = `https://ramaj.dev`, `NUXT_SITE_ENV` (`staging` until
-     launch, then `production`), `NUXT_PUBLIC_TURNSTILE_SITE_KEY`
+    - Secrets: `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`
+    - Variables: `NUXT_SITE_URL` = `https://ramaj.dev`, `NUXT_SITE_ENV` (`staging` until
+      launch, then `production`), `NUXT_PUBLIC_TURNSTILE_SITE_KEY`
 5. **Worker secrets** (once, from your machine after `npx wrangler login`):
 
-   ```bash
-   npx wrangler secret put NUXT_TURNSTILE_SECRET_KEY
-   npx wrangler secret put NUXT_TURNSTILE_HOSTNAME  # ramaj.dev
-   npx wrangler secret put NUXT_CONTACT_PHONE       # keep the leading "+"
-   npx wrangler secret put NUXT_CONTACT_EMAIL       # your Hostinger address
-   npx wrangler secret put NUXT_RESEND_API_KEY
-   npx wrangler secret put NUXT_RESEND_TO           # your Hostinger address
-   ```
+    ```bash
+    npx wrangler secret put NUXT_TURNSTILE_SECRET_KEY
+    npx wrangler secret put NUXT_TURNSTILE_HOSTNAME  # ramaj.dev
+    npx wrangler secret put NUXT_CONTACT_PHONE       # keep the leading "+"
+    npx wrangler secret put NUXT_CONTACT_EMAIL       # your Hostinger address
+    npx wrangler secret put NUXT_RESEND_API_KEY
+    npx wrangler secret put NUXT_RESEND_TO           # your Hostinger address
+    ```
 
 ## Workflows
 
@@ -65,8 +65,8 @@ runtime and changes with `wrangler secret put`.
 
 ## Go-live checklist
 
-- [ ] `ramaj.dev` active on Cloudflare, Hostinger email still working, Resend domain verified.
-- [ ] Deploy; the Worker takes over `ramaj.dev` (replace any old A/CNAME record for the apex
+- [x] `ramaj.dev` active on Cloudflare, Hostinger email still working, Resend domain verified.
+- [x] Deploy; the Worker takes over `ramaj.dev` (replace any old A/CNAME record for the apex
       if Cloudflare reports a conflict).
 - [ ] Set `NUXT_SITE_ENV=production`, then redeploy.
 - [ ] Send a test message through the form and check it arrives.
