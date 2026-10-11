@@ -4,6 +4,7 @@
 
 Phone and email exist only as Worker secrets (`NUXT_CONTACT_PHONE`, `NUXT_CONTACT_EMAIL`).
 They are never in the repo, the HTML or the JS bundle.
+The one exception is the privacy notice, which prints a public email for data requests (GDPR art. 13).
 
 1. The visitor clicks "Show contact details". Only then does the Cloudflare Turnstile widget
    (and its script) load.

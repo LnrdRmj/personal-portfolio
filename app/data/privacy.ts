@@ -1,6 +1,6 @@
 import type { Localized } from '../../shared/types/content'
 
-// TODO(leonardo): have this reviewed, and add a contact email for privacy requests (GDPR art. 13).
+// TODO(leonardo): have this reviewed by a lawyer.
 export const privacyUpdatedAt = '2026-10-04'
 
 export const privacySections: { title: Localized; paragraphs: Localized<string[]> }[] = [
@@ -8,7 +8,7 @@ export const privacySections: { title: Localized; paragraphs: Localized<string[]
         title: { it: 'Titolare del trattamento', en: 'Data controller' },
         paragraphs: {
             it: [
-                'Il titolare del trattamento è Leonardo Ramaj, P.IVA 02610360972, con sede a Prato (PO). Per qualsiasi richiesta sui tuoi dati puoi scrivermi tramite il modulo di contatto di questo sito.',
+                'Il titolare del trattamento è Leonardo Ramaj, P.IVA 02610360972, con sede a Prato (PO). Per qualsiasi richiesta sui tuoi dati puoi scrivermi a leonardo@ramaj.dev o tramite il modulo di contatto di questo sito.',
             ],
             en: [
                 'The data controller is Leonardo Ramaj, VAT number IT02610360972, based in Prato (PO), Italy. For any request about your data, you can write to me through this website’s contact form.',
