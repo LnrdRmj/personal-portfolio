@@ -11,5 +11,11 @@
     "vars": {
         // ramaj.dev is verified in Resend, so the form can send from it.
         "NUXT_RESEND_FROM": "Portfolio <portfolio@ramaj.dev>"
+    },
+    // Worker Previews (wrangler preview) require their own vars; previews run the form in dry-run mode.
+    "previews": {
+        "vars": {
+            "NUXT_RESEND_FROM": "Portfolio Preview <portfolio@ramaj.dev>"
+        }
     }
 }
