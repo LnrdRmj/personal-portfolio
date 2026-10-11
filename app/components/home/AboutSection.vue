@@ -14,7 +14,7 @@ const l = useLocalized()
                 <div v-if="profile.portrait" class="mt-10 bg-blue p-5 sm:p-6">
                     <ResponsiveImage
                         :media="profile.portrait"
-                        sizes="(min-width: 1024px) 380px, 100vw"
+                        sizes="(min-width: 1024px) 480px, 100vw"
                         class="aspect-4/5 w-full object-cover"
                     />
                 </div>
