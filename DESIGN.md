@@ -141,7 +141,7 @@ Density is brochure-like: generous section spacing, large tightly tracked displa
 - Square corners everywhere; the only curves are true circles (circle mark, radio indicator).
 - Hairline-ruled definition lists with tabular numerals carry facts (role, period, stack, VAT).
 - Five GeoMarks (circle, square, half-disc, triangle, bar) are the only ornament.
-- One authored motion: the hero marks assemble once.
+- Motion belongs to the marks: they assemble in the hero, are set onto the method axis on scroll, and each answers hover with its own gesture.
 
 ## Colors
 
@@ -191,7 +191,7 @@ Matt paper and black ink, with three Olivetti fields used at full strength and f
 ### Named Rules
 **The Tabular Facts Rule.** Dates, periods, VAT and phone numbers always use tabular lining numerals.
 
-**The Lowercase Wordmark Rule.** "leonardo ramaj" is set lowercase, semibold, tracked -0.04em (header) to -0.055em (the footer's full-width wordmark).
+**The Lowercase Wordmark Rule.** "leonardo ramaj" is set lowercase, semibold, tracked -0.04em (header) to -0.055em (the footer's full-width wordmark). The footer wordmark assembles once as it scrolls into view: each letter flies in from its own golden-angle direction and rotation (1.2s expo, scattered order, 55ms apart), clipped by the footer edge, and hops when hovered.
 
 ## Layout
 
@@ -233,10 +233,13 @@ Sticky 72px header on paper with a hairline bottom rule: lowercase wordmark, gra
 Definition lists ruled by hairlines (or by 30% current colour on a field): graphite label in a 6rem column, semibold value, numerals tabular. On wide screens the compact form becomes three columns under an ink rule.
 
 ### GeoMark and the Method Diagram
-Five filled marks, each tied to a method step: circle (analysis, blue), square (planning, ochre), half-disc (build, red), triangle (SEO and launch, ink), bar (maintenance, blue). They appear as the hero row and as a manual-style diagram hung from a 2px ink axis. In the hero they assemble once when the row is 60% in view: each mark drops in from its own offset and rotation over 1.1s with an expo ease-out, staggered 90ms, animating transform only. With reduced motion or without JS the marks simply sit at rest.
+Five filled marks, each tied to a method step: circle (analysis, blue), square (planning, ochre), half-disc (build, red), triangle (SEO and launch, ink), bar (maintenance, blue). They appear as the hero row and as a manual-style diagram hung from a 2px ink axis. In the hero they assemble once when the row is 60% in view: each mark drops in from its own offset and rotation over 1.1s with an expo ease-out, staggered 90ms, animating transform only. In the method diagram the ink axis draws first (0.9s), then each mark spins in from -120deg and 0.3 scale as its step enters view (0.8s, staggered 110ms on wide screens). On hover a mark makes its own move: the circle lifts, the square turns to a diamond, the half-disc flips, the triangle tilts, the bar stands upright. With reduced motion or without JS the marks simply sit at rest.
 
 ### Enquiry Picker
-A red field holding a ruled radio list (circular indicators) and a full-width on-red submit button that scrolls to the contact form and pre-fills its topic.
+A red field holding a ruled radio list (circular indicators) and a full-width on-red submit button that scrolls to the contact form and pre-fills its topic. Hovering a row nudges its label 6px right and previews a small dot; the chosen dot fills from the centre. The submit arrow nudges 4px on hover.
+
+### Skill List
+Hairline-ruled rows of icon plus label. On hover the rule turns ink, the icon goes to full strength and scales up, and the label nudges 4px right.
 
 ## Do's and Don'ts
 
@@ -255,4 +258,4 @@ A red field holding a ruled radio list (circular indicators) and a full-width on
 - **Don't** use rounded rectangles, pills, chips or tag clouds.
 - **Don't** lay projects out as equal cards in a grid.
 - **Don't** put white text on ochre, or ochre text on paper for anything a reader needs.
-- **Don't** add new decorative shapes beyond the five GeoMarks, or a second authored animation.
+- **Don't** add new decorative shapes beyond the five GeoMarks, or motion that isn't carried by a mark, a rule, the footer wordmark or a direct hover response.

@@ -165,8 +165,8 @@
 }
 
 /*
- * The site's one authored motion: geometric marks fall into place, the way pieces settle on an
- * Olivetti poster. Marks stay visible by default; only their position animates, never the text beside them.
+ * Marks fall into place, the way pieces settle on an Olivetti poster: the hero row once, and the
+ * method diagram as it scrolls in. Only the marks move, never the text beside them.
  */
 @keyframes assemble {
     from {
@@ -174,14 +174,149 @@
     }
 }
 
-/* Without JS (or with reduced motion) the marks simply sit at rest. */
+@keyframes mark-set {
+    from {
+        opacity: 0;
+        transform: rotate(-120deg) scale(0.3);
+    }
+}
+
+@keyframes draw {
+    from {
+        transform: scale(var(--draw-x, 1), var(--draw-y, 1));
+    }
+}
+
+/* Without JS (or with reduced motion) data-reveal is never set and everything sits at rest. */
 @media (prefers-reduced-motion: no-preference) {
-    .assemble[data-assemble='waiting'] svg {
+    .assemble[data-reveal='waiting'] svg {
         transform: translate(var(--from-x, 0), var(--from-y, -40%)) rotate(var(--from-r, -25deg)) scale(0.7);
     }
 
-    .assemble[data-assemble='play'] svg {
-        animation: assemble 1.1s var(--ease-out-expo) both;
+    /* backwards, not both: once settled the mark is free to take its hover turn. */
+    .assemble[data-reveal='play'] svg {
+        animation: assemble 1.1s var(--ease-out-expo) backwards;
         animation-delay: calc(var(--i, 0) * 90ms + 150ms);
+    }
+
+    /* The method axis is ruled first, then each mark is set onto it. */
+    .method-axis {
+        transform-origin: left top;
+    }
+
+    [data-reveal='waiting'] > .method-axis {
+        transform: scale(var(--draw-x, 1), var(--draw-y, 1));
+    }
+
+    [data-reveal='play'] > .method-axis {
+        animation: draw 0.9s var(--ease-out-expo) backwards;
+    }
+
+    .method-step[data-reveal='waiting'] svg {
+        opacity: 0;
+        transform: rotate(-120deg) scale(0.3);
+    }
+
+    .method-step[data-reveal='play'] svg {
+        animation: mark-set 0.8s var(--ease-out-expo) backwards;
+        animation-delay: 120ms;
+    }
+
+    /* On wide screens the five steps enter together, so they set left to right. */
+    @media (min-width: 64rem) {
+        .method-step[data-reveal='play'] svg {
+            animation-delay: calc(var(--i, 0) * 110ms + 250ms);
+        }
+    }
+}
+
+/* Each mark answers a hover with its own gesture. */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .mark-turn svg {
+        transition: transform 0.5s var(--ease-out-expo);
+    }
+
+    .mark-turn:hover svg[data-shape='circle'] {
+        transform: translateY(-14%);
+    }
+
+    .mark-turn:hover svg[data-shape='square'] {
+        transform: rotate(45deg) scale(0.8);
+    }
+
+    .mark-turn:hover svg[data-shape='half'] {
+        transform: rotate(180deg);
+    }
+
+    .mark-turn:hover svg[data-shape='triangle'] {
+        transform: rotate(-18deg);
+    }
+
+    .mark-turn:hover svg[data-shape='bar'] {
+        transform: rotate(90deg);
+    }
+}
+
+/* Hero picker: the selection fills from the centre; hovering an empty option previews the dot. */
+.radio-dot {
+    position: relative;
+}
+
+.radio-dot::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background: currentColor;
+    transform: scale(0);
+    transition: transform 0.3s var(--ease-out-expo);
+}
+
+@media (hover: hover) {
+    label:hover > .radio-dot::after {
+        transform: scale(0.4);
+    }
+}
+
+.peer:checked ~ .radio-dot::after {
+    transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .radio-dot::after {
+        transition: none;
+    }
+}
+
+/* Footer wordmark: letters fly in from scattered directions and settle; each hops when hovered. */
+.wordmark span {
+    display: inline-block;
+}
+
+@keyframes letter-in {
+    from {
+        opacity: 0;
+        transform: translate(var(--from-x), var(--from-y)) rotate(var(--from-r)) scale(0.6);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .wordmark[data-reveal='waiting'] span {
+        opacity: 0;
+    }
+
+    .wordmark[data-reveal='play'] span {
+        animation: letter-in 1.2s var(--ease-out-expo) backwards;
+        animation-delay: calc(var(--order, 0) * 55ms + 100ms);
+    }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .wordmark span {
+        transition: transform 0.4s var(--ease-out-expo);
+    }
+
+    .wordmark span:hover {
+        transform: translateY(-10%) rotate(-6deg);
     }
 }

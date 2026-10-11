@@ -26,11 +26,14 @@ const { t } = useI18n()
                     <li
                         v-for="skill in group.items"
                         :key="skill.id"
-                        class="flex items-center gap-3 border-b py-2.5 last:border-0"
-                        :class="group.id === 'ai' ? 'border-yellow-fg/25' : 'border-border'"
+                        class="group/skill flex items-center gap-3 border-b py-2.5 transition-colors duration-200 last:border-0"
+                        :class="group.id === 'ai' ? 'border-yellow-fg/25 hover:border-yellow-fg' : 'border-border hover:border-fg'"
                     >
-                        <Icon :name="skill.icon" class="size-4 shrink-0 opacity-70" />
-                        {{ skill.label }}
+                        <Icon
+                            :name="skill.icon"
+                            class="size-4 shrink-0 opacity-70 transition duration-300 ease-(--ease-out-expo) group-hover/skill:opacity-100 motion-safe:group-hover/skill:scale-125"
+                        />
+                        <span class="transition-transform duration-300 ease-(--ease-out-expo) motion-safe:group-hover/skill:translate-x-1">{{ skill.label }}</span>
                     </li>
                 </ul>
             </div>

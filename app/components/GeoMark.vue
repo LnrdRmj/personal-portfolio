@@ -13,7 +13,7 @@ const fills: Record<MethodStep['tone'], string> = {
 
 <template>
     <!-- Decorative: the step's title always sits next to it. -->
-    <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false" :class="fills[tone]">
+    <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false" :data-shape="shape" :class="fills[tone]">
         <circle v-if="shape === 'circle'" cx="20" cy="20" r="20" fill="currentColor" />
         <rect v-else-if="shape === 'square'" x="2" y="2" width="36" height="36" fill="currentColor" />
         <path v-else-if="shape === 'half'" d="M0 30a20 20 0 0 1 40 0Z" fill="currentColor" />

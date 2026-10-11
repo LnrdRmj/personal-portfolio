@@ -4,6 +4,23 @@ import { profile } from '~/data/profile'
 const { t } = useI18n()
 const paths = useSitePaths()
 const year = new Date().getFullYear()
+
+// Each letter flies in from its own direction (golden-angle spread, so no two neighbours match)
+// and lands in a scattered order. Deterministic, so server and client render the same values.
+const letters = [...'leonardo ramaj'].map((char, i) => {
+    const angle = (i * 137.5 * Math.PI) / 180
+    return {
+        char,
+        style: {
+            '--from-x': `${Math.round(Math.cos(angle) * 140)}%`,
+            '--from-y': `${Math.round(Math.sin(angle) * 120)}%`,
+            '--from-r': `${(i % 2 ? 1 : -1) * (30 + ((i * 23) % 60))}deg`,
+            '--order': (i * 5) % 14,
+        },
+    }
+})
+const wordmark = ref<HTMLElement>()
+useReveal(wordmark, { threshold: 0.5 })
 </script>
 
 <template>
@@ -36,12 +53,11 @@ const year = new Date().getFullYear()
 
         <div class="container-page overflow-hidden">
             <p
-                class="pb-[0.12em] font-semibold tracking-[-0.055em] whitespace-nowrap"
+                ref="wordmark"
+                class="wordmark pb-[0.12em] font-semibold tracking-[-0.055em] whitespace-pre"
                 style="font-size: calc((min(100vw, 84rem) - 5rem) / 6.35); line-height: 1"
                 aria-hidden="true"
-            >
-                leonardo ramaj
-            </p>
+            ><span v-for="(letter, i) in letters" :key="i" :style="letter.style">{{ letter.char }}</span></p>
         </div>
         <div class="border-t border-ink-fg/25">
             <p class="container-page py-5 text-sm opacity-80">© {{ year }} {{ profile.name }}. {{ t('footer.rights') }}</p>

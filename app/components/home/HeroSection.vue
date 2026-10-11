@@ -20,20 +20,7 @@ const drops = [
 
 // The marks settle once, when the row first comes into view (on phones it starts below the fold).
 const marks = ref<HTMLOListElement>()
-onMounted(() => {
-    const row = marks.value
-    if (!row || matchMedia('(prefers-reduced-motion: reduce)').matches) return
-    const observer = new IntersectionObserver(
-        ([entry]) => {
-            if (!entry?.isIntersecting) return
-            row.dataset.assemble = 'play'
-            observer.disconnect()
-        },
-        { threshold: 0.6 },
-    )
-    row.dataset.assemble = 'waiting'
-    observer.observe(row)
-})
+useReveal(marks)
 
 function startEnquiry() {
     enquiryTopic.value = choice.value ? t(`hero.picker.options.${choice.value}.phrase`) : ''
@@ -69,21 +56,21 @@ function startEnquiry() {
                         <label
                             v-for="option in options"
                             :key="option"
-                            class="flex cursor-pointer items-center justify-between gap-4 border-b border-accent-fg/40 py-4 text-lg font-medium"
+                            class="group flex cursor-pointer items-center justify-between gap-4 border-b border-accent-fg/40 py-4 text-lg font-medium"
                         >
                             <input v-model="choice" type="radio" name="enquiry-topic" :value="option" class="peer sr-only" />
-                            <span>{{ t(`hero.picker.options.${option}.label`) }}</span>
+                            <span class="transition-transform duration-300 ease-(--ease-out-expo) motion-safe:group-hover:translate-x-1.5">{{ t(`hero.picker.options.${option}.label`) }}</span>
                             <span
-                                class="size-5 shrink-0 rounded-full border-2 border-accent-fg transition-colors peer-checked:bg-accent-fg peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent-fg"
+                                class="radio-dot size-5 shrink-0 rounded-full border-2 border-accent-fg text-accent-fg peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent-fg"
                                 aria-hidden="true"
                             />
                         </label>
                     </div>
                 </fieldset>
 
-                <button type="submit" class="btn mt-8 w-full justify-between bg-accent-fg text-accent hover:bg-fg hover:text-bg">
+                <button type="submit" class="group btn mt-8 w-full justify-between bg-accent-fg text-accent hover:bg-fg hover:text-bg">
                     {{ t('hero.picker.submit') }}
-                    <Icon name="lucide:arrow-right" class="size-5" />
+                    <Icon name="lucide:arrow-right" class="size-5 transition-transform duration-300 ease-(--ease-out-expo) motion-safe:group-hover:translate-x-1" />
                 </button>
                 <p class="mt-3 text-sm">{{ t('hero.picker.note') }}</p>
             </form>
@@ -93,6 +80,7 @@ function startEnquiry() {
                 <li
                     v-for="(step, index) in methodSteps"
                     :key="step.id"
+                    class="mark-turn"
                     :style="{ '--i': index, '--from-x': drops[index]!.x, '--from-y': drops[index]!.y, '--from-r': drops[index]!.r }"
                 >
                     <GeoMark :shape="step.mark" :tone="step.tone" class="size-8 sm:size-12" />
