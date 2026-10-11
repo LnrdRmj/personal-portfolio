@@ -53,11 +53,11 @@ export const yoomy: Project = {
                 paragraphs: {
                     it: [
                         'Yoomy nasce nel 2021 per cambiare il modo in cui gli studenti comprano la merenda a scuola: ordini e pagamenti dall’app, con più controllo per studenti e fornitori.',
-                        'L’app affronta problemi concreti: molte scuole non hanno un bar fisico e altre offrono la vendita delle merende solo durante la ricreazione, con sovraffollamento, prodotti che finiscono subito e pagamenti esclusivamente in contanti.',
+                        'L’app risolve un problema pratico: molte scuole non hanno un bar fisico e altre offrono la vendita delle merende solo durante la ricreazione, con sovraffollamento, prodotti che finiscono subito e pagamenti esclusivamente in contanti.',
                     ],
                     en: [
                         'Yoomy was founded in 2021 to change the way students buy snacks at school: orders and payments happen in the app, with more control for students and suppliers.',
-                        'The app solves real problems: many schools have no cafeteria, while others only sell snacks during recess, which means crowds, products running out quickly and cash-only payments.',
+                        'The app fixes a practical problem: many schools have no cafeteria, while others only sell snacks during recess, which means crowds, products running out quickly and cash-only payments.',
                     ],
                 },
             },

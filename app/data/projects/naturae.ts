@@ -27,11 +27,11 @@ export const naturae: Project = {
             text: {
                 paragraphs: {
                     it: [
-                        'Il progetto consiste nella realizzazione del sito di presentazione di Naturae, azienda di riferimento nel settore del parquet a Firenze.',
+                        'Ho realizzato il sito di presentazione di Naturae, azienda di parquet di Firenze.',
                         'Il sito cura il SEO, è responsive, include la gestione del dominio e del DNS e un pannello per gestire i contenuti.',
                     ],
                     en: [
-                        'The project was the presentation website for Naturae, a leading parquet company in Florence.',
+                        'I built the presentation website for Naturae, a parquet company in Florence.',
                         'The site is SEO-optimised and responsive, and the work included domain and DNS management plus a panel for managing content.',
                     ],
                 },
@@ -44,12 +44,12 @@ export const naturae: Project = {
                 paragraphs: {
                     it: [
                         'Il cliente voleva una buona visibilità sui principali motori di ricerca, con particolare attenzione alla qualità del SEO.',
-                        'Per questo ho scelto Nuxt, una tecnologia che tra i suoi vantaggi offre un’ottima gestione dell’ottimizzazione per i motori di ricerca.',
+                        'Per questo ho scelto Nuxt, che rende più semplice ottimizzare il sito per i motori di ricerca.',
                         'Per garantire una corretta indicizzazione non basta la tecnologia: ho usato anche Google Search Console, lo strumento di Google che permette di richiedere direttamente l’indicizzazione del sito.',
                     ],
                     en: [
                         'The client wanted strong visibility on the main search engines, with particular attention to SEO quality.',
-                        'That’s why I chose Nuxt, a framework whose strengths include excellent search engine optimisation.',
+                        'That’s why I chose Nuxt, which makes it easier to optimise a site for search engines.',
                         'Technology alone doesn’t guarantee proper indexing, so I also used Google Search Console, Google’s tool for requesting a site’s indexing directly.',
                     ],
                 },
