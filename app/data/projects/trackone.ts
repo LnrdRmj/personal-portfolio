@@ -28,6 +28,11 @@ export const trackone: Project = {
         width: 1800,
         height: 675,
     },
+    cover: video('device-details', {
+        it: 'Registrazione del dettaglio di un dispositivo Trackone con mappa e grafici',
+        en: 'Screen recording of a Trackone device page with its map and charts',
+    }),
+    // TODO(leonardo): review the rewritten intro and maps copy (the "client was very satisfied" line was cut).
     sections: [
         {
             kind: 'media-with-text',
@@ -36,11 +41,11 @@ export const trackone: Project = {
                 paragraphs: {
                     it: [
                         'Trackone è una piattaforma sviluppata per NGSSensors, azienda specializzata nella vendita e installazione di dispositivi di misurazione per veicoli logistici.',
-                        'Mi è stato affidato lo sviluppo del frontend del progetto esistente: una sfida stimolante che mi ha permesso di affinare le mie competenze su mappe e grafici. Il risultato semplifica la gestione dei dispositivi con mappe ricche e grafici chiari, e il cliente ne è rimasto molto soddisfatto.',
+                        'Ho sviluppato il frontend della piattaforma esistente: le mappe interattive dei dispositivi, i grafici delle misurazioni nel tempo e le schermate per gestire ogni dispositivo.',
                     ],
                     en: [
                         'Trackone is a platform built for NGSSensors, a company that sells and installs measurement devices for logistics vehicles.',
-                        'I was hired to develop the frontend of the existing project: an exciting challenge that sharpened my skills with maps and charts. The result makes device management easier through rich maps and clear charts, and the client was extremely satisfied.',
+                        'I built the frontend of the existing platform: the interactive device maps, the charts of measurements over time and the screens for managing each device.',
                     ],
                 },
             },
@@ -61,10 +66,10 @@ export const trackone: Project = {
             text: {
                 paragraphs: {
                     it: [
-                        'Trackone integra le mappe con Leaflet, una libreria potente per visualizzare e interagire con dati geografici.',
+                        'Trackone integra le mappe con Leaflet, la libreria open source per le mappe interattive.',
                     ],
                     en: [
-                        'Trackone integrates maps with Leaflet, a powerful library for displaying and interacting with geographic data.',
+                        'Trackone integrates maps with Leaflet, the open-source library for interactive maps.',
                     ],
                 },
             },

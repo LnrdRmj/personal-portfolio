@@ -17,6 +17,17 @@ export const yoomy: Project = {
         width: 3840,
         height: 1440,
     },
+    cover: {
+        type: 'image',
+        src: 'projects/yoomy/intro',
+        alt: {
+            it: 'Smartphone con la home dell’app Yoomy e le merende disponibili',
+            en: 'Smartphone showing the Yoomy app home screen with available snacks',
+        },
+        width: 1600,
+        height: 1600,
+    },
+    // TODO(leonardo): review the rewritten title and first paragraph.
     sections: [
         {
             kind: 'media',
@@ -35,17 +46,17 @@ export const yoomy: Project = {
             kind: 'media-with-text',
             textPosition: 'left',
             title: {
-                it: 'Yoomy, una soluzione innovativa per le scuole',
-                en: 'Yoomy, an innovative solution for schools',
+                it: 'Yoomy, la merenda ordinata e pagata dall’app',
+                en: 'Yoomy, school snacks ordered and paid for in an app',
             },
             text: {
                 paragraphs: {
                     it: [
-                        'Yoomy nasce nel 2021 con l’obiettivo di rivoluzionare l’acquisto della merenda all’interno delle scuole, fornendo una soluzione semplice, veloce e controllata per studenti e fornitori.',
+                        'Yoomy nasce nel 2021 per cambiare il modo in cui gli studenti comprano la merenda a scuola: ordini e pagamenti dall’app, con più controllo per studenti e fornitori.',
                         'L’app affronta problemi concreti: molte scuole non hanno un bar fisico e altre offrono la vendita delle merende solo durante la ricreazione, con sovraffollamento, prodotti che finiscono subito e pagamenti esclusivamente in contanti.',
                     ],
                     en: [
-                        'Yoomy was founded in 2021 to change the way students buy snacks at school, with a simple, fast and controlled solution for both students and suppliers.',
+                        'Yoomy was founded in 2021 to change the way students buy snacks at school: orders and payments happen in the app, with more control for students and suppliers.',
                         'The app solves real problems: many schools have no cafeteria, while others only sell snacks during recess, which means crowds, products running out quickly and cash-only payments.',
                     ],
                 },

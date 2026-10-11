@@ -1,16 +1,18 @@
 {
     "nav": {
         "label": "Navigazione principale",
-        "about": "chi-sono",
-        "skills": "competenze",
-        "projects": "progetti",
-        "contact": "contatti",
+        "projects": "Lavori",
+        "method": "Metodo",
+        "skills": "Competenze",
+        "about": "Chi sono",
+        "contact": "Contatti",
         "openMenu": "Apri il menu",
         "closeMenu": "Chiudi il menu",
         "home": "Leonardo Ramaj, torna alla home",
         "skipToContent": "Vai al contenuto"
     },
     "theme": {
+        "label": "Tema",
         "toggle": "Tema: {mode}. Clicca per cambiare",
         "system": "sistema",
         "light": "chiaro",
@@ -23,53 +25,64 @@
         "contact": "Contattami"
     },
     "hero": {
-        "location": "Prato, Italia · freelance",
-        "lead": "Realizzo web app, siti e app mobili veloci, curati e pensati per farsi trovare su Google. E oggi porto l’intelligenza artificiale nei progetti dei miei clienti.",
-        "primary": "Parliamo del tuo progetto",
-        "secondary": "Guarda i progetti",
-        "terminalLabel": "Terminale decorativo con gli ultimi progetti"
-    },
-    "about": {
-        "title": "Chi sono",
-        "facts": {
-            "based": "base",
-            "basedValue": "Prato, Italia",
-            "work": "lavoro",
-            "workValue": "freelance con partita IVA",
-            "focus": "focus",
-            "focusValue": "web app, siti, mobile, AI"
+        "title": "Progetto e sviluppo web app, siti e app mobili.",
+        "lead": "Dall’analisi alla messa online, con una sola persona responsabile di tutto: codice, SEO, dominio e manutenzione. E porto l’intelligenza artificiale dentro prodotti e processi.",
+        "picker": {
+            "title": "Di cosa hai bisogno?",
+            "options": {
+                "webapp": { "label": "Una web app", "phrase": "una web app" },
+                "website": { "label": "Un sito aziendale", "phrase": "un sito aziendale" },
+                "mobile": { "label": "Un’app mobile", "phrase": "un’app mobile" },
+                "ai": { "label": "Integrare l’AI", "phrase": "integrare l’intelligenza artificiale" }
+            },
+            "submit": "Scrivimi",
+            "note": "Apre il modulo di contatto già impostato."
         }
     },
+    "method": {
+        "title": "Dall’idea alla messa online",
+        "intro": "Un progetto, una persona responsabile in ogni fase. Niente passaggi di mano tra agenzie e fornitori.",
+        "steps": "Le fasi di un progetto"
+    },
+    "projects": {
+        "title": "Lavori",
+        "intro": "Progetti che ho seguito per i miei clienti, dall’idea alla messa online.",
+        "view": "Leggi il progetto",
+        "present": "oggi"
+    },
+    "project": {
+        "breadcrumb": "Lavori",
+        "role": "Ruolo",
+        "period": "Periodo",
+        "stack": "Stack",
+        "next": "Progetto successivo",
+        "ctaTitle": "Hai un progetto simile in mente?",
+        "ctaBody": "Raccontami di cosa hai bisogno e troviamo insieme la soluzione giusta.",
+        "videoFallback": "Il tuo browser non riproduce questo video."
+    },
     "skills": {
-        "title": "Cosa conosco",
-        "intro": "Le tecnologie che uso nei progetti, dal frontend al backend fino all’intelligenza artificiale.",
+        "title": "Competenze",
+        "intro": "Gli strumenti con cui lavoro, dal frontend al backend fino all’intelligenza artificiale.",
         "groups": {
             "languages": "Linguaggi",
             "frameworks": "Framework e librerie",
             "tools": "Strumenti e piattaforme",
             "ai": "Intelligenza artificiale"
-        },
-        "new": "novità"
+        }
     },
-    "projects": {
-        "title": "Progetti",
-        "intro": "Alcuni dei lavori che ho seguito per i miei clienti, dall’idea alla messa online.",
-        "view": "Vedi il progetto",
-        "present": "oggi"
-    },
-    "project": {
-        "breadcrumb": "progetti",
-        "role": "Ruolo",
-        "period": "Periodo",
-        "stack": "Stack",
-        "next": "Prossimo progetto",
-        "ctaTitle": "Hai un progetto simile in mente?",
-        "ctaBody": "Raccontami di cosa hai bisogno e troviamo insieme la soluzione giusta.",
-        "videoFallback": "Il tuo browser non riproduce questo video."
+    "about": {
+        "title": "Chi sono",
+        "facts": {
+            "based": "Base",
+            "basedValue": "Prato, Italia",
+            "work": "Lavoro",
+            "workValue": "Freelance con partita IVA",
+            "vat": "P.IVA"
+        }
     },
     "contact": {
-        "title": "Contatti",
-        "intro": "Hai un’idea, un sito da rifare o vuoi solo un parere? Scrivimi: ti rispondo il prima possibile.",
+        "title": "Parliamo del tuo progetto.",
+        "intro": "Hai un’idea, un prodotto da far crescere o un sito da rifare? Scrivimi: ti rispondo il prima possibile.",
         "reveal": {
             "title": "Telefono ed email",
             "body": "Per proteggerli dallo spam li mostro dopo una rapida verifica anti-bot.",
@@ -87,11 +100,12 @@
             "email": "Email",
             "message": "Messaggio",
             "messagePlaceholder": "Raccontami del tuo progetto…",
+            "prefill": "Ciao Leonardo, ho bisogno di {topic}. ",
             "honeypot": "Lascia vuoto questo campo",
             "captcha": "Verifica anti-spam",
             "submit": "Invia messaggio",
             "sending": "Invio in corso…",
-            "success": "Messaggio inviato! Ti risponderò il prima possibile.",
+            "success": "Messaggio inviato. Ti rispondo il prima possibile.",
             "error": "Qualcosa è andato storto. Riprova tra poco.",
             "privacy": "Inviando il messaggio dichiari di aver letto l’{link}.",
             "privacyLink": "informativa privacy",
@@ -104,7 +118,7 @@
         }
     },
     "footer": {
-        "tagline": "Sviluppatore full-stack freelance. Web app, siti, mobile e AI.",
+        "tagline": "Sviluppatore full-stack freelance a Prato. Web app, siti, app mobili e integrazioni AI.",
         "social": "Social",
         "legal": "Dati legali",
         "vat": "P.IVA",
@@ -117,9 +131,9 @@
     },
     "error": {
         "notFoundTitle": "Pagina non trovata",
-        "notFound": "Nessun file o cartella con questo nome.",
+        "notFound": "Questa pagina non esiste o è stata spostata.",
         "genericTitle": "Qualcosa è andato storto",
-        "generic": "Si è verificato un errore imprevisto.",
+        "generic": "Si è verificato un errore imprevisto. Riprova tra poco.",
         "home": "Torna alla home"
     },
     "seo": {

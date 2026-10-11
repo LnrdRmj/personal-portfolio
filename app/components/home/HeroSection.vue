@@ -1,78 +1,104 @@
 <script setup lang="ts">
+import { methodSteps } from '~/data/method'
 import { profile } from '~/data/profile'
-import { projects } from '~/data/projects'
 
 const { t } = useI18n()
 const l = useLocalized()
-const paths = useSitePaths()
+const enquiryTopic = useEnquiryTopic()
+
+const options = ['webapp', 'website', 'mobile', 'ai'] as const
+const choice = ref<(typeof options)[number] | ''>('')
+
+// Where each mark starts before it settles into the row.
+const drops = [
+    { x: '-35%', y: '-70%', r: '-30deg' },
+    { x: '25%', y: '-110%', r: '18deg' },
+    { x: '-10%', y: '-55%', r: '-50deg' },
+    { x: '40%', y: '-90%', r: '35deg' },
+    { x: '-25%', y: '-120%', r: '-12deg' },
+]
+
+// The marks settle once, when the row first comes into view (on phones it starts below the fold).
+const marks = ref<HTMLOListElement>()
+onMounted(() => {
+    const row = marks.value
+    if (!row || matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    const observer = new IntersectionObserver(
+        ([entry]) => {
+            if (!entry?.isIntersecting) return
+            row.dataset.assemble = 'play'
+            observer.disconnect()
+        },
+        { threshold: 0.6 },
+    )
+    row.dataset.assemble = 'waiting'
+    observer.observe(row)
+})
+
+function startEnquiry() {
+    enquiryTopic.value = choice.value ? t(`hero.picker.options.${choice.value}.phrase`) : ''
+    const smooth = !matchMedia('(prefers-reduced-motion: reduce)').matches
+    document.getElementById('contact')?.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto' })
+    nextTick(() => document.getElementById('contact-message')?.focus({ preventScroll: true }))
+}
 </script>
 
 <template>
-    <section class="container-page grid items-center gap-12 pt-14 pb-20 sm:pt-20 lg:grid-cols-[1.15fr_1fr]">
-        <div>
-            <p class="chip">
-                <span class="size-2 rounded-full bg-accent" aria-hidden="true" />
-                {{ t('hero.location') }}
-            </p>
-
-            <!-- The prompt is decoration; the h1 carries the real name and role. -->
-            <p class="mt-8 font-mono text-muted" aria-hidden="true">
-                <span class="text-accent">$</span> <span class="animate-type inline-block">whoami</span>
-            </p>
-            <h1 class="mt-3">
-                <span class="block font-mono text-4xl font-bold tracking-tight sm:text-6xl">
-                    {{ profile.name
-                    }}<span class="animate-blink text-accent" aria-hidden="true">_</span>
-                </span>
-                <span class="mt-4 block text-xl font-medium text-fg sm:text-2xl">
-                    {{ l(profile.jobTitle) }}
-                </span>
-            </h1>
-            <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted">{{ t('hero.lead') }}</p>
-
-            <div class="mt-9 flex flex-wrap gap-3">
-                <NuxtLink :to="paths.section('contact')" class="btn-primary">
-                    {{ t('hero.primary') }}
-                    <Icon name="lucide:arrow-right" class="size-4" />
-                </NuxtLink>
-                <NuxtLink :to="paths.section('projects')" class="btn-secondary">
-                    {{ t('hero.secondary') }}
-                </NuxtLink>
+    <section class="container-page pt-10 pb-20 sm:pt-14 lg:pt-16 lg:pb-28">
+        <div class="grid-module gap-y-12">
+            <div class="col-span-4 sm:col-span-8 lg:col-span-8 lg:row-start-1 lg:pr-6">
+                <h1 class="display">{{ t('hero.title') }}</h1>
+                <p class="mt-8 max-w-152 text-lg leading-relaxed text-muted sm:text-xl sm:leading-relaxed">
+                    {{ t('hero.lead') }}
+                </p>
+                <p class="mt-6 text-[0.95rem] font-semibold">
+                    {{ profile.name }}
+                    <span class="font-normal text-muted">· {{ l(profile.jobTitle) }} · {{ profile.location.city }}</span>
+                </p>
             </div>
-        </div>
 
-        <TerminalWindow title="leonardo@prato: ~" :aria-label="t('hero.terminalLabel')" role="region">
-            <p>
-                <span class="text-term-accent">~</span>
-                <span class="text-term-muted"> $ </span>git log --oneline
-            </p>
-            <ul class="mt-3 space-y-1.5">
+            <form
+                class="col-span-4 bg-accent p-6 text-accent-fg sm:col-span-8 sm:p-8 lg:col-span-4 lg:col-start-9 lg:row-span-2 lg:row-start-1 lg:self-start"
+                @submit.prevent="startEnquiry"
+            >
+                <fieldset>
+                    <legend class="text-[1.75rem] leading-tight font-bold tracking-[-0.02em]">
+                        {{ t('hero.picker.title') }}
+                    </legend>
+                    <div class="mt-6 border-t border-accent-fg/40">
+                        <label
+                            v-for="option in options"
+                            :key="option"
+                            class="flex cursor-pointer items-center justify-between gap-4 border-b border-accent-fg/40 py-4 text-lg font-medium"
+                        >
+                            <input v-model="choice" type="radio" name="enquiry-topic" :value="option" class="peer sr-only" />
+                            <span>{{ t(`hero.picker.options.${option}.label`) }}</span>
+                            <span
+                                class="size-5 shrink-0 rounded-full border-2 border-accent-fg transition-colors peer-checked:bg-accent-fg peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent-fg"
+                                aria-hidden="true"
+                            />
+                        </label>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn mt-8 w-full justify-between bg-accent-fg text-accent hover:bg-fg hover:text-bg">
+                    {{ t('hero.picker.submit') }}
+                    <Icon name="lucide:arrow-right" class="size-5" />
+                </button>
+                <p class="mt-3 text-sm">{{ t('hero.picker.note') }}</p>
+            </form>
+
+            <!-- After the picker in the source, so phones reach the action first. -->
+            <ol ref="marks" class="assemble col-span-4 grid grid-cols-5 gap-2 border-t border-fg pt-6 sm:col-span-8 sm:gap-6 lg:col-span-8 lg:row-start-2 lg:mr-6" :aria-label="t('method.steps')">
                 <li
-                    v-for="(project, index) in projects"
-                    :key="project.slug"
-                    class="animate-line"
-                    :style="{ animationDelay: `${0.9 + index * 0.18}s` }"
+                    v-for="(step, index) in methodSteps"
+                    :key="step.id"
+                    :style="{ '--i': index, '--from-x': drops[index]!.x, '--from-y': drops[index]!.y, '--from-r': drops[index]!.r }"
                 >
-                    <NuxtLink
-                        :to="paths.project(project.slug)"
-                        class="group flex gap-3 rounded px-1 -mx-1 hover:bg-white/5"
-                    >
-                        <span class="shrink-0 text-term-string">{{ shortHash(project.slug) }}</span>
-                        <span class="min-w-0">
-                            <span class="text-term-link group-hover:underline">{{ project.slug }}:</span>
-                            {{ l(project.role).toLowerCase() }}
-                            <span class="text-term-muted">
-                                ({{ formatPeriod(project.period, t('projects.present')) }})
-                            </span>
-                        </span>
-                    </NuxtLink>
+                    <GeoMark :shape="step.mark" :tone="step.tone" class="size-8 sm:size-12" />
+                    <span class="mt-3 block text-[0.7rem] leading-snug font-semibold hyphens-auto sm:text-sm">{{ l(step.title) }}</span>
                 </li>
-            </ul>
-            <p class="animate-line mt-3" :style="{ animationDelay: `${0.9 + projects.length * 0.18}s` }">
-                <span class="text-term-accent">~</span>
-                <span class="text-term-muted"> $ </span>
-                <span class="animate-blink text-term-accent" aria-hidden="true">▋</span>
-            </p>
-        </TerminalWindow>
+            </ol>
+        </div>
     </section>
 </template>

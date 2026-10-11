@@ -1,16 +1,18 @@
 {
     "nav": {
         "label": "Main navigation",
-        "about": "about",
-        "skills": "skills",
-        "projects": "projects",
-        "contact": "contact",
+        "projects": "Work",
+        "method": "Method",
+        "skills": "Skills",
+        "about": "About",
+        "contact": "Contact",
         "openMenu": "Open menu",
         "closeMenu": "Close menu",
         "home": "Leonardo Ramaj, back to home",
         "skipToContent": "Skip to content"
     },
     "theme": {
+        "label": "Theme",
         "toggle": "Theme: {mode}. Click to change",
         "system": "system",
         "light": "light",
@@ -23,42 +25,33 @@
         "contact": "Contact me"
     },
     "hero": {
-        "location": "Prato, Italy · freelance",
-        "lead": "I build fast, polished web apps, websites and mobile apps that are made to be found on Google. And today I bring AI into my clients’ projects.",
-        "primary": "Let’s talk about your project",
-        "secondary": "See my work",
-        "terminalLabel": "Decorative terminal listing recent projects"
-    },
-    "about": {
-        "title": "About me",
-        "facts": {
-            "based": "based",
-            "basedValue": "Prato, Italy",
-            "work": "work",
-            "workValue": "freelance, VAT registered",
-            "focus": "focus",
-            "focusValue": "web apps, websites, mobile, AI"
+        "title": "I design and build web apps, websites and mobile apps.",
+        "lead": "From first analysis to launch, with one person accountable for all of it: code, SEO, domain and maintenance. I also bring AI into products and workflows.",
+        "picker": {
+            "title": "What do you need?",
+            "options": {
+                "webapp": { "label": "A web app", "phrase": "a web app" },
+                "website": { "label": "A business website", "phrase": "a business website" },
+                "mobile": { "label": "A mobile app", "phrase": "a mobile app" },
+                "ai": { "label": "AI integration", "phrase": "help integrating AI" }
+            },
+            "submit": "Write to me",
+            "note": "Opens the contact form, already started for you."
         }
     },
-    "skills": {
-        "title": "What I know",
-        "intro": "The technologies I use in my projects, from frontend to backend all the way to AI.",
-        "groups": {
-            "languages": "Languages",
-            "frameworks": "Frameworks and libraries",
-            "tools": "Tools and platforms",
-            "ai": "Artificial intelligence"
-        },
-        "new": "new"
+    "method": {
+        "title": "From idea to launch",
+        "intro": "One project, one person accountable at every step. No hand-offs between agencies and suppliers.",
+        "steps": "The steps of a project"
     },
     "projects": {
-        "title": "Projects",
-        "intro": "A selection of work I’ve done for my clients, from the first idea to launch.",
-        "view": "View project",
+        "title": "Work",
+        "intro": "Projects I’ve taken from the first idea to launch for my clients.",
+        "view": "Read the case study",
         "present": "present"
     },
     "project": {
-        "breadcrumb": "projects",
+        "breadcrumb": "Work",
         "role": "Role",
         "period": "Period",
         "stack": "Stack",
@@ -67,9 +60,29 @@
         "ctaBody": "Tell me what you need and let’s find the right solution together.",
         "videoFallback": "Your browser can’t play this video."
     },
+    "skills": {
+        "title": "Skills",
+        "intro": "The tools I work with, from frontend and backend to AI.",
+        "groups": {
+            "languages": "Languages",
+            "frameworks": "Frameworks and libraries",
+            "tools": "Tools and platforms",
+            "ai": "Artificial intelligence"
+        }
+    },
+    "about": {
+        "title": "About",
+        "facts": {
+            "based": "Based",
+            "basedValue": "Prato, Italy",
+            "work": "Work",
+            "workValue": "Freelance, VAT registered",
+            "vat": "VAT"
+        }
+    },
     "contact": {
-        "title": "Contact",
-        "intro": "Got an idea, a website to rebuild, or just want an opinion? Write to me and I’ll get back to you as soon as I can.",
+        "title": "Let’s talk about your project.",
+        "intro": "Got an idea, a product to grow or a website to rebuild? Write to me and I’ll get back to you as soon as I can.",
         "reveal": {
             "title": "Phone and email",
             "body": "To keep them away from spam, I show them after a quick anti-bot check.",
@@ -87,11 +100,12 @@
             "email": "Email",
             "message": "Message",
             "messagePlaceholder": "Tell me about your project…",
+            "prefill": "Hi Leonardo, I need {topic}. ",
             "honeypot": "Leave this field empty",
             "captcha": "Anti-spam check",
             "submit": "Send message",
             "sending": "Sending…",
-            "success": "Message sent! I’ll get back to you as soon as I can.",
+            "success": "Message sent. I’ll get back to you as soon as I can.",
             "error": "Something went wrong. Please try again shortly.",
             "privacy": "By sending this message you confirm you have read the {link}.",
             "privacyLink": "privacy notice",
@@ -104,7 +118,7 @@
         }
     },
     "footer": {
-        "tagline": "Freelance full-stack developer. Web apps, websites, mobile and AI.",
+        "tagline": "Freelance full-stack developer in Prato, Italy. Web apps, websites, mobile apps and AI integrations.",
         "social": "Social",
         "legal": "Legal",
         "vat": "VAT",
@@ -117,9 +131,9 @@
     },
     "error": {
         "notFoundTitle": "Page not found",
-        "notFound": "No such file or directory.",
+        "notFound": "This page doesn’t exist or has moved.",
         "genericTitle": "Something went wrong",
-        "generic": "An unexpected error occurred.",
+        "generic": "An unexpected error occurred. Please try again shortly.",
         "home": "Back to home"
     },
     "seo": {

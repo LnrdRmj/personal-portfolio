@@ -3,13 +3,14 @@ const { t } = useI18n()
 </script>
 
 <template>
-    <section id="contact" class="container-page py-20">
-        <h2 class="heading-prompt reveal">{{ t('contact.title') }}</h2>
-        <p class="reveal mt-4 max-w-2xl text-lg text-muted">{{ t('contact.intro') }}</p>
-
-        <div class="mt-10 grid items-start gap-6 lg:grid-cols-[1fr_1.5fr]">
-            <ContactReveal />
-            <ContactForm />
+    <section id="contact" class="bg-accent text-accent-fg">
+        <div class="container-page grid-module gap-y-12 py-20 lg:py-28">
+            <div class="col-span-4 sm:col-span-8 lg:col-span-5">
+                <h2 class="display">{{ t('contact.title') }}</h2>
+                <p class="mt-8 max-w-md text-lg leading-relaxed">{{ t('contact.intro') }}</p>
+                <ContactReveal class="mt-12" />
+            </div>
+            <ContactForm class="col-span-4 sm:col-span-8 lg:col-span-6 lg:col-start-7" />
         </div>
     </section>
 </template>

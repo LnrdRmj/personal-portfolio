@@ -43,7 +43,18 @@ export interface Project {
     summary: Localized
     stack: string[]
     banner: Media
+    /** Shown on the home page instead of the banner when the banner is only a logo. */
+    cover?: Media
     sections: Section[]
+}
+
+/** One step of the working method shown on the home page. */
+export interface MethodStep {
+    id: string
+    mark: 'circle' | 'square' | 'half' | 'triangle' | 'bar'
+    tone: 'red' | 'blue' | 'yellow' | 'ink'
+    title: Localized
+    body: Localized
 }
 
 export interface Skill {

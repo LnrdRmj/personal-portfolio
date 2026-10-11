@@ -7,25 +7,15 @@ const year = new Date().getFullYear()
 </script>
 
 <template>
-    <footer class="mt-24 border-t border-border">
-        <div class="container-page grid gap-10 py-12 text-sm md:grid-cols-3">
-            <div>
-                <p class="font-mono font-bold"><span class="text-accent">~/</span>leonardo-ramaj</p>
-                <p class="mt-3 max-w-xs text-muted">{{ t('footer.tagline') }}</p>
-            </div>
+    <footer class="bg-ink text-ink-fg">
+        <div class="container-page grid-module gap-y-10 pt-16 pb-10 text-[0.95rem]">
+            <p class="col-span-4 max-w-sm text-lg leading-snug sm:col-span-8 lg:col-span-5">{{ t('footer.tagline') }}</p>
 
-            <div>
-                <h2 class="font-mono text-xs tracking-wider text-muted uppercase">
-                    {{ t('footer.social') }}
-                </h2>
-                <ul class="mt-4 space-y-2.5">
+            <div class="col-span-2 sm:col-span-4 lg:col-span-3 lg:col-start-7">
+                <h2 class="border-b border-ink-fg/25 pb-2 text-sm font-semibold">{{ t('footer.social') }}</h2>
+                <ul class="mt-3 space-y-2">
                     <li v-for="social in profile.socials" :key="social.id">
-                        <a
-                            :href="social.url"
-                            target="_blank"
-                            rel="me noopener noreferrer"
-                            class="inline-flex items-center gap-2 transition-colors hover:text-accent"
-                        >
+                        <a :href="social.url" target="_blank" rel="me noopener noreferrer" class="inline-flex items-center gap-2.5 hover:underline">
                             <Icon :name="social.icon" class="size-4" />
                             {{ social.label }}
                         </a>
@@ -33,27 +23,28 @@ const year = new Date().getFullYear()
                 </ul>
             </div>
 
-            <div>
-                <h2 class="font-mono text-xs tracking-wider text-muted uppercase">
-                    {{ t('footer.legal') }}
-                </h2>
-                <ul class="mt-4 space-y-2.5 text-muted">
-                    <li class="text-fg">{{ profile.name }}</li>
-                    <li>{{ t('footer.vat') }} {{ profile.vatNumber }}</li>
+            <div class="col-span-2 sm:col-span-4 lg:col-span-3">
+                <h2 class="border-b border-ink-fg/25 pb-2 text-sm font-semibold">{{ t('footer.legal') }}</h2>
+                <ul class="mt-3 space-y-2">
+                    <li>{{ profile.name }}</li>
+                    <li class="numerals">{{ t('footer.vat') }} {{ profile.vatNumber }}</li>
                     <li>{{ profile.location.city }} ({{ profile.location.region }})</li>
-                    <li>
-                        <NuxtLink :to="paths.privacy()" class="underline-offset-4 hover:text-accent hover:underline">
-                            {{ t('footer.privacy') }}
-                        </NuxtLink>
-                    </li>
+                    <li><NuxtLink :to="paths.privacy()" class="underline hover:no-underline">{{ t('footer.privacy') }}</NuxtLink></li>
                 </ul>
             </div>
         </div>
 
-        <div class="border-t border-border">
-            <p class="container-page py-6 font-mono text-xs text-muted">
-                © {{ year }} {{ profile.name }}. {{ t('footer.rights') }}
+        <div class="container-page overflow-hidden">
+            <p
+                class="pb-[0.12em] font-semibold tracking-[-0.055em] whitespace-nowrap"
+                style="font-size: calc((min(100vw, 84rem) - 5rem) / 6.35); line-height: 1"
+                aria-hidden="true"
+            >
+                leonardo ramaj
             </p>
+        </div>
+        <div class="border-t border-ink-fg/25">
+            <p class="container-page py-5 text-sm opacity-80">© {{ year }} {{ profile.name }}. {{ t('footer.rights') }}</p>
         </div>
     </footer>
 </template>

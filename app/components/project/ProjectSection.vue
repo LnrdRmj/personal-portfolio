@@ -22,9 +22,9 @@ const l = useLocalized()
         />
     </div>
 
-    <div v-else-if="section.kind === 'media-with-text'" class="grid items-center gap-10 lg:grid-cols-2">
+    <div v-else-if="section.kind === 'media-with-text'" class="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <div :class="{ 'lg:order-2': section.textPosition === 'right' }">
-            <component :is="`h${level}`" class="font-mono text-2xl font-bold tracking-tight sm:text-3xl">
+            <component :is="`h${level}`" class="text-[1.9rem] leading-tight font-bold tracking-[-0.025em] sm:text-[2.4rem]">
                 {{ l(section.title) }}
             </component>
             <ProjectText :text="section.text" class="mt-5" />
@@ -34,7 +34,7 @@ const l = useLocalized()
 
     <div v-else-if="section.kind === 'titled'" class="space-y-10">
         <div class="max-w-3xl">
-            <component :is="`h${level}`" class="font-mono text-2xl font-bold tracking-tight sm:text-3xl">
+            <component :is="`h${level}`" class="text-[1.9rem] leading-tight font-bold tracking-[-0.025em] sm:text-[2.4rem]">
                 {{ l(section.title) }}
             </component>
             <ProjectText :text="section.text" class="mt-5" />

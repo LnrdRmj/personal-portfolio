@@ -5,38 +5,35 @@ const { t } = useI18n()
 </script>
 
 <template>
-    <section id="skills" class="container-page py-20">
-        <h2 class="heading-prompt reveal">{{ t('skills.title') }}</h2>
-        <p class="reveal mt-4 max-w-2xl text-lg text-muted">{{ t('skills.intro') }}</p>
+    <section id="skills" class="container-page py-20 lg:py-28">
+        <div class="grid-module items-end gap-y-5 border-t border-fg pt-8">
+            <h2 class="heading-section col-span-4 sm:col-span-8 lg:col-span-6">{{ t('skills.title') }}</h2>
+            <p class="col-span-4 text-lg leading-relaxed text-muted sm:col-span-6 lg:col-span-4 lg:col-start-9">
+                {{ t('skills.intro') }}
+            </p>
+        </div>
 
-        <div class="mt-10 grid gap-5 md:grid-cols-2">
-            <article
+        <div class="mt-14 grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4">
+            <div
                 v-for="group in skillGroups"
                 :key="group.id"
-                class="card reveal p-6"
-                :class="{ 'border-accent/60 bg-accent/[0.03]': group.id === 'ai' }"
+                :class="group.id === 'ai' ? 'bg-yellow px-5 pt-5 pb-3 text-yellow-fg' : ''"
             >
-                <header class="flex items-start justify-between gap-4">
-                    <div>
-                        <p class="font-mono text-xs text-muted" aria-hidden="true">
-                            ~/skills/{{ group.id }}
-                        </p>
-                        <h3 class="mt-1 text-lg font-semibold">{{ t(`skills.groups.${group.id}`) }}</h3>
-                    </div>
-                    <span
-                        v-if="group.id === 'ai'"
-                        class="rounded-md bg-accent px-2 py-0.5 font-mono text-xs font-semibold text-accent-fg"
+                <h3 class="border-b border-current pb-3 text-lg font-bold tracking-[-0.01em]">
+                    {{ t(`skills.groups.${group.id}`) }}
+                </h3>
+                <ul>
+                    <li
+                        v-for="skill in group.items"
+                        :key="skill.id"
+                        class="flex items-center gap-3 border-b py-2.5 last:border-0"
+                        :class="group.id === 'ai' ? 'border-yellow-fg/25' : 'border-border'"
                     >
-                        {{ t('skills.new') }}
-                    </span>
-                </header>
-                <ul class="mt-5 flex flex-wrap gap-2">
-                    <li v-for="skill in group.items" :key="skill.id" class="chip text-sm text-fg">
-                        <Icon :name="skill.icon" class="size-4 text-muted" />
+                        <Icon :name="skill.icon" class="size-4 shrink-0 opacity-70" />
                         {{ skill.label }}
                     </li>
                 </ul>
-            </article>
+            </div>
         </div>
     </section>
 </template>

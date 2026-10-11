@@ -5,7 +5,8 @@ All copy is static and typed. Text that differs per language is a `Localized<T>`
 
 | What | Where |
 |---|---|
-| Name, job title, bio, socials, VAT | `app/data/profile.ts` |
+| Name, job title, bio, socials, VAT, portrait | `app/data/profile.ts` |
+| The five "from idea to launch" steps | `app/data/method.ts` |
 | Skills (languages, frameworks, tools, AI) | `app/data/skills.ts` |
 | Projects | `app/data/projects/*.ts`, order in `app/data/projects/index.ts` |
 | Privacy notice | `app/data/privacy.ts` |
@@ -18,6 +19,8 @@ Phone and email are not content: they're secrets (see [security](../security/REA
 1. Put its images in `images/projects/<slug>/` (PNG/JPG, kebab-case names).
 2. Create `app/data/projects/<slug>.ts` exporting a `Project`, and add it to `index.ts`.
 3. Image `src` is the path under `images/` without extension, e.g. `projects/acme/banner`.
+   If the banner is only a logo, add a `cover` (a real screen or photo): the home page shows it
+   instead. The first project in `index.ts` gets the large lead spread.
    Give every image `alt` in both languages plus its real `width` and `height`.
 4. Build: the new pages (`/progetti/<slug>`, `/en/projects/<slug>`) are prerendered and added
    to the sitemap automatically.
@@ -25,6 +28,12 @@ Phone and email are not content: they're secrets (see [security](../security/REA
 Sections are a small union (`shared/types/content.ts`): `media`, `media-grid`,
 `media-with-text` and `titled` (a heading plus text, optionally wrapping another section).
 Text is `paragraphs` and optional `bullets` — no HTML.
+
+## Portrait
+
+Put the photo in `images/profile/` (e.g. `portrait.jpg`) and set `profile.portrait` to a `Media`
+with its real `width` and `height`. The About section shows it in a blue field; without it the
+section simply has no photo.
 
 ## Add a skill
 

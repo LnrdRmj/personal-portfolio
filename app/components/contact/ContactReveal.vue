@@ -34,42 +34,39 @@ function retry() {
 </script>
 
 <template>
-    <div class="card p-6 sm:p-8">
-        <h3 class="flex items-center gap-2 font-mono text-lg font-bold">
-            <Icon name="lucide:shield-check" class="size-5 text-accent" />
-            {{ t('contact.reveal.title') }}
-        </h3>
-        <p class="mt-3 text-muted">{{ t('contact.reveal.body') }}</p>
+    <div class="border-t border-accent-fg/40 pt-6">
+        <h3 class="text-xl font-bold tracking-[-0.01em]">{{ t('contact.reveal.title') }}</h3>
+        <p class="mt-2 max-w-md">{{ t('contact.reveal.body') }}</p>
 
-        <ul v-if="state === 'done' && details" class="mt-6 space-y-3 font-mono text-sm">
-            <li>
-                <a :href="`tel:${details.phone.replace(/\s/g, '')}`" class="group inline-flex items-center gap-3">
-                    <Icon name="lucide:phone" class="size-4 text-accent" />
+        <ul v-if="state === 'done' && details" class="mt-6 border-t border-accent-fg/40 text-lg font-semibold">
+            <li class="border-b border-accent-fg/40">
+                <a :href="`tel:${details.phone.replace(/\s/g, '')}`" class="flex items-center gap-3 py-3 hover:underline">
+                    <Icon name="lucide:phone" class="size-5" />
                     <span class="sr-only">{{ t('contact.reveal.phone') }}:</span>
-                    <span class="group-hover:underline">{{ details.phone }}</span>
+                    <span class="numerals">{{ details.phone }}</span>
                 </a>
             </li>
-            <li>
-                <a :href="`mailto:${details.email}`" class="group inline-flex items-center gap-3">
-                    <Icon name="lucide:mail" class="size-4 text-accent" />
+            <li class="border-b border-accent-fg/40">
+                <a :href="`mailto:${details.email}`" class="flex items-center gap-3 py-3 break-all hover:underline">
+                    <Icon name="lucide:mail" class="size-5 shrink-0" />
                     <span class="sr-only">{{ t('contact.reveal.email') }}:</span>
-                    <span class="group-hover:underline">{{ details.email }}</span>
+                    {{ details.email }}
                 </a>
             </li>
-            <li>
-                <a
-                    :href="details.whatsapp"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="group inline-flex items-center gap-3"
-                >
-                    <Icon name="simple-icons:whatsapp" class="size-4 text-accent" />
-                    <span class="group-hover:underline">{{ t('contact.reveal.whatsapp') }}</span>
+            <li class="border-b border-accent-fg/40">
+                <a :href="details.whatsapp" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 py-3 hover:underline">
+                    <Icon name="simple-icons:whatsapp" class="size-5" />
+                    {{ t('contact.reveal.whatsapp') }}
                 </a>
             </li>
         </ul>
 
-        <button v-else-if="state === 'idle'" type="button" class="btn-secondary mt-6" @click="state = 'challenge'">
+        <button
+            v-else-if="state === 'idle'"
+            type="button"
+            class="btn mt-6 bg-accent-fg text-accent hover:bg-fg hover:text-bg"
+            @click="state = 'challenge'"
+        >
             <Icon name="lucide:eye" class="size-4" />
             {{ t('contact.reveal.button') }}
         </button>
@@ -77,10 +74,8 @@ function retry() {
         <div v-else class="mt-6 space-y-3">
             <!-- Mounted only after the click, so Cloudflare's script never loads for casual visitors. -->
             <NuxtTurnstile ref="turnstile" v-model="token" :options="turnstileOptions" />
-            <p v-if="state === 'loading'" role="status" class="text-sm text-muted">
-                {{ t('contact.reveal.verifying') }}
-            </p>
-            <p v-if="state === 'error'" role="alert" class="text-sm text-danger">
+            <p v-if="state === 'loading'" role="status">{{ t('contact.reveal.verifying') }}</p>
+            <p v-if="state === 'error'" role="alert" class="font-semibold">
                 {{ t('contact.reveal.error') }}
                 <button type="button" class="ml-1 underline" @click="retry">{{ t('contact.reveal.retry') }}</button>
             </p>

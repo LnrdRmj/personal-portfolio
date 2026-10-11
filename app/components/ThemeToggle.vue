@@ -33,6 +33,6 @@ function cycle() {
         :title="t('theme.toggle', { mode: t(`theme.${preference}`) })"
         @click="cycle"
     >
-        <Icon :name="icons[preference]" class="size-4.5" />
+        <Icon :name="icons[preference]" class="size-[1.15rem]" />
     </button>
 </template>

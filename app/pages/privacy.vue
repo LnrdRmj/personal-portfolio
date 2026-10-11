@@ -13,21 +13,25 @@ useSeoMeta({
     title: () => t('privacy.title'),
     description: () => t('seo.privacy.description'),
 })
-defineOgImage('Terminal', { title: t('privacy.title'), description: t('seo.privacy.description'), path: '~/privacy' })
+defineOgImage('Sheet', { title: t('privacy.title'), description: t('seo.privacy.description'), path: 'ramaj.dev' + useSitePaths().privacy() })
 </script>
 
 <template>
     <div class="container-page py-14 sm:py-20">
-        <article class="max-w-3xl">
-            <h1 class="font-mono text-4xl font-bold tracking-tight sm:text-5xl">{{ t('privacy.title') }}</h1>
-            <p class="mt-4 font-mono text-sm text-muted">{{ t('privacy.updated', { date: updated }) }}</p>
+        <div class="grid-module gap-y-10">
+            <header class="col-span-4 sm:col-span-8 lg:col-span-4">
+                <h1 class="heading-section">{{ t('privacy.title') }}</h1>
+                <p class="mt-4 text-[0.95rem] text-muted">{{ t('privacy.updated', { date: updated }) }}</p>
+            </header>
 
-            <section v-for="(section, index) in privacySections" :key="index" class="mt-12">
-                <h2 class="heading-prompt text-xl sm:text-2xl">{{ l(section.title) }}</h2>
-                <div class="mt-4 space-y-4 leading-relaxed text-muted">
-                    <p v-for="(paragraph, pIndex) in l(section.paragraphs)" :key="pIndex">{{ paragraph }}</p>
-                </div>
-            </section>
-        </article>
+            <article class="col-span-4 sm:col-span-8 lg:col-span-7 lg:col-start-6">
+                <section v-for="(section, index) in privacySections" :key="index" class="border-t border-fg pt-5 pb-10">
+                    <h2 class="text-xl font-bold tracking-[-0.015em]">{{ l(section.title) }}</h2>
+                    <div class="mt-3 max-w-[65ch] space-y-4 leading-relaxed text-muted">
+                        <p v-for="(paragraph, pIndex) in l(section.paragraphs)" :key="pIndex">{{ paragraph }}</p>
+                    </div>
+                </section>
+            </article>
+        </div>
     </div>
 </template>

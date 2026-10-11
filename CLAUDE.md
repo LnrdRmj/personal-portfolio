@@ -19,6 +19,8 @@ Copy `.env.example` to `.env` before the first run.
 - [SEO](docs/seo/README.md) — localized routes, meta, sitemap, structured data, OG images
 - [Security](docs/security/README.md) — captcha-gated contact details, contact form, secrets
 - [Deployment](docs/deployment/README.md) — Cloudflare, env vars, CI, go-live checklist
+- [Product](PRODUCT.md) — audience, positioning and evidence rules (used by the Impeccable design skill)
+- [Design](DESIGN.md) — the Olivetti-style visual system: palette, type, grid, marks, motion
 
 ## Conventions
 

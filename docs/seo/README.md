@@ -24,7 +24,7 @@ domain is live, so the `workers.dev` URL never gets indexed.
 - Structured data: a `Person` identity (configured in `nuxt.config.ts` → `schemaOrg`) on every
   page; `ProfilePage` on home; `CreativeWork` + `BreadcrumbList` on projects.
 - An OG image per page and language, rendered at build time from
-  `app/components/OgImage/Terminal.takumi.vue` (`ogImage.zeroRuntime`, so no runtime cost).
+  `app/components/OgImage/Sheet.takumi.vue` (`ogImage.zeroRuntime`, so no runtime cost).
 - `/sitemap.xml` with hreflang alternates and image entries (`sitemap` in `nuxt.config.ts`).
 
 ## Checking a build

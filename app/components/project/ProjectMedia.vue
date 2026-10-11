@@ -6,8 +6,9 @@ const props = defineProps<{
     /** Standard `sizes` attribute; defaults to the full content width. */
     sizes?: string
     eager?: boolean
-    /** Shared with the matching ProjectCard image so the banner morphs between pages. */
     transitionName?: string
+    /** No frame: the media fills its parent, which supplies its own ground. */
+    bare?: boolean
 }>()
 
 const { t } = useI18n()
@@ -37,14 +38,14 @@ onBeforeUnmount(() => observer?.disconnect())
 </script>
 
 <template>
-    <figure class="overflow-hidden rounded-xl border border-border bg-surface-2">
+    <figure :class="bare ? 'h-full' : 'border border-border bg-surface'">
         <ResponsiveImage
             v-if="media.type === 'image'"
             :media="media"
             :sizes="sizes ?? '(min-width: 1152px) 1088px, 100vw'"
             :eager="eager"
             :transition-name="transitionName"
-            class="h-auto w-full"
+            :class="bare ? 'size-full object-cover' : 'h-auto w-full'"
         />
         <video
             v-else
@@ -58,7 +59,7 @@ onBeforeUnmount(() => observer?.disconnect())
             playsinline
             loop
             preload="none"
-            class="h-auto w-full"
+            :class="bare ? 'size-full object-cover' : 'h-auto w-full'"
         >
             <source :src="media.src" type="video/mp4" />
             {{ t('project.videoFallback') }}

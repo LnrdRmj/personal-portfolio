@@ -1,4 +1,4 @@
-import type { Localized, SocialLink } from '../../shared/types/content'
+import type { Localized, Media, SocialLink } from '../../shared/types/content'
 
 // Phone and email are deliberately absent: they live in server secrets (see docs/security).
 export const profile = {
@@ -9,6 +9,9 @@ export const profile = {
     } satisfies Localized,
     location: { city: 'Prato', region: 'PO', country: 'IT' },
     vatNumber: '02610360972',
+    // TODO(leonardo): add a portrait at images/profile/portrait.jpg, then set this to
+    // { type: 'image', src: 'profile/portrait', alt: {...}, width, height }.
+    portrait: undefined as Media | undefined,
     // TODO(leonardo): review the bio copy.
     bio: {
         it: [

@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-07T15:40:00Z",
+  "title": "Design System: Leonardo Ramaj",
+  "extensions": {
+    "colorMeta": {
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#f3f3f0", "tonalRamp": ["oklch(15% 0.004 106)", "oklch(25% 0.004 106)", "oklch(35% 0.004 106)", "oklch(45% 0.004 106)", "oklch(55% 0.004 106)", "oklch(65% 0.004 106)", "oklch(80% 0.004 106)", "oklch(96% 0.004 106)"] },
+      "sheet": { "role": "neutral", "displayName": "Sheet", "canonical": "#ffffff" },
+      "hairline": { "role": "neutral", "displayName": "Hairline", "canonical": "#d3d3cd", "tonalRamp": ["oklch(15% 0.008 106)", "oklch(25% 0.008 106)", "oklch(35% 0.008 106)", "oklch(45% 0.008 106)", "oklch(55% 0.008 106)", "oklch(65% 0.008 106)", "oklch(86% 0.008 106)", "oklch(95% 0.008 106)"] },
+      "ink-text": { "role": "neutral", "displayName": "Ink", "canonical": "#141414", "tonalRamp": ["oklch(15% 0 0)", "oklch(19% 0 0)", "oklch(35% 0 0)", "oklch(45% 0 0)", "oklch(55% 0 0)", "oklch(65% 0 0)", "oklch(80% 0 0)", "oklch(95% 0 0)"] },
+      "graphite": { "role": "neutral", "displayName": "Graphite", "canonical": "#55554f", "tonalRamp": ["oklch(15% 0.01 106)", "oklch(25% 0.01 106)", "oklch(35% 0.01 106)", "oklch(44% 0.01 106)", "oklch(55% 0.01 106)", "oklch(65% 0.01 106)", "oklch(80% 0.01 106)", "oklch(95% 0.01 106)"] },
+      "olivetti-red": { "role": "primary", "displayName": "Olivetti Red", "canonical": "#c8381f", "tonalRamp": ["oklch(15% 0.18 33)", "oklch(25% 0.18 33)", "oklch(35% 0.18 33)", "oklch(45% 0.18 33)", "oklch(56% 0.18 33)", "oklch(65% 0.18 33)", "oklch(80% 0.1 33)", "oklch(95% 0.03 33)"] },
+      "on-red": { "role": "primary", "displayName": "On Red", "canonical": "#ffffff" },
+      "red-ink": { "role": "primary", "displayName": "Red Ink", "canonical": "#b3311a" },
+      "olivetti-blue": { "role": "secondary", "displayName": "Olivetti Blue", "canonical": "#1f4e8c", "tonalRamp": ["oklch(15% 0.12 258)", "oklch(25% 0.12 258)", "oklch(35% 0.12 258)", "oklch(43% 0.12 258)", "oklch(55% 0.12 258)", "oklch(65% 0.1 258)", "oklch(80% 0.06 258)", "oklch(95% 0.02 258)"] },
+      "on-blue": { "role": "secondary", "displayName": "On Blue", "canonical": "#ffffff" },
+      "ochre": { "role": "tertiary", "displayName": "Ochre", "canonical": "#e3a823", "tonalRamp": ["oklch(15% 0.05 77)", "oklch(25% 0.08 77)", "oklch(35% 0.1 77)", "oklch(45% 0.12 77)", "oklch(55% 0.14 77)", "oklch(65% 0.15 77)", "oklch(77% 0.15 77)", "oklch(95% 0.04 77)"] },
+      "on-ochre": { "role": "tertiary", "displayName": "On Ochre", "canonical": "#141414" },
+      "ink-field": { "role": "neutral", "displayName": "Ink Field", "canonical": "#141414" },
+      "on-ink": { "role": "neutral", "displayName": "On Ink", "canonical": "#f3f3f0" },
+      "danger": { "role": "neutral", "displayName": "Danger", "canonical": "#b3261e" },
+      "paper-dark": { "role": "neutral", "displayName": "Paper (dark)", "canonical": "#121211" },
+      "sheet-dark": { "role": "neutral", "displayName": "Sheet (dark)", "canonical": "#1c1c1a" },
+      "hairline-dark": { "role": "neutral", "displayName": "Hairline (dark)", "canonical": "#34342f" },
+      "ink-text-dark": { "role": "neutral", "displayName": "Ink (dark)", "canonical": "#ecebe6" },
+      "graphite-dark": { "role": "neutral", "displayName": "Graphite (dark)", "canonical": "#a6a59e" },
+      "red-ink-dark": { "role": "primary", "displayName": "Red Ink (dark)", "canonical": "#f0745a" },
+      "olivetti-blue-dark": { "role": "secondary", "displayName": "Olivetti Blue (dark)", "canonical": "#2b5fa6" },
+      "ink-field-dark": { "role": "neutral", "displayName": "Ink Field (dark)", "canonical": "#050505" },
+      "on-ink-dark": { "role": "neutral", "displayName": "On Ink (dark)", "canonical": "#ecebe6" },
+      "danger-dark": { "role": "neutral", "displayName": "Danger (dark)", "canonical": "#ff8a7a" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero promise, lead-spread and project-page names, contact title." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles, CTA panels, next-project link." },
+      "title": { "displayName": "Title", "purpose": "Picker legend and form title." },
+      "body": { "displayName": "Body", "purpose": "Intros and case-study prose, max 65ch." },
+      "label": { "displayName": "Label", "purpose": "Buttons, spec-table values, byline, field labels." },
+      "numerals": { "displayName": "Tabular numerals", "purpose": "Dates, periods, VAT and phone numbers." },
+      "wordmark": { "displayName": "Wordmark", "purpose": "Lowercase 'leonardo ramaj' in the header; scaled to full width in the footer." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-out-expo", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "The assemble animation and the slow image zoom on project spreads." },
+      { "name": "assemble", "value": "1.1s ease-out-expo, stagger 90ms + 150ms, transform only", "purpose": "Hero GeoMarks drop in once when the row is 60% in view; disabled under prefers-reduced-motion and without JS." },
+      { "name": "state-change", "value": "colors 200ms", "purpose": "Button, link and icon-button colour inversion on hover." },
+      { "name": "spread-zoom", "value": "transform 700ms ease-out-expo, scale(1.025)", "purpose": "Project image inside its field on hover." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "container-max", "value": "84rem" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Red action button; inverts to ink on hover.",
+      "html": "<button class=\"ds-btn-primary\">Contattami <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 10px; padding: 14px 20px; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-size: 0.95rem; font-weight: 600; background: var(--c-accent, #c8381f); color: var(--c-accent-fg, #fff); border: 0; border-radius: 0; cursor: pointer; transition: background-color 200ms, color 200ms; } .ds-btn-primary:hover { background: var(--c-fg, #141414); color: var(--c-bg, #f3f3f0); } .ds-btn-primary:focus-visible { outline: 2px solid var(--c-fg, #141414); outline-offset: 2px; }"
+    },
+    {
+      "name": "Ink Button",
+      "kind": "button",
+      "refersTo": "button-ink",
+      "description": "Ink button for secondary actions on paper; inverts to red on hover.",
+      "html": "<button class=\"ds-btn-ink\">Torna alla home</button>",
+      "css": ".ds-btn-ink { display: inline-flex; align-items: center; gap: 10px; padding: 14px 20px; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-size: 0.95rem; font-weight: 600; background: var(--c-fg, #141414); color: var(--c-bg, #f3f3f0); border: 0; border-radius: 0; cursor: pointer; transition: background-color 200ms, color 200ms; } .ds-btn-ink:hover { background: var(--c-accent, #c8381f); color: var(--c-accent-fg, #fff); } .ds-btn-ink:focus-visible { outline: 2px solid var(--c-fg, #141414); outline-offset: 2px; }"
+    },
+    {
+      "name": "Arrow Text Link",
+      "kind": "custom",
+      "description": "Project link: label over a 2px ink rule; turns red on hover, arrow nudges right.",
+      "html": "<a href=\"#\" class=\"ds-arrow-link\">Vedi il progetto <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></a>",
+      "css": ".ds-arrow-link { display: inline-flex; align-items: center; gap: 8px; padding-bottom: 4px; border-bottom: 2px solid var(--c-fg, #141414); font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-weight: 600; color: var(--c-fg, #141414); text-decoration: none; transition: color 200ms, border-color 200ms; } .ds-arrow-link svg { transition: transform 200ms; } .ds-arrow-link:hover { color: var(--c-accent-ink, #b3311a); border-color: var(--c-accent, #c8381f); } .ds-arrow-link:hover svg { transform: translateX(4px); } .ds-arrow-link:focus-visible { outline: 2px solid var(--c-fg, #141414); outline-offset: 2px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Square hairline field on paper; border turns ink on focus, danger when invalid.",
+      "html": "<label class=\"ds-field-label\" for=\"ds-name\">Nome</label><input id=\"ds-name\" class=\"ds-field\" placeholder=\"Mario Rossi\">",
+      "css": ".ds-field-label { display: block; margin-bottom: 8px; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; font-weight: 600; color: var(--c-fg, #141414); } .ds-field { display: block; width: 100%; padding: 12px 14px; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-size: 1rem; background: var(--c-bg, #f3f3f0); color: var(--c-fg, #141414); border: 1px solid var(--c-border, #d3d3cd); border-radius: 0; transition: border-color 150ms; } .ds-field::placeholder { color: var(--c-muted, #55554f); } .ds-field:focus { outline: none; border-color: var(--c-fg, #141414); } .ds-field[aria-invalid=\"true\"] { border-color: var(--c-danger, #b3261e); }"
+    },
+    {
+      "name": "Site Header",
+      "kind": "nav",
+      "description": "Sticky paper header with lowercase wordmark, graphite links, locale switch and red contact button.",
+      "html": "<header class=\"ds-header\"><span class=\"ds-wordmark\">leonardo ramaj</span><nav class=\"ds-nav\"><a href=\"#\">Progetti</a><a href=\"#\">Metodo</a><a href=\"#\">Competenze</a><a href=\"#\">Chi sono</a></nav><a href=\"#\" class=\"ds-lang\"><span>it</span><span class=\"ds-off\">en</span></a><a href=\"#\" class=\"ds-cta\">Contattami</a></header>",
+      "css": ".ds-header { display: flex; align-items: center; gap: 24px; height: 72px; padding: 0 32px; background: var(--c-bg, #f3f3f0); border-bottom: 1px solid var(--c-border, #d3d3cd); font-family: Archivo, ui-sans-serif, system-ui, sans-serif; color: var(--c-fg, #141414); } .ds-wordmark { font-size: 1.35rem; font-weight: 600; letter-spacing: -0.04em; } .ds-nav { margin-left: auto; display: flex; gap: 4px; font-size: 0.95rem; } .ds-nav a { padding: 8px 12px; color: var(--c-muted, #55554f); text-decoration: none; transition: color 150ms; } .ds-nav a:hover { color: var(--c-fg, #141414); } .ds-lang { display: inline-flex; align-items: center; gap: 6px; height: 40px; padding: 0 10px; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; color: var(--c-fg, #141414); text-decoration: none; transition: background-color 150ms, color 150ms; } .ds-lang .ds-off { color: var(--c-muted, #55554f); } .ds-lang:hover { background: var(--c-fg, #141414); color: var(--c-bg, #f3f3f0); } .ds-cta { padding: 10px 20px; font-size: 0.95rem; font-weight: 600; background: var(--c-accent, #c8381f); color: var(--c-accent-fg, #fff); text-decoration: none; transition: background-color 200ms, color 200ms; } .ds-cta:hover { background: var(--c-fg, #141414); color: var(--c-bg, #f3f3f0); } .ds-header a:focus-visible { outline: 2px solid var(--c-fg, #141414); outline-offset: 2px; }"
+    },
+    {
+      "name": "Spec Table",
+      "kind": "custom",
+      "description": "Hairline-ruled definition list: graphite labels, semibold values, tabular numerals.",
+      "html": "<dl class=\"ds-spec\"><div><dt>Ruolo</dt><dd>Sviluppo full-stack</dd></div><div><dt>Periodo</dt><dd class=\"ds-num\">2022 – 2024</dd></div><div><dt>Stack</dt><dd>Vue, Laravel, Capacitor</dd></div></dl>",
+      "css": ".ds-spec { margin: 0; border-bottom: 1px solid var(--c-border, #d3d3cd); font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-size: 0.95rem; color: var(--c-fg, #141414); } .ds-spec div { display: grid; grid-template-columns: 6rem 1fr; gap: 16px; padding: 12px 0; border-top: 1px solid var(--c-border, #d3d3cd); } .ds-spec dt { color: var(--c-muted, #55554f); } .ds-spec dd { margin: 0; font-weight: 600; } .ds-num { font-variant-numeric: tabular-nums lining-nums; }"
+    },
+    {
+      "name": "Enquiry Picker",
+      "kind": "custom",
+      "description": "Red field with a ruled radio list (circular indicators) and a white full-width submit.",
+      "html": "<form class=\"ds-picker\"><fieldset><legend>Di cosa hai bisogno?</legend><div class=\"ds-opts\"><label><input type=\"radio\" name=\"t\" checked><span>Web app</span><span class=\"ds-dot\"></span></label><label><input type=\"radio\" name=\"t\"><span>Sito web</span><span class=\"ds-dot\"></span></label><label><input type=\"radio\" name=\"t\"><span>App mobile</span><span class=\"ds-dot\"></span></label></div></fieldset><button type=\"button\" class=\"ds-picker-go\">Scrivimi <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></button></form>",
+      "css": ".ds-picker { max-width: 380px; padding: 32px; background: var(--c-accent, #c8381f); color: var(--c-accent-fg, #fff); font-family: Archivo, ui-sans-serif, system-ui, sans-serif; } .ds-picker fieldset { margin: 0; padding: 0; border: 0; } .ds-picker legend { padding: 0; font-size: 1.75rem; font-weight: 700; line-height: 1.25; letter-spacing: -0.02em; } .ds-opts { margin-top: 24px; border-top: 1px solid rgb(255 255 255 / 0.4); } .ds-opts label { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgb(255 255 255 / 0.4); font-size: 1.125rem; font-weight: 500; cursor: pointer; } .ds-opts input { position: absolute; opacity: 0; width: 1px; height: 1px; } .ds-dot { width: 20px; height: 20px; flex-shrink: 0; border: 2px solid currentColor; border-radius: 9999px; transition: background-color 150ms; } .ds-opts input:checked ~ .ds-dot { background: currentColor; } .ds-opts input:focus-visible ~ .ds-dot { outline: 2px solid currentColor; outline-offset: 2px; } .ds-picker-go { display: flex; width: 100%; justify-content: space-between; align-items: center; margin-top: 32px; padding: 14px 20px; border: 0; border-radius: 0; font: inherit; font-size: 0.95rem; font-weight: 600; background: var(--c-accent-fg, #fff); color: var(--c-accent, #c8381f); cursor: pointer; transition: background-color 200ms, color 200ms; } .ds-picker-go:hover { background: var(--c-fg, #141414); color: var(--c-bg, #f3f3f0); }"
+    },
+    {
+      "name": "GeoMark Row",
+      "kind": "custom",
+      "description": "The five method marks under an ink rule; the only ornament in the system.",
+      "html": "<ol class=\"ds-marks\"><li><svg viewBox=\"0 0 40 40\" class=\"ds-blue\"><circle cx=\"20\" cy=\"20\" r=\"20\" fill=\"currentColor\"/></svg><span>Analisi</span></li><li><svg viewBox=\"0 0 40 40\" class=\"ds-ochre\"><rect x=\"2\" y=\"2\" width=\"36\" height=\"36\" fill=\"currentColor\"/></svg><span>Progettazione</span></li><li><svg viewBox=\"0 0 40 40\" class=\"ds-red\"><path d=\"M0 30a20 20 0 0 1 40 0Z\" fill=\"currentColor\"/></svg><span>Sviluppo</span></li><li><svg viewBox=\"0 0 40 40\" class=\"ds-ink\"><path d=\"M20 1 40 37H0Z\" fill=\"currentColor\"/></svg><span>SEO e messa online</span></li><li><svg viewBox=\"0 0 40 40\" class=\"ds-blue\"><rect x=\"0\" y=\"13\" width=\"40\" height=\"14\" fill=\"currentColor\"/></svg><span>Manutenzione</span></li></ol>",
+      "css": ".ds-marks { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; margin: 0; padding: 24px 0 0; list-style: none; border-top: 1px solid var(--c-fg, #141414); font-family: Archivo, ui-sans-serif, system-ui, sans-serif; color: var(--c-fg, #141414); } .ds-marks svg { display: block; width: 48px; height: 48px; } .ds-marks span { display: block; margin-top: 12px; font-size: 0.875rem; font-weight: 600; line-height: 1.375; } .ds-blue { color: var(--c-blue, #1f4e8c); } .ds-ochre { color: var(--c-yellow, #e3a823); } .ds-red { color: var(--c-accent, #c8381f); } .ds-ink { color: var(--c-fg, #141414); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Olivetti Identity Program",
+    "overview": "The site treats a one-person software studio the way Olivetti treated a typewriter: technology presented with modernist rigour and warmth. A matt paper ground carries black ink type; flat red, blue and ochre fields own whole regions of the page instead of decorating them. Everything sits on a visible 12-column module, information is set in hairline-ruled spec tables, and the only ornament is a family of five geometric marks, each standing for one step of the working method.\n\nDensity is brochure-like: generous section spacing, large tightly tracked display type, few elements per spread. Depth is entirely flat. There is no monospace, no terminal imagery, no card grid and no rounded pill anywhere; the developer-portfolio default is the explicit thing this world replaces.",
+    "keyCharacteristics": [
+      "Archivo is the only typeface; the wordmark \"leonardo ramaj\" is always lowercase.",
+      "Flat colour fields occupy whole grid regions (hero picker, project spreads, contact section, footer).",
+      "Square corners everywhere; the only curves are true circles (circle mark, radio indicator).",
+      "Hairline-ruled definition lists with tabular numerals carry facts (role, period, stack, VAT).",
+      "Five GeoMarks (circle, square, half-disc, triangle, bar) are the only ornament.",
+      "One authored motion: the hero marks assemble once."
+    ],
+    "rules": [
+      { "name": "The Whole Field Rule", "body": "Red, blue and ochre are used flat and at full strength: as fields that own a whole grid region with content set on them, as solid GeoMarks, or (red only) as the action button. Never as tints, gradients or decorative stripes.", "section": "colors" },
+      { "name": "The Field Cycle Rule", "body": "Projects take fields in order ochre, blue, ink (index mod 3), and a project page uses the same field as its home spread so the view transition reads as one object.", "section": "colors" },
+      { "name": "The Two Themes Rule", "body": "Colours come only from the `--c-*` semantic tokens in `app/assets/css/main.css`; every surface must work under the `.dark` override.", "section": "colors" },
+      { "name": "The Tabular Facts Rule", "body": "Dates, periods, VAT and phone numbers always use tabular lining numerals.", "section": "typography" },
+      { "name": "The Lowercase Wordmark Rule", "body": "\"leonardo ramaj\" is set lowercase, semibold, tracked -0.04em (header) to -0.055em (the footer's full-width wordmark).", "section": "typography" },
+      { "name": "The Printed Sheet Rule", "body": "Depth is shown by placing one flat surface on another (sheet on red, image inside a field's padding), never by shadow.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do let red, blue and ochre fields own whole grid regions, and cycle project fields ochre, blue, ink.",
+      "Do open each section with a full-width ink rule and a headline on the 12-column module.",
+      "Do set facts in hairline-ruled spec tables with tabular numerals.",
+      "Do keep every rectangle square-cornered; use a curve only as a full circle.",
+      "Do use a GeoMark only where it stands for its method step.",
+      "Do use Lucide for interface icons and Simple Icons for technology and social logos.",
+      "Do keep motion to transform only, and switch it off under reduced motion."
+    ],
+    "donts": [
+      "Don't use a monospace face, terminal chrome or code-styled decoration.",
+      "Don't use shadows, gradients, glass or tinted overlays.",
+      "Don't use rounded rectangles, pills, chips or tag clouds.",
+      "Don't lay projects out as equal cards in a grid.",
+      "Don't put white text on ochre, or ochre text on paper for anything a reader needs.",
+      "Don't add new decorative shapes beyond the five GeoMarks, or a second authored animation."
+    ]
+  }
+}

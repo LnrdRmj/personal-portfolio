@@ -120,13 +120,14 @@ export default defineNuxtConfig({
 
     fonts: {
         families: [
-            { name: 'JetBrains Mono', provider: 'google', weights: [400, 500, 700], global: true },
-            { name: 'Inter', provider: 'google', weights: [400, 500, 600, 700], global: true },
+            { name: 'Archivo', provider: 'google', weights: [400, 500, 600, 700, 800], global: true },
         ],
     },
 
     // Icons ship in the client bundle only: no icon API in the Worker, no runtime fetches.
     icon: {
+        // In Tailwind's base layer so utilities like size-12 can resize icons.
+        cssLayer: 'base',
         provider: 'none',
         serverBundle: false,
         fallbackToApi: false,

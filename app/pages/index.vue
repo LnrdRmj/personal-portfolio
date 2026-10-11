@@ -8,15 +8,16 @@ useSeoMeta({
     description: () => t('seo.home.description'),
 })
 useSchemaOrg([defineWebPage({ '@type': 'ProfilePage' })])
-defineOgImage('Terminal', { title: 'Leonardo Ramaj', description: t('seo.home.description') })
+defineOgImage('Sheet', { title: 'Leonardo Ramaj', description: t('seo.home.description') })
 </script>
 
 <template>
     <div>
         <HomeHeroSection />
-        <HomeAboutSection />
-        <HomeSkillsSection />
         <HomeProjectsSection />
+        <HomeMethodSection />
+        <HomeSkillsSection />
+        <HomeAboutSection />
         <ContactSection />
     </div>
 </template>
