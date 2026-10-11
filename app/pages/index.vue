@@ -14,10 +14,10 @@ defineOgImage('Sheet', { title: 'Leonardo Ramaj', description: t('seo.home.descr
 <template>
     <div>
         <HomeHeroSection />
+        <HomeAboutSection />
         <HomeProjectsSection />
         <HomeMethodSection />
         <HomeSkillsSection />
-        <HomeAboutSection />
         <ContactSection />
     </div>
 </template>

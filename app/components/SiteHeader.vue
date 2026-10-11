@@ -3,7 +3,7 @@ const { t } = useI18n()
 const paths = useSitePaths()
 const route = useRoute()
 
-const sections = ['projects', 'method', 'skills', 'about'] as const
+const sections = ['about', 'projects', 'method', 'skills'] as const
 const menuOpen = ref(false)
 
 watch(
