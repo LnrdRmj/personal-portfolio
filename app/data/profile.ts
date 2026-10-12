@@ -40,14 +40,14 @@ export const profile = {
         {
             id: "linkedin",
             label: "LinkedIn",
-            url: "https://www.linkedin.com/in/leonardo-ramaj",
+            url: "https://www.linkedin.com/in/leonardo-ramaj-7a304120a",
             icon: "simple-icons:linkedin",
         },
-        {
-            id: "instagram",
-            label: "Instagram",
-            url: "https://www.instagram.com/leonardo.ramaj",
-            icon: "simple-icons:instagram",
-        },
+        // {
+        //     id: "instagram",
+        //     label: "Instagram",
+        //     url: "https://www.instagram.com/leonardo.ramaj",
+        //     icon: "simple-icons:instagram",
+        // },
     ] satisfies SocialLink[],
 };
